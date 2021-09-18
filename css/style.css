@@ -1,0 +1,28 @@
+@import url("https://use.fontawesome.com/releases/v5.5.0/css/all.css");
+@import url("https://fonts.googleapis.com/earlyaccess/notosanstc.css");
+
+body {
+    margin: 0;
+    background-color: #cae8d5;
+    color: #333;
+    overflow: hidden;
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+svg {
+    width: 100vw;
+    height: 100vh;
+}
+
+.r-ent{
+    font-size: 1.1em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.content{
+    /* border: 1px solid black; */
+    width:  400px;
+    height: 360px;
+    overflow-y:auto;
+}
