@@ -20,14 +20,111 @@
     }
 
     h1 {
-      font-size: 3em; /* Larger title font size */
-      margin-bottom: 10px;
+      font-size: 5em;
+      margin-bottom: 20px;
     }
 
     #countdown {
-      font-size: 1.5em;
-      margin-top: 20px;
+        font-size: 3em;
+        margin-bottom: 50px;
     }
+
+    #clock {
+        position: relative;
+        width: 250px;
+        height: 250px;
+        margin: 20px auto;
+        border: 5px solid #5c6bc0; /* Fancy color for clock border */
+        border-radius: 50%;
+        background-color: rgba(22, 68, 91, 0.429); /* Background color for clock face */
+      }
+
+    .number {
+      position: absolute;
+      font-size: 20px;
+      font-weight: bold;
+      top: 50%;
+      left: 50%;
+      transform-origin: 50% 100%;
+    }
+
+    .number:nth-child(1) { transform: translate(-50%, -100%) rotate(30deg) translate(0, -450%); }
+    .number:nth-child(2) { transform: translate(-50%, -100%) rotate(60deg) translate(0, -450%); }
+    .number:nth-child(3) { transform: translate(-50%, -100%) rotate(90deg) translate(0, -450%); }
+    .number:nth-child(4) { transform: translate(-50%, -100%) rotate(120deg) translate(0, -450%); }
+    .number:nth-child(5) { transform: translate(-50%, -100%) rotate(150deg) translate(0, -450%); }
+    .number:nth-child(6) { transform: translate(-50%, -100%) rotate(180deg) translate(0, -450%); }
+    .number:nth-child(7) { transform: translate(-50%, -100%) rotate(210deg) translate(0, -450%); }
+    .number:nth-child(8) { transform: translate(-50%, -100%) rotate(240deg) translate(0, -450%); }
+    .number:nth-child(9) { transform: translate(-50%, -100%) rotate(270deg) translate(0, -450%); }
+    .number:nth-child(10) { transform: translate(-50%, -100%) rotate(300deg) translate(0, -450%); }
+    .number:nth-child(11) { transform: translate(-50%, -100%) rotate(330deg) translate(0, -450%); }
+    .number:nth-child(12) { transform: translate(-50%, -100%) rotate(360deg) translate(0, -450%); }
+
+    .hand {
+      position: absolute;
+      width: 2px;
+      height: 80px;
+      background-color: #5c6bc0; /* Fancy color for hands */
+      top: 50%;
+      left: 50%;
+      transform-origin: 50% 100%;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+      
+      .hour {
+        height: 60px;
+        width: 6px;
+        background-color: #ef5350; /* Fancy color for hour hand */
+        transform-origin: 50% 100%;
+        animation-name: rotateHour;
+        animation-duration: 43200s; /* 12 hours */
+      }
+      
+      .minute {
+        height: 90px;
+        width: 4px;
+        background-color: #26a69a; /* Fancy color for minute hand */
+        transform-origin: 50% 100%;
+        animation-name: rotateMinute;
+        animation-duration: 3600s; /* 60 minutes */
+      }
+      
+      .second {
+        height: 100px;
+        width: 2px;
+        background-color: #ffee58; /* Fancy color for seconds hand */
+        transform-origin: 50% 100%;
+        animation-name: rotateSecond;
+        animation-duration: 60s; /* 60 seconds */
+      }
+    @keyframes rotateHour {
+        from {
+          transform: translate(-50%, -100%) rotate(calc(30deg * var(--hour-rotation)));
+        }
+        to {
+          transform: translate(-50%, -100%) rotate(calc(30deg * var(--hour-rotation)));
+        }
+      }
+  
+      @keyframes rotateMinute {
+        from {
+          transform: translate(-50%, -100%) rotate(calc(6deg * var(--minute-rotation)));
+        }
+        to {
+          transform: translate(-50%, -100%) rotate(calc(6deg * var(--minute-rotation)));
+        }
+      }
+  
+      @keyframes rotateSecond {
+        from {
+          transform: translate(-50%, -100%) rotate(calc(6deg * var(--second-rotation)));
+        }
+        to {
+          transform: translate(-50%, -100%) rotate(calc(6deg * var(--second-rotation)));
+        }
+      }
   </style>
   <title>Countdown Timer</title>
 </head>
@@ -35,14 +132,37 @@
   <div class="container">
     <h1>ECCV</h1>
     <div id="countdown"></div>
+    <div id="clock">
+      <!-- Numbers on the clock face -->
+      <div class="number">1</div>
+      <div class="number">2</div>
+      <div class="number">3</div>
+      <div class="number">4</div>
+      <div class="number">5</div>
+      <div class="number">6</div>
+      <div class="number">7</div>
+      <div class="number">8</div>
+      <div class="number">9</div>
+      <div class="number">10</div>
+      <div class="number">11</div>
+      <div class="number">12</div>
+      <!-- Clock hands -->
+      <div class="hand hour" style="--hour-rotation: 0;"></div>
+      <div class="hand minute" style="--minute-rotation: 0;"></div>
+      <div class="hand second" style="--second-rotation: 0;"></div>
+    </div>
   </div>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       // Set the date of your special day (format: month/day/year)
       const specialDay = new Date('03/08/2024 05:00:00').getTime();
 
-      // Update the countdown every second
+      // Update the countdown and clock hands every second
       const countdownElement = document.getElementById('countdown');
+      const hourHand = document.querySelector('.hand.hour');
+      const minuteHand = document.querySelector('.hand.minute');
+      const secondHand = document.querySelector('.hand.second');
+
       setInterval(function() {
         const now = new Date().getTime();
         const distance = specialDay - now;
@@ -52,9 +172,18 @@
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+        // Update countdown
         countdownElement.innerHTML = `${days} days ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')} left`;
-      }, 1000);
+       
+        const totalSeconds = hours*3600 + minutes*60 + (distance % (1000 * 60)) / 1000 - 0.5;
+        
+        // Update clock hands
+        hourHand.style.setProperty('--hour-rotation', totalSeconds / 3600);
+        minuteHand.style.setProperty('--minute-rotation', totalSeconds / 60);
+        secondHand.style.setProperty('--second-rotation', totalSeconds % 60);
+    }, 10);
     });
-  </script>
-</body>
-</html>
+    </script>
+    
+    </body>
+    </html>
