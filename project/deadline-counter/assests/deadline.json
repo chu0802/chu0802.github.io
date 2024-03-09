@@ -1,7 +1,7 @@
 {
     "events": [
         {
-            "name": "ECCV",
+            "name": "ECCV'24",
             "deadline": "03/8/2024 05:00:00",
             "timezone": "UTC+8",
             "city": "Milan",
@@ -9,7 +9,7 @@
             "image_path": "assests/images/milan.jpg"
         },
         {
-            "name": "COLM",
+            "name": "COLM'24",
             "deadline": "03/29/2024 23:59:00",
             "timezone": "UTC-12",
             "city": "Philadelphia",
@@ -17,7 +17,7 @@
             "image_path": "assests/images/upenn.jpeg"
         },
         {
-            "name": "NeurIPS",
+            "name": "NeurIPS'24",
             "deadline": "05/22/2024 13:00:00",
             "timezone": "PDT",
             "city": "Vancouver",
