@@ -9,11 +9,18 @@
 <body>
   <div id="trigger" style="position: fixed; left: 0; top: 0; width: 10px; height: 100%; background: transparent; z-index: 1000;"></div>
   <div id="menu" style="position: fixed; left: -250px; top: 0; width: 250px; height: 100%; background: #333; transition: left 0.3s; z-index: 999; overflow-y: auto;">
-    <h2 style="color: white; text-align: center;">Events</h2>
-    <h3 style="color: white; text-align: center;">Coming Events</h3>
-    <ul id="comingEventList" style="list-style-type: none; padding: 0;"></ul>
-    <h3 style="color: white; text-align: center;">Past Events</h3>
-    <ul id="pastEventList" style="list-style-type: none; padding: 0;"></ul>
+    <h2 style="color: white; text-align: center;">Coming Events</h2>
+
+    <h3 style="color: white; text-align: left; padding: 10px;">Submission Due</h3>
+    <ul id="submissionList" style="list-style-type: none; padding: 0;"></ul>
+    <h3 style="color: white; text-align: left; padding: 10px;">Review Release Date</h3>
+    <ul id="reviewList" style="list-style-type: none; padding: 0;"></ul>
+    <h3 style="color: white; text-align: left; padding: 10px;">Rebuttal Due</h3>
+    <ul id="rebuttalList" style="list-style-type: none; padding: 0;"></ul>
+    <h3 style="color: white; text-align: left; padding: 10px;">Decision Release</h3>
+    <ul id="decisionList" style="list-style-type: none; padding: 0;"></ul>
+    <h3 style="color: white; text-align: left; padding: 10px;">Coming Trip</h3>
+    <ul id="tripList" style="list-style-type: none; padding: 0;"></ul>
   </div>
       <!-- Clock elements go here -->
     </div>
@@ -21,7 +28,9 @@
   <div class="dark-overlay"></div>
   <div class="container">
     <h1 id="eventName">Select an Event</h1>
+    <h2 id="eventType">Event Type</h2>
     <h2 id="eventDate">Event Date</h2>
+    
     <div id="countdown"></div>
     <div id="clock">
       <!-- Numbers on the clock face -->

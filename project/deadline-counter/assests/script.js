@@ -1,5 +1,13 @@
 let countdownInterval;
 
+const eventTable = {
+    "submission": "Submission Due",
+    "review": "Review Release Date",
+    "rebuttal": "Rebuttal Due",
+    "decision": "Decision Release",
+    "trip": "Coming Trip"
+};
+
 document.addEventListener('DOMContentLoaded', function() {
   const menu = document.getElementById('menu');
   const trigger = document.getElementById('trigger');
@@ -13,71 +21,93 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   fetch('assests/deadline.json')
-      .then(response => response.json())
-      .then(data => {
-          const comingEventList = document.getElementById('comingEventList');
-          const pastEventList = document.getElementById('pastEventList');
-          const now = new Date();
-          let closestEvent = null;
-          let closestTime = Infinity;
+  .then(response => response.json())
+  .then(data => {
+      const eventList = {
+        "submission": document.getElementById('submissionList'),
+        "review": document.getElementById('reviewList'),
+        "rebuttal": document.getElementById('rebuttalList'),
+        "decision": document.getElementById('decisionList'),
+        "trip": document.getElementById('tripList')
+      }
 
-          data.events.forEach(event => {
-              const eventDate = new Date(event.deadline);
-              const li = document.createElement('li');
-              li.textContent = event.name;
-              li.style.padding = '10px';
-              li.style.color = 'white';
-              li.style.cursor = 'pointer';
-              li.addEventListener('click', () => selectEvent(event));
+      const now = new Date();
+      let closestEvent = null;
+      let closestTime = Infinity;
 
-              if (eventDate >= now) {
-                  // This is a coming event
-                  comingEventList.appendChild(li);
+      data.events.forEach(event => {
+          const li = document.createElement('li');
+          li.textContent = event.name;
+          li.style.padding = '10px';
+          li.style.paddingLeft = '20px';
+          li.style.color = 'white';
+          li.style.cursor = 'pointer';
+          li.addEventListener('click', () => selectEvent(event));
 
-                  // Check if this is the closest coming event
-                  if (eventDate < closestTime) {
-                      closestEvent = event;
-                      closestTime = eventDate;
-                  }
-              } else {
-                  // This is a past event
-                  pastEventList.appendChild(li);
+          let closestDeadline = Infinity;
+          let closestType = null;
+
+          let eventDeadlines = new Map(Object.entries(event.deadline));
+
+          eventDeadlines.forEach((value, key) => {
+              let deadline = new Date(value + ' ' + event.timezone);
+              if (deadline < closestDeadline && deadline > now) {
+                closestDeadline = deadline;
+                closestType = key;
               }
           });
-
-          // Automatically select the closest coming event
-          if (closestEvent) {
-              selectEvent(closestEvent);
+          
+          // Update the logic to handle the case when closestType is null
+          if (closestType && closestDeadline < closestTime && closestType === "submission") {
+            closestEvent = event;
+            closestTime = closestDeadline;
           }
-      })
-      .catch(error => console.log('Error loading the events: ', error));
+
+          if (closestType) {
+            eventList[closestType]?.appendChild(li);
+
+            event.closestDeadline = closestDeadline;
+            event.closestType = closestType;
+          }
+      });
+
+      data.events.forEach(event => {
+        console.log(event);
+      });
+      // Automatically select the closest coming event
+      if (closestEvent) {
+          selectEvent(closestEvent);
+      }
+  })
+  .catch(error => console.log('Error loading the events: ', error));
 });
 
 function selectEvent(event) {
-if (countdownInterval) {
-  clearInterval(countdownInterval);
-}
-const eventName = document.getElementById('eventName');
-const eventDate = document.getElementById('eventDate');
-const countdownElement = document.getElementById('countdown');
-const hourHand = document.querySelector('.hand.hour');
-const minuteHand = document.querySelector('.hand.minute');
-const secondHand = document.querySelector('.hand.second');
-const body = document.querySelector('body');
+    if (countdownInterval) {
+        clearInterval(countdownInterval);
+    }
+    const eventName = document.getElementById('eventName');
+    const eventDate = document.getElementById('eventDate');
+    const eventType = document.getElementById('eventType');
+    const countdownElement = document.getElementById('countdown');
+    const hourHand = document.querySelector('.hand.hour');
+    const minuteHand = document.querySelector('.hand.minute');
+    const secondHand = document.querySelector('.hand.second');
+    const body = document.querySelector('body');
 
-// Change the background image
-body.style.backgroundImage = `url('${event.image_path}')`;
-eventName.textContent = event.name;
+    // Change the background image
+    body.style.backgroundImage = `url('${event.image_path}')`;
+    eventName.textContent = event.name;
+    eventType.textContent = eventTable[event.closestType];
 
-// Create a Date object using the event's deadline
-let eventTime = new Date(event.deadline + ' ' + event.timezone);
-console.log(eventTime)
-// Format the date and time
-const options = { month: 'long', day: '2-digit', hour: '2-digit', minute: '2-digit'};
-const formattedDate = eventTime.toLocaleString('en-US', options) + ` UTC+8 @ ${event.city}, ${event.country}`;
-eventDate.textContent = formattedDate;
+    // Create a Date object using the event's deadline
+    let eventTime = event.closestDeadline;
+    // Format the date and time
+    const options = { month: 'long', day: '2-digit', hour: '2-digit', minute: '2-digit'};
+    const formattedDate = eventTime.toLocaleString('en-US', options) + ` UTC+8 @ ${event.city}, ${event.country}`;
+    eventDate.textContent = formattedDate;
 
-const specialDay = eventTime.getTime();
+    const specialDay = eventTime.getTime();
 
 
   countdownInterval = setInterval(function() { // Store the interval ID
