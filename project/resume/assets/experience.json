@@ -1,7 +1,7 @@
 [
     { 
       "title": "Research Assistant", 
-      "location": "Vision Learning Lab. Advisor: Prof. Yu-Chiang Frank Wang", 
+      "location": "Vision Learning Lab. Advisor: Prof. <a href=\"http://vllab.ee.ntu.edu.tw/members.html\" target=\"_blank\">Yu-Chiang Frank Wang</a>", 
       "year": "2022/11 - 2023/09",
       "description": [
         "Research on Continual Learning for Vision-Language Models.",
@@ -10,7 +10,7 @@
     },
     { 
       "title": "Machine Learning Engineer", 
-      "location": "Dcard Taiwan LTD. Manager: Ting-Hsuan Chao", 
+      "location": "Dcard Taiwan LTD. Manager: <a href=\"https://www.linkedin.com/in/chaojoel/?originalSubdomain=tw\" target=\"_blank\">Ting-Hsuan Chao</a>", 
       "year": "2022/11 - 2023/09",
       "description": [
         "Design a member-aware recommendation system. Save 10,000x space by hashing member id information.",
@@ -19,7 +19,7 @@
     },
     { 
       "title": "Research Development Intern", 
-      "location": "Microsoft AI R&D @ Bing Maps & Geospatial Team. Manager: Jason Hong", 
+      "location": "Microsoft AI R&D @ Bing Maps & Geospatial Team. Manager: <a href=\"https://www.linkedin.com/in/zhiqinghong/\" target=\"_blank\">Jason Hong</a>", 
       "year": "2021/12 - 2022/06",
       "description": [
         "Evaluate the performance of reverse geocoding offered by google, bing, and tomtom.",
@@ -28,7 +28,7 @@
     },
     { 
       "title": "Graduate Student Researcher", 
-      "location": "Computational Learning Lab. Advisor: Prof. Hsuan-Tien Lin", 
+      "location": "Computational Learning Lab. Advisor: Prof. <a href=\"https://www.csie.ntu.edu.tw/~htlin/\" target=\"_blank\">Hsuan-Tien Lin</a>", 
       "year": "2020/09 - 2022/11",
       "description": [
         "Research on Semi-Supervised Domain Adaptation.",

@@ -79,6 +79,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 120px;
   border: 8px solid #2c2f3f;
 }
+
 #header .profile h1 {
   font-size: 24px;
   margin: 0;
@@ -93,6 +94,10 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
 }
 #header .profile .social-links a {
+  font-family: "Sriracha", cursive;
+  font-weight: 400;
+  font-style: normal;
+
   font-size: 18px;
   display: inline-block;
   background: #212431;
