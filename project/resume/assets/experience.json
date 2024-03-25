@@ -1,0 +1,39 @@
+[
+    { 
+      "title": "Research Assistant", 
+      "location": "Vision Learning Lab. Advisor: Prof. Yu-Chiang Frank Wang", 
+      "year": "2022/11 - 2023/09",
+      "description": [
+        "Research on Continual Learning for Vision-Language Models.",
+        "Develop a selective knoweledge distillation algorithm to preserve both previously learned knowledge and zero-shot transferability for a VLM throughout the continual learning process."
+      ]
+    },
+    { 
+      "title": "Machine Learning Engineer", 
+      "location": "Dcard Taiwan LTD. Manager: Ting-Hsuan Chao", 
+      "year": "2022/11 - 2023/09",
+      "description": [
+        "Design a member-aware recommendation system. Save 10,000x space by hashing member id information.",
+        "Design a scalable recommendation system with members' sequential view history."
+      ]
+    },
+    { 
+      "title": "Research Development Intern", 
+      "location": "Microsoft AI R&D @ Bing Maps & Geospatial Team. Manager: Jason Hong", 
+      "year": "2021/12 - 2022/06",
+      "description": [
+        "Evaluate the performance of reverse geocoding offered by google, bing, and tomtom.",
+        "Asynchronously scrap the results, save twice more time, and keep the stability."
+      ]
+    },
+    { 
+      "title": "Graduate Student Researcher", 
+      "location": "Computational Learning Lab. Advisor: Prof. Hsuan-Tien Lin", 
+      "year": "2020/09 - 2022/11",
+      "description": [
+        "Research on Semi-Supervised Domain Adaptation.",
+        "Address Domain Adaptation as a Noisy Label Learning problem. Develop a dynamic algorithm to learn from the noisy source labels and <b>outperform state-of-the-art algorithms</b>.  <font color=\"red\">(CVPR'23)</font>"
+      ]
+    }
+  ]
+  

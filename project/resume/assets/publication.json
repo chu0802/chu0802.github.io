@@ -1,0 +1,18 @@
+[
+    {
+        "title": "Semi-Supervised Domain Adaptation with Source Label Adaptation",
+        "year": "June 2023",
+        "author": "<b>Yu-Chu Yu</b>, Hsuan-Tien Lin",
+        "conference": "IEEE/CVF Conference on Computer Vision and Pattern Recognition <b>(CVPR)</b>",
+        "arxivLink": "https://arxiv.org/abs/2302.02335",
+        "githubLink": "https://github.com/chu0802/SLA"
+    },
+    {
+        "title": "Select and Distill: Selective Dual-Teacher Knoweledge Transfer for Continual Learning on Vision-Language Models",
+        "year": "March 2024",
+        "author": "<b>Yu-Chu Yu</b>, Chi-Pin Huang, Jr-Jen Chen, Kai-Po Chang, Yung-Hsuan Lai, Fu-En Yang, Yu-Chiang Frank Wang",
+        "conference": "arXiv preprint",
+        "arxivLink": "https://arxiv.org/abs/2302.02335",
+        "githubLink": "https://github.com/chu0802/SLA"
+    }
+]
