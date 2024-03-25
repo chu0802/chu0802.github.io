@@ -127,8 +127,13 @@ document.addEventListener('DOMContentLoaded', function() {
       // Year
       const year = document.createElement('span');
       year.classList.add('publication-year');
-      year.textContent = publication.year;
+      year.textContent = `${publication.year}. `;
       publicationContent.appendChild(year);
+
+      const links = document.createElement('span');
+      links.classList.add('publication-links');
+      links.innerHTML = ` <a href="${publication.arxivLink}" target="_blank">[Paper Link]</a>.`;
+      publicationContent.appendChild(links);
 
       publicationDiv.appendChild(publicationContent);
 

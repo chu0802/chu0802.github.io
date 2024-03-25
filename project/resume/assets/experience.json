@@ -5,7 +5,7 @@
       "year": "2022/11 - 2023/09",
       "description": [
         "Research on Continual Learning for Vision-Language Models.",
-        "Develop a selective knoweledge distillation algorithm to preserve both previously learned knowledge and zero-shot transferability for a VLM throughout the continual learning process."
+        "Develop a selective knowledge distillation algorithm [1] to preserve both previously learned knowledge and zero-shot transferability for a VLM throughout the continual learning process."
       ]
     },
     { 
@@ -13,8 +13,8 @@
       "location": "Dcard Taiwan LTD. Manager: <a href=\"https://www.linkedin.com/in/chaojoel/?originalSubdomain=tw\" target=\"_blank\">Ting-Hsuan Chao</a>", 
       "year": "2022/11 - 2023/09",
       "description": [
-        "Design a member-aware recommendation system. Save 10,000x space by hashing member id information.",
-        "Design a scalable recommendation system with members' sequential view history."
+        "Design a recommendation system for a Taiwanese forum platform, serving over 15 million users with more than 10,000 posts per day.",
+        "Develop an interactive API to recommend posts to users on-the-fly (< 1.8 sec. for 95% requests) according to their previous behaviours."
       ]
     },
     { 
@@ -22,8 +22,7 @@
       "location": "Microsoft AI R&D @ Bing Maps & Geospatial Team. Manager: <a href=\"https://www.linkedin.com/in/zhiqinghong/\" target=\"_blank\">Jason Hong</a>", 
       "year": "2021/12 - 2022/06",
       "description": [
-        "Evaluate the performance of reverse geocoding offered by google, bing, and tomtom.",
-        "Asynchronously scrap the results, save twice more time, and keep the stability."
+        "Develop an asynchronous web crawler system to automatically evaluate the performance of reverse geocoding services provided by google, bing and tomtom."
       ]
     },
     { 
@@ -32,7 +31,7 @@
       "year": "2020/09 - 2022/11",
       "description": [
         "Research on Semi-Supervised Domain Adaptation.",
-        "Address Domain Adaptation as a Noisy Label Learning problem. Develop a dynamic algorithm to learn from the noisy source labels and <b>outperform state-of-the-art algorithms</b>.  <font color=\"red\">(CVPR'23)</font>"
+        "Address Domain Adaptation as a Noisy Label Learning problem. Develop a dynamic algorithm SLA [2] to learn from the noisy source labels and <b>outperform state-of-the-art algorithms</b>.  <font color=\"red\">(CVPR'23)</font>"
       ]
     }
   ]

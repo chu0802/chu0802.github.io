@@ -1,11 +1,10 @@
 [
     {
-        "title": "Select and Distill: Selective Dual-Teacher Knoweledge Transfer for Continual Learning on Vision-Language Models",
+        "title": "Select and Distill: Selective Dual-Teacher Knowledge Transfer for Continual Learning on Vision-Language Models",
         "year": "March 2024",
         "author": "<b>Yu-Chu Yu</b>, Chi-Pin Huang, Jr-Jen Chen, Kai-Po Chang, Yung-Hsuan Lai, Fu-En Yang, Yu-Chiang Frank Wang",
         "conference": "arXiv preprint",
-        "arxivLink": "https://arxiv.org/abs/2302.02335",
-        "githubLink": "https://github.com/chu0802/SLA"
+        "arxivLink": "https://arxiv.org/abs/2403.09296"
     },
     {
         "title": "Semi-Supervised Domain Adaptation with Source Label Adaptation",
