@@ -97,6 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function populatePublicationList(publications) {
     publications.forEach((publication, index) => {
       const publicationDiv = document.createElement('div');
+      publicationDiv.setAttribute('id', publication.abbr)
       publicationDiv.classList.add('publication');
 
       // Create and append publication number

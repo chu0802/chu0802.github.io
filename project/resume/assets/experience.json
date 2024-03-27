@@ -5,7 +5,7 @@
       "year": "2022/11 - 2023/09",
       "description": [
         "Research on Continual Learning for Vision-Language Models.",
-        "Develop a selective knowledge distillation algorithm [1] to preserve both previously learned knowledge and zero-shot transferability for a VLM throughout the continual learning process."
+        "Develop a selective knowledge distillation algorithm <a href=\"#sad\" class=\"reference-link\">1</a> to preserve both previously learned knowledge and zero-shot transferability for a VLM throughout the continual learning process."
       ]
     },
     { 
@@ -19,7 +19,7 @@
     },
     { 
       "title": "Research Development Intern", 
-      "location": "Microsoft AI R&D @ Bing Maps & Geospatial Team. Manager: <a href=\"https://www.linkedin.com/in/zhiqinghong/\" target=\"_blank\">Jason Hong</a>", 
+      "location": "Microsoft @ Bing Maps & Geospatial Team. Manager: <a href=\"https://www.linkedin.com/in/zhiqinghong/\" target=\"_blank\">Jason Hong</a>", 
       "year": "2021/12 - 2022/06",
       "description": [
         "Develop an asynchronous web crawler system to automatically evaluate the performance of reverse geocoding services provided by google, bing and tomtom."
@@ -31,7 +31,7 @@
       "year": "2020/09 - 2022/11",
       "description": [
         "Research on Semi-Supervised Domain Adaptation.",
-        "Address Domain Adaptation as a Noisy Label Learning problem. Develop a dynamic algorithm SLA [2] to learn from the noisy source labels and <b>outperform state-of-the-art algorithms</b>.  <font color=\"red\">(CVPR'23)</font>"
+        "Address Domain Adaptation as a Noisy Label Learning problem. Develop a dynamic algorithm SLA <a href=\"#sla\" class=\"reference-link\">2</a> to learn from the noisy source labels and <b>outperform state-of-the-art algorithms</b>.  <font color=\"red\">(CVPR'23)</font>"
       ]
     }
   ]
