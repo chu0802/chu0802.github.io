@@ -149,6 +149,10 @@ ul {
     size: A4;
     margin: 0;
   }
+
+  body {
+    font-size: 14px;
+  }
   
 } 
 
