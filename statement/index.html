@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statement of Purpose</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="header">
+    <span class="author">Yu-Chu Yu</span>
+    <span><a href="https://chuyu.org" target="_blank">https://chuyu.org</a></span>
+    <span><a href="mailto:r09922104@ntu.edu.tw">r09922104@ntu.edu.tw</a></span>
+</div>
+<div class="styled-line"></div>
+<h1>Statement of Purpose</h1>
+
+<p>My research goal is to develop machine learning (ML) and computer vision (CV) algorithms that are highly applicable to real-world scenarios. My research journey began during my graduate studies at National Taiwan University, where I was fortunate to be advised by Prof. Hsuan-Tien Lin. Currently, I have been pleasured to collaborate with Dr. Fu-En Yang and Prof. Yu-Chiang Frank Wang. I have contributed to two first-author publications [<span id="citation-sla-1" class="reference"></span>, <span id="citation-sad-1" class="reference"></span>], one of which is presented at CVPR 2023 [<span id="citation-sla-2" class="reference"></span>] and the other is under submission. In the following sections, I will provide a brief overview of my past research experiences and outline potential directions I plan to pursue in the future.</p>
+
+<h2>Past Research Experience</h2>
+
+<h3>Domain Adaptation</h3>
+<p><strong>Domain Adaptation (DA)</strong> is the first research topic that interests me due to its applicable assumption: The training and test data may drawn from different distributions. To tackle the potential domain shift issue, I developed my first research project under the supervision of Prof. Hsuan-Tien Lin and presented our work at CVPR'23 [<span id="citation-sla-3" class="reference"></span>]. We started from an intuitive observation: <div class="bounding-box">The best model for the target domain may not need to perfectly fit the source data, thus, source labels might not be the best ground truth to learn a great target model.</div> With this hypothesis, we approached DA as a Noisy Label Learning problem, with a massive amount of data with noisy labels (source labels) and many unlabeled data. We introduced a framework, <strong>Source Label Adaptation (SLA)</strong>, to dynamically adapt noisy source labels to be more suitable for the target domain. This source-to-target paradigm is entirely different from traditional target-to-source DA algorithms, allowing us to cooperate with previous state-of-the-art methods, leading to significant improvements.</p>
+
+<h3>Continual Learning for Vision-Language Models</h3>
+<p>After finishing my first project, I was impressed by the remarkable zero-shot generalization abilities of the current large-scale pre-trained vision-language models (VLMs). To enhance the versatility of VLMs, I started to explore Continual Learning for VLMs in collaboration with Prof. Yu-Chiang Frank Wang. The major challenge to continually fine-tuning a VLM is that it can not only forget its previously fine-tuned knowledge but also lose its original zero-shot transferability. To address this issue, we proposed a <strong>Selective Dual-Teacher Knowledge Transfer</strong> mechanism [<span id="citation-sad-2" class="reference"></span>] to distill knowledge from both the most recent fine-tuned model and the original pre-trained model. With access to a public reference dataset, we dynamically select an appropriate teacher source to preserve either previously learned knowledge or pre-trained knowledge. If the reference image aligns with the distribution of prior learned data, we distill knowledge from the most recent fine-tuned model. Conversely, if the image lies far from the previous distribution, we then select the pre-trained model to retain its original pre-trained knowledge. This dual-teacher selection mechanism ensures the robustness of VLMs allowing us to fine-tune on various datasets without losing both previously learned knowledge and pre-trained knowledge, presenting a more practical strategy for real-world applications.</p>
+
+<h2>Future Research Directions</h2>
+
+<p>In the future of my academic career, I am passionate about deploying machine learning algorithms in practical scenarios. Besides Image Recognition, I am particularly drawn to generative tasks such as multi-modal question answering / generation, which offer more direct applications in real-world settings. Upon these exciting research domains,  I believe that continual learning will still play a crucial role in developing agents that can act like a human being. Specifically, several recent works such as Continual Diffusion [<span id="citation-smith2023continual-1" class="reference"></span>], continual unlearning / forgetting [<span id="citation-zhao2024continual-1" class="reference"></span>] on diffusion models show significant promise. Moreover, I am also interested in enhancing the inference speed of diffusion models to make them more practical for real-world usage. Recently, several works (CM [<span id="citation-song2023consistency-1" class="reference"></span>], LCM [<span id="citation-luo2023latent-1" class="reference"></span>], LCM-Lora [<span id="citation-luo2023lcm-1" class="reference"></span>], CTM [<span id="citation-kim2023consistency-1" class="reference"></span>], DMD [<span id="citation-yin2023one-1" class="reference"></span>]) have reached one-step generation by distilling knowledge from a pre-trained diffusion model. Study on the fast generation capabilities of diffusion models for applications like text-to-image / video, image-to-image / video, and video-to-video holds great potential and contributes to the community.</p>
+<div id="references">
+    <h2>References</h2>
+    <ol id="referenceList">
+        <!-- References will be listed here -->
+    </ol>
+</div>
+
+
+</body>
+
+<script>
+    // BibTeX entries
+    var bibTeXEntries = {
+        sla: '@inproceedings{sla, author={Yu-Chu Yu and Hsuan-Tien Lin}, title={Semi-Supervised Domain Adaptation with Source Label Adaptation}, journal={IEEE/CVF Conference on Computer Vision and Patern Recognition (CVPR)}, year={June 2023}}',
+        sad: '@inproceedings{sad, author={Yu-Chu Yu and Chi-Ping Huang and Jr-Jen Chen and Kai-Po Chang and Yun-Hsuan Lai and Fu-En Yang and Yu-Chiang Frank Wang}, title={Select and Distill: Selective Dual-Teacher Knowledge Transfer for Continual Learning on Vision-Language Models}, journal={arXiv preprint}, year={March 2024}}',
+        song2023consistency: '@inproceedings{song2023consistency, title={Consistency Models}, author={Yang Song and Prafulla Dhariwal and Mark Chen and Ilya Sutskever}, journal={International Conference on Machine Learning}, year={2023}}',
+        luo2023latent: '@article{luo2023latent, title={Latent consistency models: Synthesizing high-resolution images with few-step inference}, author={Simian Luo and Yiqin Tan and Longbo Huang and Jian Li and Hang Zhao}, journal={arXiv preprint arXiv:2310.04378}, year={2023}}',
+        luo2023lcm: '@article{luo2023lcm, title={Lcm-lora: A universal stable-diffusion acceleration module}, author={Simian Luo  and Yiqin Tan and Suraj Patil and Daniel Gu and Patrick von Platen and Apolin Passosario and Longbo Huang and Jian Li and Hang Zhao}, journal={arXiv preprint arXiv:2311.05556}, year={2023}}',
+        kim2023consistency: '@inproceedings{kim2023consistency, title={Consistency Trajectory Models: Learning Probability Flow ODE Trajectory of Diffusion}, author={Dongjun Kim and Chieh-Hsin Lai and Wei-Hsiang Liao and Naoki Murata and Yuhta Takida and Toshimitsu Uesaka and Yutong He and Yuki Mitsufuji and Stefano Ermon}, journal={The Twelfth International Conference on Learning Representations}, year={2023}}',
+        yin2023one: '@article{yin2023one, title={One-step Diffusion with Distribution Matching Distillation}, author={Tianwei Yin and Michael Gharbi and Richard Zhang and Eli Shechtman and Fredo Durand and William T Freeman and Taesung Park}, journal={arXiv preprint arXiv:2311.18828}, year={2023}}',
+        smith2023continual: '@article{smith2023continual, title={Continual diffusion: Continual customization of text-to-image diffusion with c-lora}, author={James Seale Smith and Yen-Chang Hsu and Lingyu Zhang and Ting Hua and Zsolt Kira and Yilin Shen and Hongxia Jin}, journal={arXiv preprint arXiv:2304.06027}, year={2023}}',
+        zhao2024continual: '@article{zhao2024continual, title={Continual forgetting for pre-trained vision models}, author={Hongbo Zhao  and Bolin Ni and Haochen Wang and Junsong Fan and Fei Zhu and Yuxi Wang and Yuntao Chen and Gaofeng Meng and Zhaoxiang Zhang}, journal={arXiv preprint arXiv:2403.11530}, year={2024}}'
+    };
+
+    // Function to add reference to the reference list
+    function addReferenceToList(key, index, subidx) {
+        var referenceList = document.getElementById('referenceList');
+        var entry = parseBibTeXEntry(bibTeXEntries[key]);
+        var referenceText = entry.author + '. ';
+        referenceText += '"' + entry.title + '". ';
+        referenceText += `<em>${entry.journal}</em>` + ', ';
+        referenceText += entry.year + '.';
+        var listItem = document.createElement('li');
+
+        listItem.setAttribute('id', `reference-list-${key}`);
+        listItem.innerHTML = referenceText;
+        referenceList.appendChild(listItem);
+    }
+
+    // Function to parse BibTeX entry
+    function parseBibTeXEntry(entry) {
+        var parsedEntry = {};
+        var match = entry.match(/@(\w+)\s*{\s*([^,]+),((?:\s*[^,{}]+={[^{}]+},?)+)\s*}/);
+        if (match && match.length === 4) {
+            parsedEntry['type'] = match[1].trim();
+            parsedEntry['key'] = match[2].trim();
+            var fields = match[3].split(/\s*,\s*/);
+            fields.forEach(function(field) {
+                var keyValue = field.match(/\s*([^=]+)\s*=\s*{([^{}]+)}\s*/);
+                if (keyValue && keyValue.length === 3) {
+                    var key = keyValue[1].trim().toLowerCase();
+                    var value = keyValue[2].trim();
+                    // Parse authors separately
+                    if (key === 'author') {
+                        parsedEntry[key] = parseAuthors(value).join(", ");
+                    } else {
+                        // Remove surrounding quotes if present
+                        if (value.charAt(0) === '"' && value.charAt(value.length - 1) === '"') {
+                            value = value.substring(1, value.length - 1);
+                        }
+                        parsedEntry[key] = value;
+                    }
+                }
+            });
+        }
+        return parsedEntry;
+    }
+    
+    // Function to parse authors
+    function parseAuthors(authors) {
+        // Split authors by comma and trim each author
+        var authorList = authors.split('\ and\ ').map(function(author) {
+            if (author === "Yu-Chu Yu") {
+                return "<b>Yu-Chu Yu</b>"
+            }
+            return author.trim();
+        });
+        return authorList;
+    }
+
+    var citationElements = document.querySelectorAll('[id*="citation-"]');
+    var existing_ref = [];
+    citationElements.forEach(function(element, index) {
+        var key = element.id.split('-')[1];
+        var subidx = element.id.split('-')[2];
+
+        var absidx = 0
+
+        if (index === 0) {
+            addReferenceToList(key, index, subidx);
+            existing_ref.push(key);
+        }
+        else {
+            // Do something with each citation element
+            if (!existing_ref.includes(key)){
+                addReferenceToList(key, index, subidx);
+                existing_ref.push(key);
+                absidx = existing_ref.indexOf(key);
+            }
+            else {
+                absidx = existing_ref.indexOf(key);
+            }
+            
+        }
+
+        var citationItem = document.getElementById(`citation-${key}-${subidx}`);
+        var href = document.createElement('a');
+        href.setAttribute('href', `#reference-list-${key}`);
+        href.textContent = absidx + 1;
+        citationItem.appendChild(href);
+        
+    });
+</script>
+
+</body>
+</html>
+</html>
