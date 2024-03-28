@@ -1,3 +1,4 @@
+# Statement of Purpose
 My research goal is to develop machine learning (ML) and computer vision (CV) algorithms that are highly applicable to real-world scenarios. My research journey began during my graduate studies at National Taiwan University, where I was fortunate to be advised by Prof. Hsuan-Tien Lin. Currently, I have been pleasured to collaborate with Dr. Fu-En Yang and Prof. Yu-Chiang Frank Wang. I have contributed to two first-author publications, one of which is presented at CVPR 2023 and the other is under submission. In the following sections, I will provide a brief overview of my past research experiences and outline potential directions I plan to pursue in the future.
 
 ## Past Research Experience
