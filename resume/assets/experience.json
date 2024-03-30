@@ -2,7 +2,7 @@
     { 
       "title": "Research Assistant", 
       "location": "Vision Learning Lab. Advisor: Prof. <a href=\"http://vllab.ee.ntu.edu.tw/members.html\" target=\"_blank\">Yu-Chiang Frank Wang</a>", 
-      "year": "2022/11 - 2023/09",
+      "year": "2023/09 - Present",
       "description": [
         "Research on Continual Learning for Vision-Language Models.",
         "Develop a selective knowledge distillation algorithm <a href=\"#sad\" class=\"reference-link\">1</a> to preserve both previously learned knowledge and zero-shot transferability for a VLM throughout the continual learning process."
