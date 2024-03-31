@@ -72,7 +72,12 @@ document.addEventListener("DOMContentLoaded", function() {
                         iconDiv.innerHTML = `<img src="${file.url}" alt="${file.name}">`;
                     }
                     else {
-                        iconDiv.innerHTML = `<i class="bi bi-${iconMap[file.type.toLowerCase()]} text-info"></i>`;
+                        const fileType = file.type.toLowerCase();
+                        let icon = "file";
+                        if (iconMap.hasOwnProperty(fileType)){
+                            icon = iconMap[fileType];
+                        }
+                        iconDiv.innerHTML = `<i class="bi bi-${icon} text-info"></i>`;
                     }
                     console.log(file.size);
                     linkElement.href = file.url;
