@@ -81,6 +81,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     }
                     console.log(file.size);
                     linkElement.href = file.url;
+                    linkElement.target = '_blank';
                     linkElement.download = file.name;
                 }
                 
