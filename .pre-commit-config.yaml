@@ -1,0 +1,7 @@
+repos:
+  - repo: local
+    hooks:
+      - id: custom-script-file
+        name: custom-script-file
+        language: python
+        entry: bash -c 'python record_files_info.py' --
