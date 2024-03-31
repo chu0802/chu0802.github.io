@@ -1,0 +1,60 @@
+{
+    "dummyDir": {
+        "name": "dummyDir",
+        "size": "Directory",
+        "last_modified": "2024-03-31 12:14",
+        "files": {
+            "dummyFiles.txt": {
+                "name": "dummyFiles.txt",
+                "size": 14,
+                "last_modified": "2024-03-31 12:14",
+                "url": "resources/dummyDir/dummyFiles.txt",
+                "type": "txt"
+            },
+            "ddumyDir": {
+                "name": "ddumyDir",
+                "size": "Directory",
+                "last_modified": "2024-03-31 10:32",
+                "files": {
+                    "test2.txt": {
+                        "name": "test2.txt",
+                        "size": 10,
+                        "last_modified": "2024-03-31 10:32",
+                        "url": "resources/dummyDir/ddumyDir/test2.txt",
+                        "type": "txt"
+                    }
+                },
+                "url": "resources/dummyDir/ddumyDir"
+            },
+            "dummyImg.jpeg": {
+                "name": "dummyImg.jpeg",
+                "size": 461657,
+                "last_modified": "2024-03-31 12:14",
+                "url": "resources/dummyDir/dummyImg.jpeg",
+                "type": "jpeg"
+            }
+        },
+        "url": "resources/dummyDir"
+    },
+    "resume.pdf": {
+        "name": "resume.pdf",
+        "size": 101366,
+        "last_modified": "2024-03-31 08:00",
+        "url": "resources/resume.pdf",
+        "type": "pdf"
+    },
+    "taai2023.pdf": {
+        "name": "taai2023.pdf",
+        "size": 1668424,
+        "last_modified": "2024-03-09 18:23",
+        "url": "resources/taai2023.pdf",
+        "type": "pdf"
+    },
+    "test.txt": {
+        "name": "test.txt",
+        "size": 16,
+        "last_modified": "2024-03-31 10:10",
+        "url": "resources/test.txt",
+        "type": "txt"
+    }
+}
