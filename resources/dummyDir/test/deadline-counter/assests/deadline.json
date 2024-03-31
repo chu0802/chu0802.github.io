@@ -1,0 +1,64 @@
+{
+    "events": [
+        {
+            "name": "ECCV'24",
+            "deadline": {
+                "submission": "03/07/2024 23:00:00",
+                "review": "05/09/2024 22:00:00",
+                "rebuttal": "05/17/2024 22:00:00",
+                "decision": "07/01/2024 22:00:00",
+                "trip": "09/29/2024 10:00:00"
+            },
+            "timezone": "UTC+2",
+            "city": "Milan",
+            "country": "Italy",
+            "image_path": "assests/images/milan.jpg"
+        },
+        {
+            "name": "COLM'24",
+            "deadline": {
+                "submission": "03/29/2024 23:59:00",
+                "review": "05/24/2024 00:00:00",
+                "rebuttal": "05/30/2024 23:59:00",
+                "decision": "07/09/2024 23:59:00",
+                "trip": "10/07/2024 00:00:00"
+            },
+            "timezone": "UTC-12",
+            "city": "Philadelphia",
+            "country": "USA",
+            "image_path": "assests/images/upenn.jpeg"
+        },
+        {
+            "name": "NeurIPS'24",
+            "deadline": {
+                "submission": "05/22/2024 13:00:00",
+                "decision": "09/25/2024 16:00:00",
+                "trip": "12/09/2024 08:00:00"
+            },
+            "timezone": "PDT",
+            "city": "Vancouver",
+            "country": "Canada",
+            "image_path": "assests/images/vancouver.webp"
+        },
+        {
+            "name": "ICLR'24",
+            "deadline": {
+                "trip": "05/07/2024 08:00:00"
+            },
+            "timezone": "UTC+2",
+            "city": "Vienna",
+            "country": "Austria",
+            "image_path": "assests/images/viena.jpg"
+        },
+        {
+            "name": "CVPR'24",
+            "deadline": {
+                "trip": "06/19/2024 08:00:00"
+            },
+            "timezone": "PDT",
+            "city": "Seattle",
+            "country": "USA",
+            "image_path": "assests/images/seattle.jpg"
+        }
+    ]
+}

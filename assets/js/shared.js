@@ -14,8 +14,15 @@ document.addEventListener("DOMContentLoaded", function() {
         const iconMap = {
             "": "file", "txt": "filetype-txt", "html": "filetype-html",
             "pdf": "file-pdf", "json": "filetype-json", "yaml": "filetype-yml", "yml": "filetype-yml",
-            "gz": "file-zip", "zip": "file-zip", "ipynb": "filetype-py"
-        };
+            "gz": "file-zip", "zip": "file-zip", "ipynb": "filetype-py","py": "filetype-py",
+            "mp4": "filetype-video", "mp3": "filetype-audio", "wav": "filetype-audio",
+            "doc": "filetype-word", "docx": "filetype-word", "xls": "filetype-excel", "xlsx": "filetype-excel",
+            "ppt": "filetype-powerpoint", "pptx": "filetype-powerpoint", "csv": "filetype-csv",
+            "rar": "file-rar", "7z": "file-7z", "exe": "filetype-exe", "dll": "filetype-exe", "deb": "filetype-exe",
+            "iso": "filetype-iso", "img": "filetype-img", "bmp": "filetype-img", "gif": "filetype-img", "ico": "filetype-img", "jpeg": "filetype-img", "jpg": "filetype-img",
+            "js": "filetype-js", "css": "filetype-css", "scss": "filetype-scss", "sass": "filetype-scss", "less": "filetype-less", "php": "filetype-php", "java": "filetype-java",
+            "sql": "filetype-sql", "xml": "filetype-xml", "svg": "filetype-svg", "md": "filetype-markdown", "markdown": "filetype-markdown", "mdown": "filetype-markdown", "mkdn": "filetype-markdown", "mkd": "filetype-markdown", "mdf": "filetype-markdown", "mdwn": "filetype-markdown", "mdtxt": "filetype-markdown", "mdtext": "filetype-markdown", "mdr": "filetype-markdown", "ms": "filetype-markdown", "mst": "filetype-markdown", "me": "filetype-markdown"
+        }
 
         function getDict(jsonObj, path) {
             let value = jsonObj;

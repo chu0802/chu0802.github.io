@@ -1,0 +1,21 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.resume-output {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.editable {
+    cursor: pointer;
+}
+
+.editable:hover {
+    background-color: #f0f0f0;
+}

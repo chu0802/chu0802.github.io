@@ -3,7 +3,7 @@ from pathlib import Path
 import time
 import subprocess
 
-HTML_ROOT = "https://raw.githubusercontent.com/chu0802/chu0802.github.io/"
+HTML_ROOT = "https://chu0802.github.io/"
 
 def get_file_info(file_path):
     # Get file size
