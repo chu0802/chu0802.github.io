@@ -274,9 +274,23 @@
     },
     "resume.pdf": {
         "name": "resume.pdf",
-        "size": 101366,
-        "last_modified": "2024-03-31 08:00",
+        "size": 102191,
+        "last_modified": "2024-04-02 11:42",
         "url": "https://raw.githubusercontent.com/chu0802/chu0802.github.io/master/resources/resume.pdf",
+        "type": "pdf"
+    },
+    "ms_transcript.pdf": {
+        "name": "ms_transcript.pdf",
+        "size": 337739,
+        "last_modified": "2024-04-02 11:43",
+        "url": "https://raw.githubusercontent.com/chu0802/chu0802.github.io/master/resources/ms_transcript.pdf",
+        "type": "pdf"
+    },
+    "bs_transcript.pdf": {
+        "name": "bs_transcript.pdf",
+        "size": 719494,
+        "last_modified": "2024-03-26 05:51",
+        "url": "https://raw.githubusercontent.com/chu0802/chu0802.github.io/master/resources/bs_transcript.pdf",
         "type": "pdf"
     },
     "taai2023.pdf": {
