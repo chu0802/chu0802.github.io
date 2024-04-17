@@ -8,3 +8,5 @@
 2. [ICLR 2024 Easy Search](https://chuyu.org/ICLR2024-Easy-Search/)
 3. [AI Conference Deadline Counter](https://chuyu.org/project/deadline-counter)
 4. [CVPR 2024 Easy Search](https://chuyu.org/project/cvpr-search)
+5. [Quizlet](https://chuyu.org/project/quizlet)
+ 

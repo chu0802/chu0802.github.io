@@ -1,0 +1,18 @@
+[
+    {
+        "title": "Geothermal Energy",
+        "path": "books/vocab1.json"
+    },
+    {
+        "title": "The Allende Meteorite",
+        "path": "books/vocab2.json"
+    },
+    {
+        "title": "Urban Climates",
+        "path": "books/vocab3.json"
+    },
+    {
+        "title": "Distributions of Tropical Bee Colonies",
+        "path": "books/vocab4.json"
+    }
+]
