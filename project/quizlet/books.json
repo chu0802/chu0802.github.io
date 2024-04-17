@@ -14,5 +14,29 @@
     {
         "title": "Distributions of Tropical Bee Colonies",
         "path": "books/vocab4.json"
+    },
+    {
+        "title": "Crafts in the Ancient Near East",
+        "path":"books/vocab5.json"
+    },
+    {
+        "title": "Seventeenth-Century Dutch Agriculture",
+        "path":"books/vocab6.json"
+    },
+    {
+        "title": "The Birth of Photography",
+        "path":"books/vocab7.json"
+    },
+    {
+        "title": "Predator-Prey Cycles",
+        "path": "books/vocab8.json"
+    },
+    {
+        "title": "Spartina",
+        "path": "books/vocab9.json"
+    },
+    {
+        "title": "Early Saharan Pastoralists",
+        "path": "books/vocab10.json"
     }
 ]
