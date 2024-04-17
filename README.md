@@ -7,3 +7,4 @@
 1. [PTT Gossiping Analysis](https://chuyu.org/project/ptt-gossiping)
 2. [ICLR 2024 Easy Search](https://chuyu.org/ICLR2024-Easy-Search/)
 3. [AI Conference Deadline Counter](https://chuyu.org/project/deadline-counter)
+4. [CVPR 2024 Easy Search](https://chuyu.org/project/cvpr-search)
