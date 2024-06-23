@@ -48,10 +48,10 @@
                 "rebuttal": "09/09/2024 00:00:00",
                 "decision": "10/28/2024 00:00:00"
             },
-            "timezone": "PDT",
+            "timezone": "PT",
             "city": "Tucson",
             "country": "USA",
-            "image_path": "assets/image/wacv24.jpg"
+            "image_path": "assests/image/wacv24.jpg"
         },
         {
             "name": "AAAI'25",
@@ -61,10 +61,10 @@
                 "rebuttal": "11/08/2024 00:00:00",
                 "decision": "12/19/2024 00:00:00"
             },
-            "timezone": "PDT",
+            "timezone": "UTC-12",
             "city": "Philadelphia",
             "country": "USA",
-            "image_path": "assets/image/aaai25.jpg"
+            "image_path": "assests/image/aaai25.jpg"
         }
         
     ]
