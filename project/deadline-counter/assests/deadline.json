@@ -41,24 +41,31 @@
             "image_path": "assests/images/vancouver.webp"
         },
         {
-            "name": "ICLR'24",
+            "name": "WACV'24",
             "deadline": {
-                "trip": "05/07/2024 08:00:00"
-            },
-            "timezone": "UTC+2",
-            "city": "Vienna",
-            "country": "Austria",
-            "image_path": "assests/images/viena.jpg"
-        },
-        {
-            "name": "CVPR'24",
-            "deadline": {
-                "trip": "06/19/2024 08:00:00"
+                "submission": "07/15/2024 00:00:00",
+                "review": "08/30/2024 00:00:00",
+                "rebuttal": "09/09/2024 00:00:00",
+                "decision": "10/28/2024 00:00:00"
             },
             "timezone": "PDT",
-            "city": "Seattle",
+            "city": "Tucson",
             "country": "USA",
-            "image_path": "assests/images/seattle.jpg"
+            "image_path": "assets/image/wacv24.jpg"
+        },
+        {
+            "name": "AAAI'25",
+            "deadline": {
+                "submission": "08/15/2024 00:00:00",
+                "review": "10/14/2024 00:00:00",
+                "rebuttal": "11/08/2024 00:00:00",
+                "decision": "12/19/2024 00:00:00"
+            },
+            "timezone": "PDT",
+            "city": "Philadelphia",
+            "country": "USA",
+            "image_path": "assets/image/aaai25.jpg"
         }
+        
     ]
 }
