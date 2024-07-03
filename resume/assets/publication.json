@@ -2,9 +2,9 @@
     {
         "title": "Select and Distill: Selective Dual-Teacher Knowledge Transfer for Continual Learning on Vision-Language Models",
         "abbr": "sad",
-        "year": "March 2024",
+        "year": "September 2024",
         "author": "<b>Yu-Chu Yu</b>, Chi-Pin Huang, Jr-Jen Chen, Kai-Po Chang, Yung-Hsuan Lai, Fu-En Yang, Yu-Chiang Frank Wang",
-        "conference": "arXiv preprint",
+        "conference": "European Conference on Computer Vision <b>(ECCV)</b>",
         "arxivLink": "https://arxiv.org/abs/2403.09296"
     },
     {
