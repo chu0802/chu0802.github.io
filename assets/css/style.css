@@ -1111,3 +1111,8 @@ section {
 a:hover {
     text-decoration:none;
 }
+
+
+.resume-item ul li {
+  text-align: justify;
+}

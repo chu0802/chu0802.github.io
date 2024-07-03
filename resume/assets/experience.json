@@ -5,7 +5,7 @@
       "year": "2023/09 - Present",
       "description": [
         "Research on Continual Learning for Vision-Language Models.",
-        "Develop a selective knowledge distillation algorithm <a href=\"#sad\" class=\"reference-link\">1</a> to preserve both previously learned knowledge and zero-shot transferability for a VLM throughout the continual learning process."
+        "Develop a selective knowledge distillation algorithm <a href=\"#sad\" class=\"reference-link\">1</a> to preserve both previously learned knowledge and zero-shot transferability for a VLM throughout the continual learning process. <font color=\"red\">(ECCV'24)</font>"
       ]
     },
     { 

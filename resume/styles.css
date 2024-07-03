@@ -184,3 +184,11 @@ ul {
     font-size: 12px;
   }
 }
+
+#publication {
+  text-align: justify;
+}
+
+.item-list {
+  text-align: justify;
+}
