@@ -65,6 +65,13 @@ document.addEventListener('DOMContentLoaded', () => {
         'images/results/order_1/order_1_7th-task_stanford-cars.svg',
         'images/results/order_1/order_1_8th-task_ucf-101.svg'
     ];
+    const dots = document.getElementById('dots');
+
+    imagePaths.forEach(() => {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        dots.appendChild(dot);
+    });
     const carouselTrack = document.getElementById('carouselTrack');
 
     const addImageToTrack = (path, isClone = false) => {
@@ -105,9 +112,16 @@ document.addEventListener('DOMContentLoaded', () => {
     carouselTrack.style.transform = `translateX(-${(currentIndex + 1) * slideWidth}px)`; // Start from the first real image
 
     const updateCarousel = () => {
-
+        const allDots = document.querySelectorAll('.dot');
         const buttons = document.querySelectorAll('.carousel-button');
 
+        allDots.forEach((dot, index) => {
+            dot.classList.remove('active');
+            if (index === (currentIndex + 1) % imagePaths.length) {
+                dot.classList.add('active')
+            }
+        })
+        
         buttons.forEach((button, index) => {
             button.classList.add('disable');
         });
@@ -164,6 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.prevSlide = prevSlide;
 
     document.querySelectorAll('.carousel-slide')[currentIndex+2].classList.add('active');
+    document.querySelectorAll('.dot')[(currentIndex + 1) % imagePaths.length].classList.add('active');
 });
 
 function showResults() {
