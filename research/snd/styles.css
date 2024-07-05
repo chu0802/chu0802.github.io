@@ -43,23 +43,6 @@ body {
     width: 60%;
 }
 
-.animated-button {
-    display: inline-block;
-    padding: 1em 2em;
-    margin-top: 1em;
-    font-size: 1em;
-    color: white;
-    background-color: #1c92d2;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.animated-button:hover {
-    background-color: #0b74c8;
-    transform: scale(1.1);
-}
 
 .animated-section {
     opacity: 0;
@@ -73,9 +56,6 @@ body {
     transition: transform 0.3s;
 }
 
-.animated-section.visible:hover {
-    transform: scale(1.01);
-}
 
 .author-section {
     max-width: 100%;
@@ -160,7 +140,7 @@ body {
     width: 50vw;
     height: auto;
     margin: 10px;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 
 .thumbnail:hover {
@@ -193,7 +173,7 @@ body {
 }
 
 .carousel-track {
-    width: 800px;
+    width: 100%;
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
@@ -267,8 +247,16 @@ body {
     opacity: 1;
 }
 
+.carousel-slide.active img:hover {
+    transform: scale(1.05);
+}
+
 .carousel-slide:not(.active) img {
     opacity: 0.6;
+}
+
+.carousel-slide:not(.active) img:hover {
+    transform: scale(calc(0.5*1.05));
 }
 
 .carousel-button.left {
@@ -286,12 +274,22 @@ body {
 }
 
 #dots .dot {
+    cursor: pointer;
     margin: 0 0.3em;
     border-radius: 50%;
     width: 10px;
     height: 10px;
     background-color: rgba(0, 0, 0, 0.5);
     transition: 0.3s;
+}
+#dots .dot:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: scale(1.2);
+}
+
+#dots .dot:active {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: scale(0.95);
 }
 
 #dots .dot.active {
@@ -373,16 +371,16 @@ body {
 }
 
 .button {
-    width: 100px;
-    height: 40px;
+    width: 7em;
+    height: 2.5em;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     margin: 0 2em;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.6);
     color: white;
     text-decoration: none;
-    border-radius: 50px;
+    border-radius: 1em;
     font-size: 1em;
     font-weight: 500;
     transition: all 0.3s ease;
@@ -434,3 +432,24 @@ body {
     width: 150%;
     height: 150%;
 }
+
+@media screen and (max-width: 600px) {
+    .content {
+      width: 100vw;
+      font-size: 8px;
+    }
+    #dots .dot {
+        width: 4px;
+        height: 4px;
+    }
+}
+
+@media (max-width: 840px) {
+    .content {
+      font-size: 10px;
+    }
+    #dots .dot {
+        width: 6px;
+        height: 6px;
+    }
+  }

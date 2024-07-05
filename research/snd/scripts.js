@@ -67,9 +67,10 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
     const dots = document.getElementById('dots');
 
-    imagePaths.forEach(() => {
+    imagePaths.forEach((path, index) => {
         const dot = document.createElement('div');
         dot.classList.add('dot');
+        dot.setAttribute("dotID", index);
         dots.appendChild(dot);
     });
     const carouselTrack = document.getElementById('carouselTrack');
@@ -176,6 +177,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.nextSlide = nextSlide;
     window.prevSlide = prevSlide;
+
+    document.querySelectorAll('.dot').forEach((dot, index) => {
+        const dotID = parseInt(dot.getAttribute("dotID"))
+        dot.addEventListener("click", function(){
+            currentIndex = dotID - 1;
+            updateCarousel();
+        });
+    });
 
     document.querySelectorAll('.carousel-slide')[currentIndex+2].classList.add('active');
     document.querySelectorAll('.dot')[(currentIndex + 1) % imagePaths.length].classList.add('active');
