@@ -436,7 +436,7 @@ body {
 @media only screen and (max-width: 600px) {
     .content {
       width: 100vw;
-      font-size: 8px;
+      font-size: 6px;
     }
     #dots .dot {
         width: 4px;
