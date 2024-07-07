@@ -1,4 +1,11 @@
 {
+    "icon.png": {
+        "name": "icon.png",
+        "size": 13881,
+        "last_modified": "2024-07-07 16:30",
+        "url": "https://raw.githubusercontent.com/chu0802/chu0802.github.io/master/resources/icon.png",
+        "type": "png"
+    },
     "dummyDir": {
         "name": "dummyDir",
         "size": "Directory",
