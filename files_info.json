@@ -1,11 +1,4 @@
 {
-    "icon.png": {
-        "name": "icon.png",
-        "size": 13881,
-        "last_modified": "2024-07-07 16:30",
-        "url": "https://raw.githubusercontent.com/chu0802/chu0802.github.io/master/resources/icon.png",
-        "type": "png"
-    },
     "dummyDir": {
         "name": "dummyDir",
         "size": "Directory",
@@ -279,6 +272,13 @@
         },
         "url": "resources/dummyDir"
     },
+    "icon-1024.png": {
+        "name": "icon-1024.png",
+        "size": 167992,
+        "last_modified": "2024-07-07 16:33",
+        "url": "https://raw.githubusercontent.com/chu0802/chu0802.github.io/master/resources/icon-1024.png",
+        "type": "png"
+    },
     "resume.pdf": {
         "name": "resume.pdf",
         "size": 102394,
@@ -306,5 +306,12 @@
         "last_modified": "2024-03-09 18:23",
         "url": "https://raw.githubusercontent.com/chu0802/chu0802.github.io/master/resources/taai2023.pdf",
         "type": "pdf"
+    },
+    "icon-128.png": {
+        "name": "icon-128.png",
+        "size": 13881,
+        "last_modified": "2024-07-07 16:30",
+        "url": "https://raw.githubusercontent.com/chu0802/chu0802.github.io/master/resources/icon-128.png",
+        "type": "png"
     }
 }
