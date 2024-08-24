@@ -498,8 +498,10 @@ section {
 # Portfolio
 --------------------------------------------------------------*/
 .portfolio .portfolio-item {
+  height: 250px;
   margin-bottom: 30px;
 }
+
 .portfolio #portfolio-flters {
   padding: 0;
   margin: 0 auto 35px auto;
@@ -1115,4 +1117,9 @@ a:hover {
 
 .resume-item ul li {
   text-align: justify;
+}
+
+#publication .section-title .row {
+  max-height: 200px;
+  height: 200px;
 }
