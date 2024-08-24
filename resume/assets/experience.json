@@ -1,11 +1,10 @@
 [
     { 
       "title": "Research Assistant", 
-      "location": "Vision Learning Lab. Advisor: Prof. <a href=\"http://vllab.ee.ntu.edu.tw/members.html\" target=\"_blank\">Yu-Chiang Frank Wang</a>", 
+      "location": "Vision Learning Lab @ National Taiwan University. Advisor: Prof. <a href=\"http://vllab.ee.ntu.edu.tw/members.html\" target=\"_blank\">Yu-Chiang Frank Wang</a>", 
       "year": "2023/09 - Present",
       "description": [
-        "Research on Continual Learning for Vision-Language Models.",
-        "Develop a selective knowledge distillation algorithm <a href=\"#sad\" class=\"reference-link\">1</a> to preserve both previously learned knowledge and zero-shot transferability for a VLM throughout the continual learning process. <font color=\"red\">(ECCV'24)</font>"
+        "Research on Continual Learning for Vision-Language Models, develop a selective knowledge distillation algorithm <a href=\"#sad\" class=\"reference-link\">2</a> to preserve both previous knowledge and zero-shot transferability for VLMs. <font color=\"red\">(ECCV'24)</font>"
       ]
     },
     { 
@@ -28,10 +27,10 @@
     { 
       "title": "Graduate Student Researcher", 
       "location": "Computational Learning Lab. Advisor: Prof. <a href=\"https://www.csie.ntu.edu.tw/~htlin/\" target=\"_blank\">Hsuan-Tien Lin</a>", 
-      "year": "2020/09 - 2022/11",
+      "year": "2020/09 - 2023/01",
       "description": [
         "Research on Semi-Supervised Domain Adaptation.",
-        "Address Domain Adaptation as a Noisy Label Learning problem. Develop a dynamic algorithm SLA <a href=\"#sla\" class=\"reference-link\">2</a> to learn from the noisy source labels and <b>outperform state-of-the-art algorithms</b>.  <font color=\"red\">(CVPR'23)</font>"
+        "Address Domain Adaptation as a Noisy Label Learning problem. Develop a dynamic algorithm SLA <a href=\"#sla\" class=\"reference-link\">3</a> to learn from the noisy source labels and <b>outperform state-of-the-art algorithms</b>.  <font color=\"red\">(CVPR'23)</font>"
       ]
     }
   ]

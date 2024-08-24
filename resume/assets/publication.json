@@ -1,5 +1,13 @@
 [
     {
+        "title": "ReXTime: A Benchmark Suite for Reasoning-Across-Time in Videos",
+        "abbr": "rextime",
+        "year": "June 2024",
+        "author": "Jr-Jen Chen, Yu-Chien Liao, Hsi-Che Lin, <b>Yu-Chu Yu</b>, Yen-Chun Chen, Yu-Chiang Frank Wang",
+        "conference": "arXiv preprint",
+        "arxivLink": "https://arxiv.org/abs/2406.19392"
+    },
+    {
         "title": "Select and Distill: Selective Dual-Teacher Knowledge Transfer for Continual Learning on Vision-Language Models",
         "abbr": "sad",
         "year": "September 2024",
