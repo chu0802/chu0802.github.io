@@ -65,6 +65,20 @@
             "city": "Philadelphia",
             "country": "USA",
             "image_path": "assests/images/aaai25.jpg"
+        },
+        {
+            "name": "CVPR'25",
+            "deadline": {
+                "submission": "11/14/2024 01:59:00",
+                "review": "01/23/2025 01:59:00",
+                "rebuttal": "01/30/2024 01:59:00",
+                "decision": "02/26/2024 01:59:00",
+                "trip": "06/10/2025 08:00:00"
+            },
+            "timezone": "UTC-6",
+            "city": "Nashville",
+            "country": "USA",
+            "image_path": "assests/images/cvpr25.jpg"
         }
         
     ]
