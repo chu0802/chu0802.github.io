@@ -1,4 +1,13 @@
 [
+    {
+      "title": "Visiting Student",
+      "location": "University of California, Merced. Advisor: Prof. <a href=\"https://faculty.ucmerced.edu/mhyang/\" target=\"_blank\">Ming-Hsuan Yang</a>",
+      "year": "2024/04 - Present",
+      "description": [
+        "Research on 3D articulated object placement with affordance.", 
+        "Develop a pipeline to synthesize 3D articulated objects with plausible interaction with the environment."
+      ]
+    },
     { 
       "title": "Research Assistant", 
       "location": "Vision Learning Lab @ National Taiwan University. Advisor: Prof. <a href=\"http://vllab.ee.ntu.edu.tw/members.html\" target=\"_blank\">Yu-Chiang Frank Wang</a>", 

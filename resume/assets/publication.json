@@ -2,9 +2,9 @@
     {
         "title": "ReXTime: A Benchmark Suite for Reasoning-Across-Time in Videos",
         "abbr": "rextime",
-        "year": "June 2024",
+        "year": "December 2024",
         "author": "Jr-Jen Chen, Yu-Chien Liao, Hsi-Che Lin, <b>Yu-Chu Yu</b>, Yen-Chun Chen, Yu-Chiang Frank Wang",
-        "conference": "arXiv preprint",
+        "conference": "Neural Information Processing Systems <b>(NeurIPS)</b>",
         "arxivLink": "https://arxiv.org/abs/2406.19392"
     },
     {
