@@ -1,11 +1,11 @@
 [
     {
-      "title": "Visiting Student",
+      "title": "Visiting Student Researcher",
       "location": "University of California, Merced. Advisor: Prof. <a href=\"https://faculty.ucmerced.edu/mhyang/\" target=\"_blank\">Ming-Hsuan Yang</a>",
       "year": "2024/04 - Present",
       "description": [
-        "Research on 3D articulated object placement with affordance.", 
-        "Develop a pipeline to synthesize 3D articulated objects with plausible interaction with the environment."
+        "Research on 3D articulated objects synthesis with affordance.", 
+        "Develop an affordance-aware pipeline to synthesize 3D articulated objects."
       ]
     },
     { 

@@ -50,22 +50,28 @@ document.addEventListener('DOMContentLoaded', function() {
   function populateList(data, list) {
     data.forEach(item => {
       const li = document.createElement('li');
+      const itemOverview = document.createElement('div');
       const itemInfo = document.createElement('div');
       const itemTitle = document.createElement('div');
       const itemYear = document.createElement('div');
       const itemDescription = document.createElement('div');
       const itemLocation = document.createElement('div');
 
+      itemOverview.classList.add('item-overview');
       itemInfo.classList.add('item-info');
       itemTitle.classList.add('item-title');
       itemYear.classList.add('item-year');
       itemDescription.classList.add('item-description');
       itemLocation.classList.add('item-location')
 
-      itemTitle.textContent = item.title;
-      itemYear.textContent = item.year;
-      itemLocation.innerHTML = item.location;
-
+      if (item.overview) {
+        itemOverview.textContent = item.overview;
+      }
+      if (item.title) {
+        itemTitle.textContent = item.title;
+        itemYear.textContent = item.year;
+        itemLocation.innerHTML = item.location;
+      }
       
       if (Array.isArray(item.description)) {
         // If description is an array of strings
@@ -90,12 +96,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
       itemInfo.appendChild(itemTitle);
       itemInfo.appendChild(itemYear);
-
-
-      li.appendChild(itemInfo);
-      li.appendChild(itemLocation);
-      li.appendChild(itemDescription);
       
+      if (item.overview) {
+        li.appendChild(itemOverview);
+      }
+      if (item.title) {
+        li.appendChild(itemInfo);
+        li.appendChild(itemLocation);
+      }  
+      if (item.description) {
+        li.appendChild(itemDescription);
+      }
       list.appendChild(li);
     });
   }
