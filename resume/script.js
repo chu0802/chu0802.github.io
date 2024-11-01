@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const teachingList = document.getElementById('teaching-list');
   const publicationList = document.getElementById('publication-list');
   const awardList = document.getElementById('award-list');
+  const serviceList = document.getElementById('service-list');
   // Load experience data
   fetch('assets/experience.json')
     .then(response => response.json())
@@ -40,6 +41,11 @@ document.addEventListener('DOMContentLoaded', function() {
   fetch('assets/award.json')
   .then(response => response.json())
   .then(data => populateList(data, awardList));
+
+  // Load service data
+  fetch('assets/service.json')
+  .then(response => response.json())
+  .then(data => populateList(data, serviceList));
 
   function populateList(data, list) {
     data.forEach(item => {
