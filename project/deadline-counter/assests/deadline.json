@@ -1,34 +1,6 @@
 {
     "events": [
         {
-            "name": "ECCV'24",
-            "deadline": {
-                "submission": "03/07/2024 23:00:00",
-                "review": "05/09/2024 22:00:00",
-                "rebuttal": "05/17/2024 22:00:00",
-                "decision": "07/01/2024 22:00:00",
-                "trip": "09/29/2024 10:00:00"
-            },
-            "timezone": "UTC+2",
-            "city": "Milan",
-            "country": "Italy",
-            "image_path": "assests/images/milan.jpg"
-        },
-        {
-            "name": "COLM'24",
-            "deadline": {
-                "submission": "03/29/2024 23:59:00",
-                "review": "05/24/2024 00:00:00",
-                "rebuttal": "05/30/2024 23:59:00",
-                "decision": "07/09/2024 23:59:00",
-                "trip": "10/07/2024 00:00:00"
-            },
-            "timezone": "UTC-12",
-            "city": "Philadelphia",
-            "country": "USA",
-            "image_path": "assests/images/upenn.jpeg"
-        },
-        {
             "name": "NeurIPS'24",
             "deadline": {
                 "submission": "05/22/2024 13:00:00",
@@ -79,7 +51,16 @@
             "city": "Nashville",
             "country": "USA",
             "image_path": "assests/images/cvpr25.jpg"
+        },
+        {
+            "name": "ICML'25",
+            "deadline": {
+                "submission": "01/31/2025 11:59:00"
+            },
+            "timezone": "UTC+0",
+            "city": "Vancouver",
+            "country": "Cananda",
+            "image_path": "assests/images/vancouver.webp"
         }
-        
     ]
 }
