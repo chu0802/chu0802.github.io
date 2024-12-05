@@ -1,5 +1,13 @@
 [
     {
+        "title": "Towards Affordance-Aware Articulation Synthesis for Rigged Objects",
+        "abbr": "a3syn",
+        "year": "December 2024",
+        "author": "<b>Yu-Chu Yu</b>, Chieh Hubert Lin, Hsin-Yin Lee, Chaoyang Wang, Yu-Chiang Frank Wang, Ming-Hsuan Yang",
+        "conference": "arXiv preprint",
+        "arxivLink": "https://chuyu.org"
+    },
+    {
         "title": "ReXTime: A Benchmark Suite for Reasoning-Across-Time in Videos",
         "abbr": "rextime",
         "year": "December 2024",
