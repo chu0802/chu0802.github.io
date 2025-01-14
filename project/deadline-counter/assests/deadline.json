@@ -1,31 +1,6 @@
 {
     "events": [
         {
-            "name": "NeurIPS'24",
-            "deadline": {
-                "submission": "05/22/2024 13:00:00",
-                "decision": "09/25/2024 16:00:00",
-                "trip": "12/09/2024 08:00:00"
-            },
-            "timezone": "PDT",
-            "city": "Vancouver",
-            "country": "Canada",
-            "image_path": "assests/images/vancouver.webp"
-        },
-        {
-            "name": "WACV'24",
-            "deadline": {
-                "submission": "07/15/2024 00:00:00",
-                "review": "08/30/2024 00:00:00",
-                "rebuttal": "09/09/2024 00:00:00",
-                "decision": "10/28/2024 00:00:00"
-            },
-            "timezone": "PDT",
-            "city": "Tucson",
-            "country": "USA",
-            "image_path": "assests/images/wacv24.jpg"
-        },
-        {
             "name": "AAAI'25",
             "deadline": {
                 "submission": "08/15/2024 23:59:00",
@@ -61,6 +36,20 @@
             "city": "Vancouver",
             "country": "Cananda",
             "image_path": "assests/images/vancouver.webp"
+        },
+        {
+            "name": "ICCV'25",
+            "deadline": {
+                "submission": "03/07/2025 23:59:00",
+                "review": "05/10/2025 03:59:00",
+                "rebuttal": "05/16/2025 23:59:00",
+                "decision": "06/21/2025 03:59:00",
+                "trip": "10/20/2025 03:59:00"
+            },
+            "timezone": "UTC-12",
+            "city": "Hawaii",
+            "country": "USA",
+            "image_path": "assests/images/iccv25.jpg"
         }
     ]
 }
