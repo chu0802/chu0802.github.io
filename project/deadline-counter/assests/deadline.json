@@ -41,12 +41,12 @@
             "name": "ICCV'25",
             "deadline": {
                 "submission": "03/07/2025 23:59:00",
-                "review": "05/10/2025 03:59:00",
+                "review": "05/10/2025 23:59:00",
                 "rebuttal": "05/16/2025 23:59:00",
-                "decision": "06/21/2025 03:59:00",
-                "trip": "10/20/2025 03:59:00"
+                "decision": "06/21/2025 23:59:00",
+                "trip": "10/20/2025 10:00:00"
             },
-            "timezone": "UTC-12",
+            "timezone": "UTC-8",
             "city": "Hawaii",
             "country": "USA",
             "image_path": "assests/images/iccv25.jpg"
