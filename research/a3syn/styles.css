@@ -353,7 +353,7 @@ body {
 .modal-content {
     display: block;
     max-width: 90%;
-    max-height: 80%;
+    max-height: 90%;
     margin: auto;
     border: 2px solid #fff;
 }
