@@ -87,7 +87,7 @@ body {
 }
 
 .affiliations span {
-    margin: 0em 1.3em 0em 1.3em;
+    margin: 0em 0.5em 0em 0.5em;
 }
 
 .authors a {
@@ -123,6 +123,10 @@ body {
 
 .authors .snap, .affiliations .snap {
     color: rgba(214, 111, 255, 0.713);
+}
+
+.authors .yonsei, .affiliations .yonsei {
+    color: rgba(16, 14, 154, 0.8);
 }
 
 .authors a:hover {
