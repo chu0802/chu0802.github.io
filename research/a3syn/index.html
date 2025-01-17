@@ -67,24 +67,6 @@
                 Rigged objects are commonly used in artist pipelines, as they can flexibly adapt to different scenes and postures. However, articulating the rigs into realistic affordance-aware postures (e.g., following the context, respecting the physics and the personalities of the object) remains time-consuming and heavily relies on human labor from experienced artists. In this paper, we tackle the novel problem and design <span class="highlight">A3Syn</span>. With a given context, such as the environment mesh and a text prompt of the desired posture, <span class="highlight">A3Syn</span> synthesizes articulation parameters for arbitrary and open-domain rigged objects obtained from the Internet. The task is incredibly challenging due to the lack of training data, and we do not make any topological assumptions about the open-domain rigs. We propose using 2D inpainting diffusion model and several control techniques to synthesize in-context affordance information. Then, we develop an efficient bone correspondence alignment using a combination of differentiable rendering and semantic correspondence. <span class="highlight">A3Syn</span> has stable convergence, completes in minutes, and synthesizes plausible affordance on different combinations of in-the-wild object rigs and scenes. 
             </p>
         </div>
-<!-- 
-        <div class="section animated-section" id="gallery">
-            <h2>Evaluation of Our Proposed Framework</h2>
-            <div class="carousel">
-                <button class="carousel-button left" onclick="prevSlide()">&#10094;</button>
-                <div class="carousel-track-container">
-                    <div class="carousel-track" id="carouselTrack">
-                    </div>
-                </div>
-                <button class="carousel-button right" onclick="nextSlide()">&#10095;</button>
-                
-            </div>
-            <div id="dots"></div>
-            <p>
-                Take adventage from dual-teacher VLMs, our proposed framework, <b><i>Selective Dual-Teacher Knowledge Transfer (S&D)</i></b>, successfully prevents catastrophic forgetting on previously learned datasets and preserves the original zero-shot capability for unseen data.
-            </p>
-        </div> 
--->
 
         <div class="section animated-section">
             <h2>Overview</h2>
@@ -104,18 +86,34 @@
             <h2>Results</h2>
 
             <div class="video-grid">
-                <video src="results/01_rabbit_jump_chair.mp4" autoplay muted loop></video>
-                <video src="results/02_fox_jump_chair.mp4" autoplay muted loop></video>
-                <video src="results/03_shiba_jump_chair.mp4" autoplay muted loop></video>
-                <video src="results/04_fox_bridge.mp4" autoplay muted loop></video>
-                <video src="results/05_cow_bridge.mp4" autoplay muted loop></video>
-                <video src="results/06_horse_bridge.mp4" autoplay muted loop></video>
-                <video src="results/07_cat_stairs.mp4" autoplay muted loop></video>
-                <video src="results/08_shiba_stairs.mp4" autoplay muted loop></video>
-                <video src="results/09_horse_stairs.mp4" autoplay muted loop></video>
-                <video src="results/10_fox_tree.mp4" autoplay muted loop></video>
-                <video src="results/11_cat_tree.mp4" autoplay muted loop></video>
-                <video src="results/12_shiba_tree.mp4" autoplay muted loop></video>
+                <div class="grid-item description">
+                    <img src="results/kyoto-chairs.png">
+                    <p>Jumping down from a wooden chair to the ground.</p>
+                </div>
+                <video class="grid-item" src="results/01_rabbit_jump_chair.mp4" autoplay muted loop></video>
+                <video class="grid-item" src="results/02_fox_jump_chair.mp4" autoplay muted loop></video>
+                <video class="grid-item" src="results/03_shiba_jump_chair.mp4" autoplay muted loop></video>
+                <div class="grid-item description">
+                    <img src="results/kyoto-bridge.png">
+                    <p>Running on a wooden bridge.</p>
+                </div>
+                <video class="grid-item" src="results/04_fox_bridge.mp4" autoplay muted loop></video>
+                <video class="grid-item" src="results/05_cow_bridge.mp4" autoplay muted loop></video>
+                <video class="grid-item" src="results/06_horse_bridge.mp4" autoplay muted loop></video>
+                <div class="grid-item description">
+                    <img src="results/venice-stairs.png">
+                    <p>Climbing stairs.</p>
+                </div>
+                <video class="grid-item" src="results/07_cat_stairs.mp4" autoplay muted loop></video>
+                <video class="grid-item" src="results/08_shiba_stairs.mp4" autoplay muted loop></video>
+                <video class="grid-item" src="results/09_horse_stairs.mp4" autoplay muted loop></video>
+                <div class="grid-item description">
+                    <img src="results/venice-tree.png">
+                    <p>Climbing a tree.</p>
+                </div>
+                <video class="grid-item" src="results/10_fox_tree.mp4" autoplay muted loop></video>
+                <video class="grid-item" src="results/11_cat_tree.mp4" autoplay muted loop></video>
+                <video class="grid-item" src="results/12_shiba_tree.mp4" autoplay muted loop></video>
             </div>
 
             <p>
