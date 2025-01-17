@@ -52,7 +52,7 @@
 
         <div class="section animated-section">
             <h2>Demo</h2>
-            <video src="images/final_compress.mp4" width="80%" max-width="960px" autoplay muted loop></video>
+            <video class="thumbnail" src="images/final_compress.mp4" width="80%" max-width="960px" style="border-radius: 1em;" autoplay muted loop></video>
             <p>
                 Given arbitrary scene and open-domain rigged objects, <span class="highlight">A3Syn</span> synthesizes articulation that respects the affordance and context.
             </p>
@@ -70,7 +70,9 @@
 
         <div class="section animated-section">
             <h2>Overview</h2>
+
             <img src="images/method.svg" class="thumbnail">
+            
             <p>
                 <b>Left.</b> Our <span class="highlight">A3Syn</span> takes four inputs: The scene geometry, a rigged object, a text prompt describes the desired articulation, and an approximate location to perform the pose. The goal is to solve the object transformation and articulation parameters. 
             </p>
@@ -87,33 +89,33 @@
 
             <div class="video-grid">
                 <div class="grid-item description">
-                    <img src="results/kyoto-chairs.png">
+                    <img class="thumbnail" src="results/kyoto-chairs.png">
                     <p>Jumping down from a wooden chair to the ground.</p>
                 </div>
-                <video class="grid-item" src="results/01_rabbit_jump_chair.mp4" autoplay muted loop></video>
-                <video class="grid-item" src="results/02_fox_jump_chair.mp4" autoplay muted loop></video>
-                <video class="grid-item" src="results/03_shiba_jump_chair.mp4" autoplay muted loop></video>
+                <video class="grid-item thumbnail" src="results/01_rabbit_jump_chair.mp4" autoplay muted loop></video>
+                <video class="grid-item thumbnail" src="results/02_fox_jump_chair.mp4" autoplay muted loop></video>
+                <video class="grid-item thumbnail" src="results/03_shiba_jump_chair.mp4" autoplay muted loop></video>
                 <div class="grid-item description">
-                    <img src="results/kyoto-bridge.png">
+                    <img class="thumbnail" src="results/kyoto-bridge.png">
                     <p>Running on a wooden bridge.</p>
                 </div>
-                <video class="grid-item" src="results/04_fox_bridge.mp4" autoplay muted loop></video>
-                <video class="grid-item" src="results/05_cow_bridge.mp4" autoplay muted loop></video>
-                <video class="grid-item" src="results/06_horse_bridge.mp4" autoplay muted loop></video>
+                <video class="grid-item thumbnail" src="results/04_fox_bridge.mp4" autoplay muted loop></video>
+                <video class="grid-item thumbnail" src="results/05_cow_bridge.mp4" autoplay muted loop></video>
+                <video class="grid-item thumbnail" src="results/06_horse_bridge.mp4" autoplay muted loop></video>
                 <div class="grid-item description">
-                    <img src="results/venice-stairs.png">
+                    <img class="thumbnail" src="results/venice-stairs.png">
                     <p>Climbing stairs.</p>
                 </div>
-                <video class="grid-item" src="results/07_cat_stairs.mp4" autoplay muted loop></video>
-                <video class="grid-item" src="results/08_shiba_stairs.mp4" autoplay muted loop></video>
-                <video class="grid-item" src="results/09_horse_stairs.mp4" autoplay muted loop></video>
+                <video class="grid-item thumbnail" src="results/07_cat_stairs.mp4" autoplay muted loop></video>
+                <video class="grid-item thumbnail" src="results/08_shiba_stairs.mp4" autoplay muted loop></video>
+                <video class="grid-item thumbnail" src="results/09_horse_stairs.mp4" autoplay muted loop></video>
                 <div class="grid-item description">
-                    <img src="results/venice-tree.png">
+                    <img class="thumbnail" src="results/venice-tree.png">
                     <p>Climbing a tree.</p>
                 </div>
-                <video class="grid-item" src="results/10_fox_tree.mp4" autoplay muted loop></video>
-                <video class="grid-item" src="results/11_cat_tree.mp4" autoplay muted loop></video>
-                <video class="grid-item" src="results/12_shiba_tree.mp4" autoplay muted loop></video>
+                <video class="grid-item thumbnail" src="results/10_fox_tree.mp4" autoplay muted loop></video>
+                <video class="grid-item thumbnail" src="results/11_cat_tree.mp4" autoplay muted loop></video>
+                <video class="grid-item thumbnail" src="results/12_shiba_tree.mp4" autoplay muted loop></video>
             </div>
 
             <p>
@@ -183,12 +185,9 @@
         </div>
     </div>
 
-    
-
-
     <div id="modal" class="modal">
         <span class="close" id="close">&times;</span>
-        <img class="modal-content" id="modal-img">
+        <div class="modal-content" id="modal-content">
     </div>
     
 
