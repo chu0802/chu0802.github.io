@@ -52,7 +52,7 @@
 
         <div class="section animated-section">
             <h2>Demo</h2>
-            <video src="images/final_compress.mp4" width="80%" max-width="960px" controls></video>
+            <video src="images/final_compress.mp4" width="80%" max-width="960px" autoplay muted loop></video>
             <p>
                 Given arbitrary scene and open-domain rigged objects, <span class="highlight">A3Syn</span> synthesizes articulation that respects the affordance and context.
             </p>
@@ -103,10 +103,25 @@
         <div class="section animated-section">
             <h2>Results</h2>
 
-            <img src="images/results.png" class="thumbnail">
+            <div class="video-grid">
+                <video src="results/01_rabbit_jump_chair.mp4" autoplay muted loop></video>
+                <video src="results/02_fox_jump_chair.mp4" autoplay muted loop></video>
+                <video src="results/03_shiba_jump_chair.mp4" autoplay muted loop></video>
+                <video src="results/04_fox_bridge.mp4" autoplay muted loop></video>
+                <video src="results/05_cow_bridge.mp4" autoplay muted loop></video>
+                <video src="results/06_horse_bridge.mp4" autoplay muted loop></video>
+                <video src="results/07_cat_stairs.mp4" autoplay muted loop></video>
+                <video src="results/08_shiba_stairs.mp4" autoplay muted loop></video>
+                <video src="results/09_horse_stairs.mp4" autoplay muted loop></video>
+                <video src="results/10_fox_tree.mp4" autoplay muted loop></video>
+                <video src="results/11_cat_tree.mp4" autoplay muted loop></video>
+                <video src="results/12_shiba_tree.mp4" autoplay muted loop></video>
+            </div>
+
             <p>
                 The affordance-aware articulation synthesized with our <span class="highlight">A3Syn</span>. For each scene-prompt-location composition, we use three different objects to show that our algorithm can adapt to arbitrary open-domain objects, maintain the physical soundness, and be aware of the object semantics (e.g., the rabbit has a different jumping posture, the cat and dog has different tail signatures). Most importantly, the same object adapts to distinctive postures accord to different scene geometries, showing our results captures the nuance of affordance: the complementarity between the animal and the environment.
             </p>
+            
             
         </div>
 
