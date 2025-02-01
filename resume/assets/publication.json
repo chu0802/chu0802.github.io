@@ -4,8 +4,8 @@
         "abbr": "a3syn",
         "year": "November 2024",
         "author": "<b>Yu-Chu Yu</b>, Chieh Hubert Lin, Hsin-Ying Lee, Chaoyang Wang, Yu-Chiang Frank Wang, Ming-Hsuan Yang",
-        "conference": "preprint",
-        "arxivLink": "https://chuyu.org/archive/a3syn.pdf"
+        "conference": "arXiv preprint",
+        "arxivLink": "https://arxiv.org/abs/2501.12393"
     },
     {
         "title": "ReXTime: A Benchmark Suite for Reasoning-Across-Time in Videos",
