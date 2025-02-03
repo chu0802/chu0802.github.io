@@ -153,6 +153,16 @@ ul {
   color: black;
 }
 
+.footnote {
+  font-size: 0.8em;
+  color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  width: 100%;
+  height: 2em;
+  margin-top: 2em;
+  padding-bottom: 2em;
+}
+
 /* Print Styles */
 @media print {
   @page {
@@ -162,6 +172,10 @@ ul {
 
   body {
     font-size: 12px;
+  }
+
+  .footnote {
+    display: none;
   }
   
 } 

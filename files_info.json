@@ -1,11 +1,4 @@
 {
-    "resume20241214.pdf": {
-        "name": "resume20241214.pdf",
-        "size": 303630,
-        "last_modified": "2024-12-14 16:26",
-        "url": "https://raw.githubusercontent.com/chu0802/chu0802.github.io/master/resources/resume20241214.pdf",
-        "type": "pdf"
-    },
     "icon-1024.png": {
         "name": "icon-1024.png",
         "size": 167992,
@@ -32,6 +25,13 @@
         "size": 1668424,
         "last_modified": "2024-03-09 18:23",
         "url": "https://raw.githubusercontent.com/chu0802/chu0802.github.io/master/resources/taai2023.pdf",
+        "type": "pdf"
+    },
+    "resume20250204.pdf": {
+        "name": "resume20250204.pdf",
+        "size": 351469,
+        "last_modified": "2025-02-04 07:58",
+        "url": "https://raw.githubusercontent.com/chu0802/chu0802.github.io/master/resources/resume20250204.pdf",
         "type": "pdf"
     },
     "eccv2024_snd_poster.pdf": {
