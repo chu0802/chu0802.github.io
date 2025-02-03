@@ -4,7 +4,7 @@
       "location": "University of California, Merced. Advisor: Prof. <a href=\"https://faculty.ucmerced.edu/mhyang/\" target=\"_blank\">Ming-Hsuan Yang</a>",
       "year": "2024/04 - Present",
       "description": [
-        "Propose a novel setup and framework: A3Syn <a href=\"#a3syn\" class=\"reference-link\">1</a>, synthesize affordance-aware 3D articulation for open-domain rigged objects."
+        "Propose A3Syn <a href=\"#a3syn\" class=\"reference-link\">1</a>, a novel framework to synthesize affordance-aware 3D articulation for open-domain rigged objects."
       ]
     },
     { 
@@ -13,23 +13,6 @@
       "year": "2023/09 - Present",
       "description": [
         "Research on Continual Learning for Vision-Language Models, develop a selective knowledge distillation algorithm <a href=\"#sad\" class=\"reference-link\">3</a> to preserve both previous knowledge and zero-shot transferability for VLMs. <font color=\"red\">(ECCV'24)</font>"
-      ]
-    },
-    { 
-      "title": "Machine Learning Engineer", 
-      "location": "Dcard Taiwan LTD. Manager: <a href=\"https://www.linkedin.com/in/chaojoel/?originalSubdomain=tw\" target=\"_blank\">Ting-Hsuan Chao</a>", 
-      "year": "2022/11 - 2023/09",
-      "description": [
-        "Design a recommendation system for a Taiwanese forum platform, serving over 15 million users with more than 10,000 posts per day.",
-        "Develop an interactive API to recommend posts to users on-the-fly (< 1.8 sec. for 95% requests) according to their previous behaviours."
-      ]
-    },
-    { 
-      "title": "Research Development Intern", 
-      "location": "Microsoft @ Bing Maps & Geospatial Team. Manager: <a href=\"https://www.linkedin.com/in/zhiqinghong/\" target=\"_blank\">Jason Hong</a>", 
-      "year": "2021/12 - 2022/06",
-      "description": [
-        "Develop an asynchronous web crawler system to automatically evaluate the performance of reverse geocoding services provided by google, bing and tomtom."
       ]
     },
     { 

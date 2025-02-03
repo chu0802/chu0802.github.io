@@ -11,16 +11,22 @@ function addFootnote() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  const experienceList = document.getElementById('experience-list');
+  const researchExperienceList = document.getElementById('research-experience-list');
+  const workExperienceList = document.getElementById('work-experience-list');
   const educationList = document.getElementById('education-list');
   const teachingList = document.getElementById('teaching-list');
   const publicationList = document.getElementById('publication-list');
   const awardList = document.getElementById('award-list');
   const serviceList = document.getElementById('service-list');
   // Load experience data
-  fetch('assets/experience.json')
+  fetch('assets/research-experience.json')
     .then(response => response.json())
-    .then(data => populateList(data, experienceList));
+    .then(data => populateList(data, researchExperienceList));
+
+  // Load work experience data
+  fetch('assets/work-experience.json')
+    .then(response => response.json())
+    .then(data => populateList(data, workExperienceList));
 
   // Load education data
   fetch('assets/education.json')
