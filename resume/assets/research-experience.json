@@ -18,7 +18,7 @@
     { 
       "title": "Graduate Student Researcher", 
       "location": "National Taiwan University. Advisor: Prof. <a href=\"https://www.csie.ntu.edu.tw/~htlin/\" target=\"_blank\">Hsuan-Tien Lin</a>", 
-      "year": "2020/09 - 2023/01",
+      "year": "2020/09 - 2022/11",
       "description": [
         "Research on Semi-Supervised Domain Adaptation.",
         "Address Domain Adaptation as a Noisy Label Learning problem. Develop a dynamic algorithm SLA <a href=\"#sla\" class=\"reference-link\">4</a> to learn from the noisy source labels and <b>outperform state-of-the-art algorithms</b>.  <font color=\"red\">(CVPR'23)</font>"
