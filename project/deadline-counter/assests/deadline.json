@@ -25,6 +25,16 @@
             "image_path": "assests/images/vancouver.webp"
         },
         {
+            "name": "NeurIPS'25",
+            "deadline": {
+                "submission": "05/15/2025 23:59:00",
+            },
+            "timezone": "UTC-12",
+            "city": "San Diego",
+            "country": "USA",
+            "image_path": "assests/images/neurips25.jpg"
+        },
+        {
             "name": "ICCV'25",
             "deadline": {
                 "submission": "03/07/2025 23:59:00",
