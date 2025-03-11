@@ -1,18 +1,18 @@
 [
-    {
-      "title": "Visiting Student Researcher",
-      "location": "University of California, Merced. Advisor: Prof. <a href=\"https://faculty.ucmerced.edu/mhyang/\" target=\"_blank\">Ming-Hsuan Yang</a>",
-      "year": "2024/04 - Present",
-      "description": [
-        "Propose A3Syn <a href=\"#a3syn\" class=\"reference-link\">1</a>, a novel framework to synthesize affordance-aware 3D articulation for open-domain rigged objects."
-      ]
-    },
     { 
       "title": "Research Assistant", 
       "location": "National Taiwan University. Advisor: Prof. <a href=\"http://vllab.ee.ntu.edu.tw/members.html\" target=\"_blank\">Yu-Chiang Frank Wang</a>", 
       "year": "2023/09 - Present",
       "description": [
         "Research on Continual Learning for Vision-Language Models, develop a selective knowledge distillation algorithm <a href=\"#sad\" class=\"reference-link\">3</a> to preserve both previous knowledge and zero-shot transferability for VLMs. <font color=\"red\">(ECCV'24)</font>"
+      ]
+    },
+    {
+      "title": "Visiting Student Researcher",
+      "location": "University of California, Merced. Advisor: Prof. <a href=\"https://faculty.ucmerced.edu/mhyang/\" target=\"_blank\">Ming-Hsuan Yang</a>",
+      "year": "2024/04 - 2024/12",
+      "description": [
+        "Propose A3Syn <a href=\"#a3syn\" class=\"reference-link\">1</a>, a novel framework to synthesize affordance-aware 3D articulation for open-domain rigged objects."
       ]
     },
     { 
