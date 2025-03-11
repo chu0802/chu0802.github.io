@@ -5,9 +5,7 @@
       "location": "National Taiwan University",
       "description": {
         "GPA": "4.1 / 4.3",
-        "Adivisor": "<b>Hsuan-Tien Lin</b>. Computational Learning Lab (CLLab)",
-        "Honor": "<i>Master Thesis Award</i>. Taiwanese Association for Artificial Intelligence 2023",
-        "Master Thesis": "Semi-Supervised Domain Adaptation with Source Label Adaptation <font color=\"red\">(CVPR'23)</font>"
+        "Adivisor": "<b>Hsuan-Tien Lin</b>. Computational Learning Lab (CLLab)"
       }
     },
     { 
