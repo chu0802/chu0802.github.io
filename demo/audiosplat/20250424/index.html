@@ -29,19 +29,36 @@
       border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       overflow: hidden;
-      width: 240px;
+      width: 230px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       text-align: center;
-      padding-bottom: 10px;
+      padding: 24px 10px 10px; /* 上方留空給編號 */
+      position: relative;
     }
     .item:hover {
       transform: translateY(-5px) scale(1.02);
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
+    .item-number {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 28px;
+      height: 28px;
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 0.85rem;
+    }
     .item img {
-      width: 100%;
+      width: 90%;
       height: auto;
       display: block;
+      margin: 24px auto 0;
+      border-radius: 12px;
     }
     .audio-block {
       margin: 12px 0;
@@ -439,11 +456,10 @@
       },
       // 可依需求再新增更多列和描述
     ];
-
     const gallery = document.getElementById('gallery');
+    let globalIndex = 1;
 
     rows.forEach(rowData => {
-      // 每列容器
       const container = document.createElement('div');
       container.classList.add('row-container');
 
@@ -460,11 +476,19 @@
       rowData.items.forEach(itemData => {
         const itemEl = document.createElement('div');
         itemEl.classList.add('item');
+
+        // 編號
+        const numEl = document.createElement('div');
+        numEl.classList.add('item-number');
+        numEl.textContent = globalIndex++;
+        itemEl.appendChild(numEl);
+
         // 圖片
         const imgEl = document.createElement('img');
         imgEl.src = itemData.img;
         imgEl.alt = 'Demo Image';
         itemEl.appendChild(imgEl);
+
         // 多個音訊區塊
         itemData.audios.forEach(audioData => {
           const audioBlock = document.createElement('div');
