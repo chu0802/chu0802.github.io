@@ -1,0 +1,23 @@
+[
+    { 
+      "title": "Teaching Assistant", 
+      "year": "2020 Fall, 2021 Fall",
+      "location": "CSIE 5043: Machine Learning",
+      "advisor": "Instructor: Prof. Hsuan-Tien Lin",
+      "description":[
+        "Help introduce the foundational concepts of machine learning in 600-person class.",
+        "Design assignments, and projects, and hold office hour for answering questions."
+      ]
+    },
+    { 
+      "title": "Teaching Assistant", 
+      "year": "2021 Spring",
+      "location": "CSIE 1212: Data Structures and Algorithms",
+      "advisor": "Instructor: Prof. Hsuan-Tien Lin & Prof. Hsin-Mu Tsai",
+      "description": [
+        "Help deal with administrative issues to better maintain a 400-person class.",
+        "Provide office hour for debugging, answering questions."
+      ]
+    }
+  ]
+  

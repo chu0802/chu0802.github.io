@@ -1,814 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QZT4G47E4M"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QZT4G47E4M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-QZT4G47E4M');
-</script>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Yu-Chu, Yu's Personal Page</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
+    gtag('config', 'G-QZT4G47E4M');
+  </script>
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icon/apple-touch-icon.png">
   <link rel="icon" href="assets/img/icon/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icon/favicon-16x16.png">
   <link rel="manifest" href="assets/img/icon/site.webmanifest">
 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Yu-Chu Yu – Homepage</title>
   <!-- Google Fonts -->
-  <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Sriracha&display=swap" rel="stylesheet">
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons-1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-  <!-- md5 -->
-  <script src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/core.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
-  
-  <!-- =======================================================
-  * Template Name: iPortfolio - v3.7.0
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Courier+Prime:wght@400;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Fancy Styles -->
+  <link rel="stylesheet" href="assets/css/fancy-styles.css">
 </head>
-
 <body>
+  <!-- Dark Mode Toggle -->
+  <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+    <i class="fas fa-moon"></i>
+    <i class="fas fa-sun"></i>
+  </button>
 
-  <!-- ======= Mobile nav toggle button ======= -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+  <!-- Mobile Navigation Toggle -->
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+    <i class="fas fa-bars"></i>
+  </button>
 
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="d-flex flex-column">
-
+  <div class="container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
       <div class="profile">
-        <img id="selfie" src="assets/img/selfie_squared.jpg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light", style="text-align: center"><a href="index.html">Yu-Chu, Yu</a></h1>
-        <div class="social-links mt-3 text-center">
-          <a href="https://github.com/chu0802" class="github" target="_blank"><i class="bx bxl-github"></i></a>
-          <!-- <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a> -->
-          <!-- <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a> -->
-         
-          <a href="https://www.linkedin.com/in/chu0802/" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
-          <a href="https://scholar.google.com/citations?user=Ewt88bUAAAAJ" class="google-scholar" target="_blank"><img src="assets/img/google-scholar.svg" alt="google-scholar--v3"/></a>
-          <a href="resume/" class="resume" target="_blank">CV</a>
-			 <!-- <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path stroke="white" d="M3 24h19v-23h-1v22h-18v1zm17-24h-18v22h18v-22zm-1 1h-16v20h16v-20zm-2 16h-12v1h12v-1zm0-3h-12v1h12v-1zm0-3h-12v1h12v-1zm-7.348-3.863l.948.3c-.145.529-.387.922-.725 1.178-.338.257-.767.385-1.287.385-.643 0-1.171-.22-1.585-.659-.414-.439-.621-1.04-.621-1.802 0-.806.208-1.432.624-1.878.416-.446.963-.669 1.642-.669.592 0 1.073.175 1.443.525.221.207.386.505.496.892l-.968.231c-.057-.251-.177-.449-.358-.594-.182-.146-.403-.218-.663-.218-.359 0-.65.129-.874.386-.223.258-.335.675-.335 1.252 0 .613.11 1.049.331 1.308.22.26.506.39.858.39.26 0 .484-.082.671-.248.187-.165.322-.425.403-.779zm3.023 1.78l-1.731-4.842h1.06l1.226 3.584 1.186-3.584h1.037l-1.734 4.842h-1.044z"/></svg>-->
-			 <!-- <i class="bi bi-file-person"></i> -->
-          
-
-          <!-- <a href="statement/" class="statement" target="_blank">SoP</a> -->
-
-          
+        <img src="assets/img/chu.jpg" alt="Yu-Chu Yu">
+        <h1>Yu-Chu Yu</h1>
+        <div class="social">
+          <a href="https://github.com/chu0802" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/chu0802/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="resume/" target="_blank" aria-label="Resume"><i class="fa-solid fa-file-alt"></i></a>
+          <a href="https://scholar.google.com/citations?user=Ewt88bUAAAAJ" target="_blank" aria-label="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
         </div>
       </div>
+      <nav class="nav-links">
+        <a href="#about"><i class="fas fa-user"></i><span>About</span></a>
+        <a href="#publications"><i class="fas fa-book-open"></i><span>Publications</span></a>
+        <a href="#resume"><i class="fas fa-file-lines"></i><span>Resume</span></a>
+        <a href="resources.html"><i class="fas fa-download"></i><span>Resources</span></a>
+      </nav>
+      
+      <!-- Sidebar Footer -->
+      <div class="sidebar-footer">
+        <p>© 2025 Yu-Chu Yu</p>
+        <p>Last updated: 2025/05/24</p>
+      </div>
+    </aside>
 
-      <nav id="navbar" class="nav-menu navbar">
-        <ul>
-          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-
-          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#publication" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Publication</span></a></li>
-          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          
-          <!-- <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li> -->
-          <!-- <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li> -->
-          <li><a href="#project" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Project</span></a></li>
-          <li><a href="resources.html" class="nav-link scrollto"><i class="bx bx-download"></i> <span>Resources</span></a></li>
-        </ul>
-      </nav><!-- .nav-menu -->
-    </div>
-  </header><!-- End Header -->
-
-<!-- ======= Hero Section ======= -->
-  <!-- <section id="hero" class="d-flex flex-column justify-content-center align-items-center" style="display: none;">
-    <div class="hero-container" data-aos="fade-in" data-aos-duration="1000">
-      <h1>Yu-Chu, Yu</h1>
-      <p>I'm an <span class="typed" data-typed-items="ML Researcher,ML Engineer"></span>.</p>
-    </div>
-  </section>End Hero -->
-  <!-- hidden current main page-->
-  <!-- <main id="main" style="display:none"> -->
-  <main id="main">
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>About</h2>
-          <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/selfie_main.jpg" class="img-fluid" alt="">
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <section id="about" class="section about-section">
+        <h2>About</h2>
+        <div class="about-grid">
+          <div class="about-img">
+            <img src="assets/img/selfie_main.jpg" alt="Yu-Chu Yu">
           </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Machine Learning Researcher / Engineer</h3>
-            <p class="fst-italic">
-            </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <!-- <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>2 Aug 1998</span></li> -->
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+886 988 185 871</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Taipei, Taiwan</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <!-- <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> 
-                  <span>
-                    <script>
-                      const today = new Date();
-                      const targetDate = new Date('1998/08/02');
-                      const diffTime = today.getTime() - targetDate.getTime();
-                      const diffYear = Math.floor(diffTime / (1000 * 60 * 60 * 24 * 365));
-                      document.write(diffYear)</script>
-                  </span></li> -->
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>r09922104@ntu.edu.tw</span></li>
-                  
-                </ul>
-              </div>
-            </div>
-            <p style="text-align: justify">
-              I am currently a visiting student in the Vision Learning Lab (VLLab) at UC Merced, working with <a href="https://hubert0527.github.io" target="_blank">Chieh Hubert Lin</a> and Prof. <a href="http://faculty.ucmerced.edu/mhyang/" target="_blank">Ming-Hsuan Yang</a>. I also work as a research assistant in the Vision Learning Lab (VLLab) at National Taiwan University EECS, advised by Prof. 
-              <a href="http://vllab.ee.ntu.edu.tw/members.html" target="_blank">Yu-Chiang Frank Wang</a>. 
-              
-              My Primary research interests lie in Computer Vision, with a particular focus on <b>multi-modal models' adaptability, continual learning, and open-domain 3D articulation synthesis</b>.
-            </p>
-            <p style="text-align: justify">Prior to my role at VLLab, I am a Machine Learning Engineer at Dcard, where I designed a recommendation system using machine learning algorithms for over 15 million users.</p>
-            <p style="text-align: justify">
-              I completed my bachelor's and master's degrees in Computer Science from National Taiwan University, where I conducted research in the Computational Learning Lab under the supervision of Prof. <a href="https://www.csie.ntu.edu.tw/~htlin/" target="_blank">Hsuan-Tien Lin</a>.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section-bg" style="display:none">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Skills</h2>
-          <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
-        </div>
-
-        <div class="row skills-content">
-
-          <div class="col-lg-12" data-aos="fade-up">
-
-            <div class="progress">
-              <span class="skill">C/C++ <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Python <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Html/Js/Css <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="progress">
-              <span class="skill">PHP <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">WordPress/CMS <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Photoshop <i class="val">55%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-          </div> -->
-
-        </div>
-
-      </div>
-    </section><!-- End Skills Section -->
-
-  <!-- ======= Publication Section ======= -->
-  <section id="publication" class="portfolio section-bg">
-    <div class="container">
-
-      <div class="section-title" style="padding-bottom: 30px">
-        <h2>Publication</h2>
-      </div>
-
-      <div class="row" style="padding-bottom: 30px" id="a3syn">
-        <div class="col-lg-4" data-aos="fade-right">
-          <div class="portfolio-wrap">
-            <img src="assets/img/research/a3syn.jpg" class="img-fluid" alt="">
-            <div class="portfolio-links">
-              <a href="assets/img/research/a3syn.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" target="_blank"><i class="bx bx-plus"></i></a>
-              <a href="https://chuyu.org" title="Paper Link" target="_blank"><i class="bx bx-book"></i></a>
-              <a href="https://chuyu.org" title="Project Link" target="_blank"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-          <h5>Towards Affordance-Aware Articulation Synthesis for Rigged Objects</h5>
-
-          <p>
-            <a href="index.html"><b>Yu-Chu Yu</b></a>,
-            <a href="https://hubert0527.github.io" target="_blank">Chieh Hubert Lin</a>,
-            <a href="http://hsinyinglee.com" target="_blank">Hsin-Ying Lee</a>,
-            <a href="https://mightychaos.github.io" target="_blank">Chaoyang Wang</a>,
-            <a href="http://vllab.ee.ntu.edu.tw/members.html" target="_blank">Yu-Chiang Frank Wang</a>,
-            <a href="https://faculty.ucmerced.edu/mhyang" target="_blank">Ming-Hsuan Yang</a><br>
-          </p>
-          <p class="conference-title">
-            <i>arXiv preprint</i>, January 2025.
-          </p>
-          <p>
-            [<a href="https://arxiv.org/abs/2501.12393" target="_blank" style="padding-right: 20px"> Paper Link</a>
-            <a href="research/a3syn" target="_blank"> Project Page</a> ]
-          </p>
-        </div>
-      </div>
-
-      <div class="row" style="padding-bottom: 30px" id="rextime">
-        <div class="col-lg-4" data-aos="fade-right">
-          <div class="portfolio-wrap">
-            <img src="assets/img/research/rextime.jpg" class="img-fluid" alt="">
-            <div class="portfolio-links">
-              <a href="assets/img/research/rextime.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" target="_blank"><i class="bx bx-plus"></i></a>
-              <a href="https://arxiv.org/abs/2406.19392" title="Paper Link" target="_blank"><i class="bx bx-book"></i></a>
-              <a href="https://rextime.github.io" title="Project Link" target="_blank"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-          <h5>ReXTime: A Benchmark Suite for Reasoning-Across-Time in Videos</h5>
-
-          <p>
-            <a href="https://tousakanagio.github.io" target="_blank">Jr-Jen Chen</a>, 
-            <a href="#">Yu-Chien Liao</a>, 
-            <a href="#">Hsi-Che Lin</a>, 
-            <a href="index.html"><b>Yu-Chu Yu</b></a>, 
-            <a href="" target="_blank"> Yen-Chun Chen</a>, 
-            <a href="http://vllab.ee.ntu.edu.tw/members.html" target="_blank">Yu-Chiang Frank Wang</a><br>
-          </p>
-          <p class="conference-title">
-            <i>Neural Information Processing Systems <b>(NeurIPS)</b>, Datasets and Benchmarks Track</i>, December 2024.
-          </p>
-          <p>
-            [<a href="https://arxiv.org/abs/2406.19392" target="_blank" style="padding-right: 20px"> Paper Link</a>
-            <a href="https://rextime.github.io" target="_blank"> Project Page</a> ]
-          </p>
-        </div>
-      </div>
-
-      <div class="row" style="padding-bottom: 30px" id="sad">
-        <div class="col-lg-4" data-aos="fade-right">
-          <div class="portfolio-wrap">
-            <img src="assets/img/intro_sad.png" class="img-fluid" alt="">
-            <div class="portfolio-links">
-              <a href="assets/img/intro_sad.png" data-gallery="portfolioGallery" class="portfolio-lightbox" target="_blank"><i class="bx bx-plus"></i></a>
-              <a href="https://arxiv.org/abs/2403.09296" title="Paper Link" target="_blank"><i class="bx bx-book"></i></a>
-              <a href="research/snd" title="Project Link" target="_blank"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-          <h5>Select and Distill: Selective Dual-Teacher Knowledge Transfer for Continual Learning on Vision-Language Models</h5>
-
-          <p>
-            <b><a href="index.html">Yu-Chu Yu</a></b>, 
-            <a href="https://scholar.google.com/citations?user=s8-yTSwAAAAJ&hl=zh-TW" target="_blank">Chi-Pin Huang</a>, 
-            <a href="https://tousakanagio.github.io" target="_blank">Jr-Jen Chen</a>, 
-            <a href="https://research.nvidia.com/labs/twn/author/kai-po-chang/" target="_blank">Kai-Po Chang</a>, 
-            <a href="https://franklin905.github.io" target="_blank">Yung-Hsuan Lai</a>, 
-            <a href="https://fuenyang1127.github.io" target="_blank">Fu-En Yang</a>, 
-            <a href="http://vllab.ee.ntu.edu.tw/members.html" target="_blank">Yu-Chiang Frank Wang</a><br>
-          </p>
-          <p class="conference-title">
-            <i class="conference-title">European Conference on Computer Vision <b>(ECCV)</b></i>, September 2024.
-          </p>
-          <p>
-            [<a href="https://arxiv.org/abs/2403.09296" target="_blank" style="padding-right: 20px"> Paper Link</a>
-            <a href="research/snd" target="_blank"> Project Page</a>
-            ]
-          </p>
-        </div>
-      </div>
-
-      <div class="row" style="padding-bottom: 30px" id="sla">
-      <div class="col-lg-4" data-aos="fade-right">
-        <div class="portfolio-wrap">
-          <img src="assets/img/intro_sla.png" class="img-fluid" alt="">
-          <div class="portfolio-links">
-            <a href="assets/img/intro_sla.png " data-gallery="portfolioGallery" class="portfolio-lightbox" target="_blank"><i class="bx bx-plus"></i></a>
-            <a href="https://arxiv.org/abs/2302.02335" title="Paper Link" target="_blank"><i class="bx bx-book"></i></a>
-            <a href="https://github.com/chu0802/SLA" title="Project Link" target="_blank"><i class="bx bxl-github"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-        <h5>Semi-Supervised Domain Adaptation with Source Label Adaptation</h5>
-
-        <p>
-          <b><a href="index.html">Yu-Chu Yu</a></b>, 
-          <a href="https://www.csie.ntu.edu.tw/~htlin/" target="_blank">Hsuan-Tien Lin</a><br>
-        </p>
-        <p class="conference-title">
-          <i class="conference-title">In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition <b>(CVPR)</b></i>, June 2023.
-        </p>
-        <p>
-          [<a href="https://arxiv.org/abs/2302.02335" target="_blank" style="padding-right: 20px"> Paper Link</a>
-          <a href="https://github.com/chu0802/SLA" target="_blank"> Code</a>]
-        </p>
-      </div>
-    </div>
-    </div>
-
-    <!-- <div class="row" data-aos="zoom-in">
-      <div class="col-lg-12 d-flex justify-content-center">
-        <ul id="portfolio-flters">
-          <li data-filter="*" class="filter-active">All</li>
-        </ul>
-      </div>
-    </div> -->
-
-    
-    <!-- <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-      <div class="col-lg-4 col-md-6 portfolio-item">
-        
-      </div>
-    </div> -->
-  </section>
-
-    <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Resume</h2>
-          <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
-        </div>
-        <!-- <h2>Resume</h2> -->
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-up">
-            <!-- <h3 class="resume-title">Summary</h3>
-            <div class="resume-item pb-0">
-              <h4>Yu-Chu, Yu</h4>
-              <ul>
-                <li>Taipei, Taiwan</li>
-                <li>(+886) 988-185-871</li>
-                <li>r09922104@ntu.edu.tw</li>
-              </ul>
-            </div> -->
-
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>National Taiwan University</h4>
-              <h5>2020/09 - 2023/01</h5>
-              <p><em>Master of Computer Science &amp; information Engineering</em></p>
-              <ul>
-                <li><b>GPA</b>: 4.1 / 4.3</li>
-                <li><b>Master Thesis</b>: Semi-Supervised Domain Adaptation with Source Label Adaptation <font color="red">(CVPR'23)</font> [<a href="#sla">Link</a>]</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>National Taiwan University</h4>
-              <h5>2016/09 - 2020/06</h5>
-              <p><em>Bachelor of Computer Science &amp; information Engineering</em></p>
-              <!-- <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p> -->
-            </div>
-            <h3 class="resume-title">Teaching</h3>
-            <div class="resume-item">
-              <h4>Data Structures & Algorithms <small>CSIE 1212</small></h4>
-              <h5>2020 Spring</h5>
-              <p><em>Teaching Assistant. Instructor: <a href="https://www.csie.ntu.edu.tw/~htlin/" target="_blank">Hsuan-Tien Lin</a></em></p>
-              <ul>
-                <li>Assist in the administration of a 400-person class to ensure smooth operation.</li>
-                <li>Provide office hours for debugging and answering student questions.</li>
-                <li>Collaborate with the instructor to create and grade assignments / exams.</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Machine Learning <small>CSIE 5043</small></h4>
-              <h5>2020 Fall</h5> <h5>2021 Fall</h5>
-              <p><em>Teaching Assistant. Instructor: <a href="https://www.csie.ntu.edu.tw/~htlin/" target="_blank">Hsuan-Tien Lin</a></em></p>
-              <ul>
-                <li>Assist in the administration of a 600-person class to ensure smooth operation.</li>
-                <li>Provide office hours for answering student questions, helping students understand foundational concepts of machine learning.</li>
-                <li>Design and create assignments / projects that allowed students to apply their knowledge in both practical and theoretical settings.</li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Experience</h3>
-            <div class="resume-item">
-              <h4>Vision Learning Lab <small>University of California, Merced</small></h4>
-              <h5>2024/04 - Present</h5>
-              <p><em>Visiting Student Researcher. Advisor: <a href="https://faculty.ucmerced.edu/mhyang/" target="_blank">Ming-Hsuan Yang</a></em></p>
-              <ul>
-                <li>Research on 3D articulated objects synthesis with affordance.</li> 
-                <li>Develop an affordance-aware pipeline to synthesize 3D articulated objects.</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Vision Learning Lab <small>National Taiwan University</small></h4>
-              <h5>2023/09 - Present</h5>
-              <p><em>Research Assistant. Advisor: <a href="http://vllab.ee.ntu.edu.tw/members.html" target="_blank">Yu-Chiang Frank Wang</a></em></p>
-              <ul>
-                <li>Research on Continual Learning for Vision-Language Models, develop a selective knoweledge distillation algorithm to preserve both previous knowledge and zero-shot transferability for VLMs. <font color="red">(ECCV'24)</font> [<a href="#sad">Link</a>]</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Dcard Taiwan Ltd. <small>Taipei, TW</small></h4>
-              <h5>2022/11 - 2023/09</h5>
-              <p><em>Machine Learning Engineer</em></p>
-              <ul>
-                <li>Design a recommendation system for a Taiwanese forum platform, serving over 15 million users with more than 10,000 posts per day.</li>
-                <li>Develop an interactive API to recommend posts to users on-the-fly (< 1.8 sec. for 95% requests) according to their previous behaviours.</li>
-                
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Microsoft <small>Taipei, TW</small></h4>
-              <h5>2021/12 - 2022/06</h5>
-              <p><em>Research Development Intern @ MS Maps & Geospatial Team</em></p>
-              <ul>
-                <li>Develop an asynchronous web crawler system to automatically evaluate the performance of reverse geocoding services provided by google, bing and tomtom.</li>
-                
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Computational Learning Lab <small>National Taiwan University</small></h4>
-              <h5>2020/04 - 2023/01</h5>
-              <p><em>Graduate Research Student. Advisor: <a href="https://www.csie.ntu.edu.tw/~htlin/" target="_blank">Hsuan-Tien Lin</a></em></p>
-              <ul>
-                <li>Research on Semi-Supervised Domain Adaptation, introduce a novel source-adaptive paradigm by addressing Domain Adaptation as a Noisy Label Learning problem. Develop a dynamic algorithm to learn from the noisy source labels and <b>outperform state-of-the-art algorithms</b>.  <font color="red">(CVPR'23)</font> [<a href="#sla">Link</a>] </li>
-              </ul>
-            </div>
-            
-          </div>
-          <!-- <h3 class="resume-title" data-aos="fade-up" data-aos-delay="200">Teaching</h3> -->
-          <!-- <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200"> -->
-            
-          <!-- </div> -->
-          <!-- <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            
-          
-        </div> -->
-
-      </div>
-    </section><!-- End Resume Section -->
-
-
-  
-
-    <!-- ======= Portfolio Section ======= -->
-    <section id="project" class="portfolio section-bg">
-      <div class="container">
-
-        <div class="section-title" style="padding-bottom: 30px">
-          <h2>Project</h2>
-          <p>I am also interested in contribute to open source development, and here are a few of my projects.</p>
-        </div>
-
-        <div class="row" data-aos="zoom-in">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <!-- <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li> -->
-              <li data-filter=".filter-web">Web</li>
+          <div class="about-info">
+            <h3>Computer Vision Researcher</h3>
+            <ul class="contact-list">
+              <li><strong>Phone:</strong> +886 988 185 871</li>
+              <li><strong>City:</strong> Taipei, Taiwan</li>
+              <li><strong>Degree:</strong> Master</li>
+              <li><strong>Email:</strong> <a href="mailto:r09922104@ntu.edu.tw">r09922104@ntu.edu.tw</a></li>
             </ul>
+            <div id="introduction"></div>
           </div>
         </div>
+      </section>
 
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/projects/gossiping.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/projects/gossiping.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="https://chuyu.org/project/ptt-gossiping/" title="More Details" target="_blank"><i class="bx bx-link"></i></a>
-                <a href="https://github.com/chu0802/chu0802.github.io/tree/master/project/ptt-gossiping" title="Project Link" target="_blank"><i class="bx bxl-github"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/projects/iclr.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/projects/iclr.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="https://chuyu.org/ICLR2024-Easy-Search/" title="More Details" target="_blank"><i class="bx bx-link"></i></a>
-                <a href="https://github.com/chu0802/ICLR2024-Easy-Search" title="Project Link" target="_blank"><i class="bx bxl-github"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/projects/deadline.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/projects/deadline.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                <a href="https://chuyu.org/project/deadline-counter/" title="More Details" target="_blank"><i class="bx bx-link"></i></a>
-                <a href="https://github.com/chu0802/chu0802.github.io/tree/master/project/deadline-counter" title="Project Link" target="_blank"><i class="bx bxl-github"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/projects/cryptotracker.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/projects/cryptotracker.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="https://github.com/chu0802/CryptoTrader" title="More Details" target="_blank"><i class="bx bx-link"></i></a>
-                <a href="https://github.com/chu0802/CryptoTrader" title="Project Link" target="_blank"><i class="bx bxl-github"></i></a>
-              </div>
-            </div>
-          </div>
-
-      </div>
-    </section>
-    <!-- End Portfolio Section -->
-
-    <!-- ======= Services Section ======= -->
-    <!-- <section id="services" class="services" style="display: none;">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Services</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+      <!-- PUBLICATIONS SECTION -->
+      <section id="publications" class="section publication-section">
+        <h2>Publications</h2>
+        <div id="publication-list" class="pub-list">
+          <!-- JS will inject each .pub-item here -->
         </div>
+      </section>
+      
+      <!-- RESUME SECTION -->
+      <section id="resume" class="section resume-section">
+        <h2>Resume</h2>
+        <div class="resume-container">
+          <!-- LEFT COLUMN: Education & Teaching -->
+          <div class="resume-column left">
+            <h3>Education</h3>
+            <div id="education-timeline" class="timeline"></div>
 
-        <div class="row">
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-            <div class="icon"><i class="bi bi-briefcase"></i></div>
-            <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+            <h3>Teaching</h3>
+            <div id="teaching-timeline" class="timeline"></div>
           </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon"><i class="bi bi-card-checklist"></i></div>
-            <h4 class="title"><a href="">Dolor Sitema</a></h4>
-            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon"><i class="bi bi-bar-chart"></i></div>
-            <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon"><i class="bi bi-binoculars"></i></div>
-            <h4 class="title"><a href="">Magni Dolores</a></h4>
-            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-            <div class="icon"><i class="bi bi-brightness-high"></i></div>
-            <h4 class="title"><a href="">Nemo Enim</a></h4>
-            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon"><i class="bi bi-calendar4-week"></i></div>
-            <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+
+          <!-- RIGHT COLUMN: Research & Work -->
+          <div class="resume-column right">
+            <h3>Research Experience</h3>
+            <div id="research-timeline" class="timeline"></div>
+
+            <h3>Work Experience</h3>
+            <div id="work-timeline" class="timeline"></div>
           </div>
         </div>
+      </section>
+    </main>
+  </div>
 
-      </div>
-    </section>End Services Section -->
+  <!-- Scroll to Top Button -->
+  <button id="scroll-top" class="scroll-top" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
-    <!-- ======= Testimonials Section ======= -->
-    <!-- <section id="testimonials" class="testimonials section-bg" style="display: none;">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Testimonials</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
-              </div>
-            </div> End testimonial item -->
-
-            <!-- <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-              </div>
-            </div> End testimonial item 
-
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="400">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-              </div>
-            </div>
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-    </section> -->
-    <!-- End Testimonials Section -->
-
-    <!-- ======= Contact Section ======= -->
-    <!-- <section id="contact" class="contact" style="display: none;">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Contact</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row" data-aos="fade-in">
-
-          <div class="col-lg-5 d-flex align-items-stretch">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>A108 Adam Street, New York, NY 535022</p>
-              </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>info@example.com</p>
-              </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+1 5589 55488 55s</p>
-              </div>
-
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
-            </div>
-
-          </div>
-
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" required>
-              </div>
-              <div class="form-group">
-                <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-          </div>
-
-        </div>
-
-      </div>
-    </section> -->
-    <!-- End Contact Section -->
-
-
-  </main><!-- End #main -->
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>iPortfolio</span></strong>
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-  </footer><!-- End  Footer -->
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+  <script src="assets/js/script.js"></script>
 </body>
-
 </html>

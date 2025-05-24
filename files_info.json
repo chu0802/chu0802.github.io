@@ -1,4 +1,25 @@
 {
+    "test": {
+        "name": "test",
+        "size": "Directory",
+        "last_modified": "2024-07-07 16:30",
+        "files": {
+            "..": {
+                "name": "..",
+                "size": "Directory",
+                "last_modified": "Parent",
+                "url": "resources"
+            },
+            "icon-128.png": {
+                "name": "icon-128.png",
+                "size": 13881,
+                "last_modified": "2024-07-07 16:30",
+                "url": "https://raw.githubusercontent.com/chu0802/chu0802.github.io/master/resources/test/icon-128.png",
+                "type": "png"
+            }
+        },
+        "url": "resources/test"
+    },
     "icon-1024.png": {
         "name": "icon-1024.png",
         "size": 167992,
@@ -27,11 +48,18 @@
         "url": "https://raw.githubusercontent.com/chu0802/chu0802.github.io/master/resources/eccv2024_snd_poster.pdf",
         "type": "pdf"
     },
-    "icon-128.png": {
-        "name": "icon-128.png",
-        "size": 13881,
-        "last_modified": "2024-07-07 16:30",
-        "url": "https://raw.githubusercontent.com/chu0802/chu0802.github.io/master/resources/icon-128.png",
-        "type": "png"
+    "test2": {
+        "name": "test2",
+        "size": "Directory",
+        "last_modified": "1970-01-01 08:00",
+        "files": {
+            "..": {
+                "name": "..",
+                "size": "Directory",
+                "last_modified": "Parent",
+                "url": "resources"
+            }
+        },
+        "url": "resources/test2"
     }
 }
