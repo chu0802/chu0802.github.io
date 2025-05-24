@@ -6,6 +6,7 @@
         "author": "<b>Yu-Chu Yu</b>, Chieh Hubert Lin, Hsin-Ying Lee, Chaoyang Wang, Yu-Chiang Frank Wang, Ming-Hsuan Yang",
         "conference": "arXiv preprint",
         "arxivLink": "https://arxiv.org/abs/2501.12393",
+        "githubLink": "research/a3syn",
         "image": "assets/img/research/a3syn.jpg"
     },
     {
@@ -15,6 +16,7 @@
         "author": "Jr-Jen Chen, Yu-Chien Liao, Hsi-Che Lin, <b>Yu-Chu Yu</b>, Yen-Chun Chen, Yu-Chiang Frank Wang",
         "conference": "Neural Information Processing Systems <b>(NeurIPS)</b>",
         "arxivLink": "https://arxiv.org/abs/2406.19392",
+        "githubLink": "https://rextime.github.io/",
         "image": "assets/img/research/rextime.jpg"
     },
     {
@@ -24,6 +26,7 @@
         "author": "<b>Yu-Chu Yu</b>, Chi-Pin Huang, Jr-Jen Chen, Kai-Po Chang, Yung-Hsuan Lai, Fu-En Yang, Yu-Chiang Frank Wang",
         "conference": "European Conference on Computer Vision <b>(ECCV)</b>",
         "arxivLink": "https://arxiv.org/abs/2403.09296",
+        "githubLink": "research/snd",
         "image": "assets/img/research/snd.png"
     },
     {
