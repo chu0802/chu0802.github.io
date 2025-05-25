@@ -29,7 +29,7 @@ body {
   hyphens: auto;
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
-  word-spacing:-0.05em;
+  word-spacing: normal;
 }
 
 body::before {
@@ -101,6 +101,10 @@ body.dark-mode::before {
   --transition-normal: 0.3s ease;
   --transition-slow: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --transition-bounce: 0.5s cubic-bezier(0.5, -0.5, 0.1, 1.5);
+
+  /* New variables for author links */
+  --primary-color-rgb: 42, 77, 105;
+  --accent-color-rgb: 58, 110, 165;
 }
 
 /* Dark Mode - Warm Gray Palette */
@@ -129,6 +133,10 @@ body.dark-mode {
   --shadow-accent: 0 5px 15px rgba(93, 140, 179, 0.3);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.03' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
   background-color: var(--bg-color);
+
+  /* New variables for author links in dark mode */
+  --primary-color-rgb: 93, 140, 179;
+  --accent-color-rgb: 129, 164, 205;
 }
 
 /* Container Layout */
@@ -397,6 +405,7 @@ body.dark-mode {
   box-shadow: var(--shadow-lg);
   transition: all var(--transition-normal);
   width: 100%;
+  min-width: 200px;
 }
 
 .about-img::before {
@@ -477,15 +486,13 @@ body.dark-mode {
   display: flex;
   align-items: center;
   margin-bottom: var(--spacing-sm);
-  padding: var(--spacing-sm);
-  border-radius: var(--border-radius-sm);
-  background-color: var(--surface-color);
+  border-radius: var(--border-radius-md);
   transition: all var(--transition-normal);
 }
 
 .contact-list li:hover {
   background-color: var(--surface-color-hover);
-  transform: translateX(5px);
+  transform: scale(1.02) translateX(5px);
 }
 
 .contact-list li strong {
@@ -532,7 +539,13 @@ body.dark-mode {
 }
 
 .introduction-item {
-  margin: 10px 0;
+  margin: 1em 0;
+  padding: 0.5rem 0;
+  transition: all var(--transition-normal);
+}
+
+.introduction-item:hover {
+  transform: scale(1.02);
 }
 
 /* Publication Section */
@@ -650,6 +663,87 @@ body.dark-mode {
   color: white;
   transform: translateY(-3px);
   box-shadow: var(--shadow-accent);
+}
+
+/* Author links styling - updated to be more compact */
+.author-link {
+  position: relative;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline;
+  padding: 0;
+  border-radius: 0;
+  background-color: transparent;
+  transform-origin: center;
+
+}
+
+.author-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.author-link:hover {
+  cursor: pointer;
+  color: var(--accent-color);
+  transform: scale(1.05) translateY(-1px);
+}
+
+.author-link:hover::after {
+  width: 100%;
+}
+
+/* Animation for author links on pub-item hover - simplified */
+.pub-item:hover .author-link {
+  animation: none;
+}
+
+/* Reduce spacing in authors list */
+.authors {
+  line-height: 1.3;
+  margin-bottom: var(--spacing-sm);
+  word-spacing: normal;
+  letter-spacing: normal;
+  white-space: normal;
+  hyphens: none;
+}
+
+.authors span, .authors a {
+  margin-right: 0;
+  display: inline;
+}
+
+/* Override the global word-spacing that might be causing the issue */
+body .authors,
+.pub-details .authors {
+  word-spacing: normal;
+  hyphens: none;
+  text-align: left;
+}
+
+/* Mobile responsive styling for author links */
+@media (max-width: 768px) {
+  .authors {
+    line-height: 1.5;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .author-link {
+    display: inline;
+    margin: 0;
+  }
+  
+  .author-link:active {
+    color: var(--accent-color);
+    transform: none;
+  }
 }
 
 /* Resume Section */
@@ -1121,6 +1215,30 @@ body.dark-mode .dark-mode-toggle .fa-sun { opacity: 1; transform: scale(1); }
     width: 100%;
     margin-bottom: var(--spacing-xs);
   }
+  
+  /* Mobile responsive styling for author links */
+  .authors {
+    margin-bottom: var(--spacing-md);
+    line-height: 1.8;
+  }
+  
+  .author-link {
+    margin: 2px 0;
+    display: inline-block;
+  }
+  
+  .pub-item:hover .author-link {
+    animation: none; /* Disable animation on mobile for better performance */
+  }
+  
+  .author-link:active {
+    color: var(--accent-color);
+    transform: translateY(-1px);
+  }
+  
+  .author-link:active::after {
+    width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1448,7 +1566,7 @@ p,
   hyphens: auto;
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
-  word-spacing:-0.05em;
+  word-spacing: normal;
 }
 
 /* Keep certain elements left-aligned for better design */
@@ -1685,19 +1803,6 @@ h1, h2, h3, h4, h5, h6,
 
 .sidebar-footer p {
   margin-bottom: var(--spacing-xs);
-}
-
-/* Fix the introduction paragraphs on mobile */
-.introduction-item {
-  margin: 8px 0;
-  width: 100%;
-  text-align: left;
-}
-
-/* Ensure the #introduction container takes full width on mobile */
-#introduction {
-  width: 100%;
-  overflow-x: hidden;
 }
 
 /* Basic responsive fixes for very small screens */

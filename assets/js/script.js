@@ -34,14 +34,29 @@ function renderPublications(list) {
     // Default image or abbr-based fallback
     const imgSrc = p.image || `assets/img/publications/${p.abbr || 'placeholder'}.jpg`;
     
+    // Process authors with links
+    const authors = p.author.split(', ').map((author, index) => {
+      // Make Yu-Chu Yu bold
+      const isAuthor = author === "Yu-Chu Yu";
+      const authorText = isAuthor ? `<strong>${author}</strong>` : author;
+      
+      if (p.links && p.links[index]) {
+        if (isAuthor)
+          return `<span class="author-link">${authorText}</span>`;
+        else
+          return `<a href="${p.links[index]}" target="_blank" class="author-link">${authorText}</a>`;
+      }
+      return `<span>${authorText}</span>`;
+    }).join(', ');
+    
     item.innerHTML = `
       <div class="pub-img">
         <img src="${imgSrc}" alt="${p.title}" onerror="this.src='assets/img/placeholder-pub.jpg'; this.onerror=null;">
       </div>
       <div class="pub-details">
         <h3>${p.title}</h3>
-        <div class="authors">${p.author}</div>
-        <div class="venue">${p.conference}, ${p.year}</div>
+        <div class="authors" style="word-spacing:normal;">${authors}</div>
+        <div class="venue">${p.conference}${p.confAbbr ? ` (<strong>${p.confAbbr}</strong>)` : ''}, ${p.year}</div>
         <div class="links">
           ${p.arxivLink ? `<a href="${p.arxivLink}" target="_blank"><i class="fas fa-file-pdf"></i> Paper Link</a>` : ''}
           ${p.githubLink ? `<a href="${p.githubLink}" target="_blank"><i class="fab fa-github"></i> Project Page</a>` : ''}
