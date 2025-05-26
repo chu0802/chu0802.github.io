@@ -821,7 +821,7 @@ body .authors,
 /* Present/ongoing position styling (overrides basic styles) */
 .timeline-item.timeline-item-present::before {
   background: var(--success-color); /* Use theme variable instead of hardcoded color */
-  animation: pulseGreen 2s infinite;
+  animation: pulseGreen 1.5s infinite;
 }
 
 @keyframes pulseGreen {
