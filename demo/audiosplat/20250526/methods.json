@@ -1,0 +1,646 @@
+{
+    "soap_dispenser": [
+        {
+            "baseline": {
+                "path": "output_test/baseline/soap_dispenser/Pressing_soap_dispenser_1102.wav",
+                "prompt": "Pressing soap dispenser"
+            },
+            "only material": {
+                "path": "output_test/material/soap_dispenser/Pressing_the_plastic_soap_dispenser_1102.wav",
+                "prompt": "Pressing the plastic soap dispenser"
+            },
+            "only environment": {
+                "path": "output_test/environment/soap_dispenser/Pressing_the_soap_dispenser_in_a_humid_bathroom_1102.wav",
+                "prompt": "Pressing the soap dispenser in a humid bathroom"
+            },
+            "detailed": {
+                "path": "output_test/detailed/soap_dispenser/Pressing_the_pump_on_the_plastic_soap_dispenser_in_a_humid_bathroom_1102.wav",
+                "prompt": "Pressing the pump on the plastic soap dispenser in a humid bathroom"
+            }
+        },
+        {
+            "baseline": {
+                "path": "output_test/baseline/soap_dispenser/Slamming_soap_dispenser_1102.wav",
+                "prompt": "Slamming soap dispenser"
+            },
+            "only material": {
+                "path": "output_test/material/soap_dispenser/Slamming_the_plastic_soap_dispenser_1102.wav",
+                "prompt": "Slamming the plastic soap dispenser"
+            },
+            "only environment": {
+                "path": "output_test/environment/soap_dispenser/Slamming_the_soap_dispenser_onto_the_countertop_in_a_quiet_bathroom_1102.wav",
+                "prompt": "Slamming the soap dispenser onto the countertop in a quiet bathroom"
+            },
+            "detailed": {
+                "path": "output_test/detailed/soap_dispenser/Slamming_the_plastic_soap_dispenser_onto_the_granite_countertop_in_a_quiet_bathroom_1102.wav",
+                "prompt": "Slamming the plastic soap dispenser onto the granite countertop in a quiet bathroom"
+            }
+        },
+        {
+            "baseline": {
+                "path": "output_test/baseline/soap_dispenser/Shaking_soap_dispenser_1102.wav",
+                "prompt": "Shaking soap dispenser"
+            },
+            "only material": {
+                "path": "output_test/material/soap_dispenser/Shaking_the_plastic_soap_dispenser_1102.wav",
+                "prompt": "Shaking the plastic soap dispenser"
+            },
+            "only environment": {
+                "path": "output_test/environment/soap_dispenser/Shaking_the_soap_dispenser_in_a_tiled_bathroom_1102.wav",
+                "prompt": "Shaking the soap dispenser in a tiled bathroom"
+            },
+            "detailed": {
+                "path": "output_test/detailed/soap_dispenser/Shaking_the_liquid_soap_bottle_in_a_tiled_bathroom_1102.wav",
+                "prompt": "Shaking the liquid soap bottle in a tiled bathroom"
+            }
+        },
+        {
+            "baseline": {
+                "path": "output_test/baseline/soap_dispenser/Unscrewing_soap_dispenser_1102.wav",
+                "prompt": "Unscrewing soap dispenser"
+            },
+            "only material": {
+                "path": "output_test/material/soap_dispenser/Unscrewing_the_plastic_soap_dispenser_1102.wav",
+                "prompt": "Unscrewing the plastic soap dispenser"
+            },
+            "only environment": {
+                "path": "output_test/environment/soap_dispenser/Unscrewing_the_soap_dispenser_in_a_bathroom_1102.wav",
+                "prompt": "Unscrewing the soap dispenser in a bathroom"
+            },
+            "detailed": {
+                "path": "output_test/detailed/soap_dispenser/Unscrewing_the_soap_pump_cap_from_the_plastic_bottle_in_a_bathroom_1102.wav",
+                "prompt": "Unscrewing the soap pump cap from the plastic bottle in a bathroom"
+            }
+        },
+        {
+            "baseline": {
+                "path": "output_test/baseline/soap_dispenser/Refilling_soap_dispenser_1102.wav",
+                "prompt": "Refilling soap dispenser"
+            },
+            "only material": {
+                "path": "output_test/material/soap_dispenser/Refilling_the_plastic_soap_dispenser_1102.wav",
+                "prompt": "Refilling the plastic soap dispenser"
+            },
+            "only environment": {
+                "path": "output_test/environment/soap_dispenser/Refilling_the_soap_dispenser_in_a_home_bathroom_1102.wav",
+                "prompt": "Refilling the soap dispenser in a home bathroom"
+            },
+            "detailed": {
+                "path": "output_test/detailed/soap_dispenser/Refilling_the_plastic_soap_dispenser_in_a_home_bathroom_1102.wav",
+                "prompt": "Refilling the plastic soap dispenser in a home bathroom"
+            }
+        }
+    ],
+    "sink_faucet": [
+        {
+            "baseline": {
+                "path": "output_test/baseline/sink_faucet/Turning_sink_faucet_1102.wav",
+                "prompt": "Turning sink faucet"
+            },
+            "only material": {
+                "path": "output_test/material/sink_faucet/Turning_the_metal_faucet_handle_1102.wav",
+                "prompt": "Turning the metal faucet handle"
+            },
+            "only environment": {
+                "path": "output_test/environment/sink_faucet/Turning_the_faucet_handle_in_a_dimly_lit_bathroom_1102.wav",
+                "prompt": "Turning the faucet handle in a dimly lit bathroom"
+            },
+            "detailed": {
+                "path": "output_test/detailed/sink_faucet/Turning_the_cold_metal_faucet_handle_in_a_dimly_lit_bathroom_1102.wav",
+                "prompt": "Turning the cold metal faucet handle in a dimly lit bathroom"
+            }
+        },
+        {
+            "baseline": {
+                "path": "output_test/baseline/sink_faucet/Splashing_sink_faucet_1102.wav",
+                "prompt": "Splashing sink faucet"
+            },
+            "only material": {
+                "path": "output_test/material/sink_faucet/Splashing_water_from_the_chrome_faucet_1102.wav",
+                "prompt": "Splashing water from the chrome faucet"
+            },
+            "only environment": {
+                "path": "output_test/environment/sink_faucet/Splashing_water_from_the_faucet_into_the_sink_in_a_bathroom_1102.wav",
+                "prompt": "Splashing water from the faucet into the sink in a bathroom"
+            },
+            "detailed": {
+                "path": "output_test/detailed/sink_faucet/Splashing_water_from_a_chrome_faucet_into_the_porcelain_sink_in_a_bathroom_1102.wav",
+                "prompt": "Splashing water from a chrome faucet into the porcelain sink in a bathroom"
+            }
+        },
+        {
+            "baseline": {
+                "path": "output_test/baseline/sink_faucet/Tapping_sink_faucet_1102.wav",
+                "prompt": "Tapping sink faucet"
+            },
+            "only material": {
+                "path": "output_test/material/sink_faucet/Tapping_a_ring_on_the_chrome_faucet_1102.wav",
+                "prompt": "Tapping a ring on the chrome faucet"
+            },
+            "only environment": {
+                "path": "output_test/environment/sink_faucet/Tapping_a_ring_on_the_faucet_in_a_tiled_bathroom_1102.wav",
+                "prompt": "Tapping a ring on the faucet in a tiled bathroom"
+            },
+            "detailed": {
+                "path": "output_test/detailed/sink_faucet/Tapping_a_metal_ring_on_the_shiny_faucet_in_a_tiled_bathroom_1102.wav",
+                "prompt": "Tapping a metal ring on the shiny faucet in a tiled bathroom"
+            }
+        },
+        {
+            "baseline": {
+                "path": "output_test/baseline/sink_faucet/Dripping_sink_faucet_1102.wav",
+                "prompt": "Dripping sink faucet"
+            },
+            "only material": {
+                "path": "output_test/material/sink_faucet/Dripping_water_from_the_chrome_faucet_1102.wav",
+                "prompt": "Dripping water from the chrome faucet"
+            },
+            "only environment": {
+                "path": "output_test/environment/sink_faucet/Dripping_water_from_the_faucet_in_a_silent_bathroom_1102.wav",
+                "prompt": "Dripping water from the faucet in a silent bathroom"
+            },
+            "detailed": {
+                "path": "output_test/detailed/sink_faucet/Dripping_water_from_the_faucet_onto_the_ceramic_sink_in_a_silent_bathroom_1102.wav",
+                "prompt": "Dripping water from the faucet onto the ceramic sink in a silent bathroom"
+            }
+        },
+        {
+            "baseline": {
+                "path": "output_test/baseline/sink_faucet/Wiping_sink_faucet_1102.wav",
+                "prompt": "Wiping sink faucet"
+            },
+            "only material": {
+                "path": "output_test/material/sink_faucet/Wiping_buildup_off_the_chrome_faucet_1102.wav",
+                "prompt": "Wiping buildup off the chrome faucet"
+            },
+            "only environment": {
+                "path": "output_test/environment/sink_faucet/Wiping_buildup_off_the_faucet_in_a_residential_bathroom_1102.wav",
+                "prompt": "Wiping buildup off the faucet in a residential bathroom"
+            },
+            "detailed": {
+                "path": "output_test/detailed/sink_faucet/Wiping_mineral_buildup_off_the_chrome_faucet_in_a_residential_bathroom_1102.wav",
+                "prompt": "Wiping mineral buildup off the chrome faucet in a residential bathroom"
+            }
+        }
+    ],
+    "toothbrush": [
+        {
+            "baseline": {
+                "path": "output_test/baseline/toothbrush/Brushing_toothbrush_1102.wav",
+                "prompt": "Brushing toothbrush"
+            },
+            "only material": {
+                "path": "output_test/material/toothbrush/Brushing_with_the_plastic_toothbrush_1102.wav",
+                "prompt": "Brushing with the plastic toothbrush"
+            },
+            "only environment": {
+                "path": "output_test/environment/toothbrush/Brushing_teeth_with_a_toothbrush_in_a_bathroom_sink_1102.wav",
+                "prompt": "Brushing teeth with a toothbrush in a bathroom sink"
+            },
+            "detailed": {
+                "path": "output_test/detailed/toothbrush/Brushing_teeth_with_a_plastic_toothbrush_in_a_ceramic_bathroom_sink_1102.wav",
+                "prompt": "Brushing teeth with a plastic toothbrush in a ceramic bathroom sink"
+            }
+        },
+        {
+            "baseline": {
+                "path": "output_test/baseline/toothbrush/Dropping_toothbrush_1102.wav",
+                "prompt": "Dropping toothbrush"
+            },
+            "only material": {
+                "path": "output_test/material/toothbrush/Dropping_the_plastic_toothbrush_1102.wav",
+                "prompt": "Dropping the plastic toothbrush"
+            },
+            "only environment": {
+                "path": "output_test/environment/toothbrush/Dropping_the_toothbrush_on_a_countertop_in_a_hotel_bathroom_1102.wav",
+                "prompt": "Dropping the toothbrush on a countertop in a hotel bathroom"
+            },
+            "detailed": {
+                "path": "output_test/detailed/toothbrush/Dropping_the_toothbrush_on_a_stone_countertop_in_a_hotel_bathroom_1102.wav",
+                "prompt": "Dropping the toothbrush on a stone countertop in a hotel bathroom"
+            }
+        },
+        {
+            "baseline": {
+                "path": "output_test/baseline/toothbrush/Rinsing_toothbrush_1102.wav",
+                "prompt": "Rinsing toothbrush"
+            },
+            "only material": {
+                "path": "output_test/material/toothbrush/Rinsing_the_plastic_toothbrush_1102.wav",
+                "prompt": "Rinsing the plastic toothbrush"
+            },
+            "only environment": {
+                "path": "output_test/environment/toothbrush/Rinsing_a_toothbrush_under_water_in_a_bathroom_1102.wav",
+                "prompt": "Rinsing a toothbrush under water in a bathroom"
+            },
+            "detailed": {
+                "path": "output_test/detailed/toothbrush/Rinsing_a_toothbrush_under_running_water_in_a_porcelain_sink_1102.wav",
+                "prompt": "Rinsing a toothbrush under running water in a porcelain sink"
+            }
+        },
+        {
+            "baseline": {
+                "path": "output_test/baseline/toothbrush/Scrubbing_toothbrush_1102.wav",
+                "prompt": "Scrubbing toothbrush"
+            },
+            "only material": {
+                "path": "output_test/material/toothbrush/Scrubbing_the_nylon_bristles_toothbrush_1102.wav",
+                "prompt": "Scrubbing the nylon bristles toothbrush"
+            },
+            "only environment": {
+                "path": "output_test/environment/toothbrush/Scrubbing_the_toothbrush_in_a_tiled_bathroom_1102.wav",
+                "prompt": "Scrubbing the toothbrush in a tiled bathroom"
+            },
+            "detailed": {
+                "path": "output_test/detailed/toothbrush/Scrubbing_the_bristles_against_a_fingertip_in_a_tiled_bathroom_1102.wav",
+                "prompt": "Scrubbing the bristles against a fingertip in a tiled bathroom"
+            }
+        },
+        {
+            "baseline": {
+                "path": "output_test/baseline/toothbrush/Tapping_toothbrush_1102.wav",
+                "prompt": "Tapping toothbrush"
+            },
+            "only material": {
+                "path": "output_test/material/toothbrush/Tapping_the_plastic_toothbrush_1102.wav",
+                "prompt": "Tapping the plastic toothbrush"
+            },
+            "only environment": {
+                "path": "output_test/environment/toothbrush/Tapping_the_toothbrush_against_a_mug_rim_in_a_morning_bathroom_1102.wav",
+                "prompt": "Tapping the toothbrush against a mug rim in a morning bathroom"
+            },
+            "detailed": {
+                "path": "output_test/detailed/toothbrush/Tapping_the_toothbrush_against_a_mug_rim_in_a_quiet_morning_bathroom_1102.wav",
+                "prompt": "Tapping the toothbrush against a mug rim in a quiet morning bathroom"
+            }
+        }
+    ],
+    "mug": [
+        {
+            "baseline": {
+                "path": "output_test/baseline/mug/Setting_down_mug_1102.wav",
+                "prompt": "Setting down mug"
+            },
+            "only material": {
+                "path": "output_test/material/mug/Setting_down_the_ceramic_mug_1102.wav",
+                "prompt": "Setting down the ceramic mug"
+            },
+            "only environment": {
+                "path": "output_test/environment/mug/Setting_down_the_mug_on_a_countertop_in_a_quiet_bathroom_1102.wav",
+                "prompt": "Setting down the mug on a countertop in a quiet bathroom"
+            },
+            "detailed": {
+                "path": "output_test/detailed/mug/Setting_down_the_ceramic_mug_on_a_stone_countertop_in_a_quiet_bathroom_1102.wav",
+                "prompt": "Setting down the ceramic mug on a stone countertop in a quiet bathroom"
+            }
+        },
+        {
+            "baseline": {
+                "path": "output_test/baseline/mug/Tapping_mug_1102.wav",
+                "prompt": "Tapping mug"
+            },
+            "only material": {
+                "path": "output_test/material/mug/Tapping_the_ceramic_mug_1102.wav",
+                "prompt": "Tapping the ceramic mug"
+            },
+            "only environment": {
+                "path": "output_test/environment/mug/Tapping_the_mug_in_an_early_morning_bathroom_1102.wav",
+                "prompt": "Tapping the mug in an early morning bathroom"
+            },
+            "detailed": {
+                "path": "output_test/detailed/mug/Tapping_the_toothbrush_inside_the_ceramic_mug_in_an_early_morning_bathroom_1102.wav",
+                "prompt": "Tapping the toothbrush inside the ceramic mug in an early morning bathroom"
+            }
+        },
+        {
+            "baseline": {
+                "path": "output_test/baseline/mug/Clinking_mug_1102.wav",
+                "prompt": "Clinking mug"
+            },
+            "only material": {
+                "path": "output_test/material/mug/Clinking_the_ceramic_mug_1102.wav",
+                "prompt": "Clinking the ceramic mug"
+            },
+            "only environment": {
+                "path": "output_test/environment/mug/Clinking_the_mug_against_the_faucet_in_a_small_bathroom_1102.wav",
+                "prompt": "Clinking the mug against the faucet in a small bathroom"
+            },
+            "detailed": {
+                "path": "output_test/detailed/mug/Clinking_the_ceramic_mug_against_the_faucet_accidentally_in_a_small_bathroom_1102.wav",
+                "prompt": "Clinking the ceramic mug against the faucet accidentally in a small bathroom"
+            }
+        },
+        {
+            "baseline": {
+                "path": "output_test/baseline/mug/Pouring_into_mug_1102.wav",
+                "prompt": "Pouring into mug"
+            },
+            "only material": {
+                "path": "output_test/material/mug/Pouring_water_into_the_ceramic_mug_1102.wav",
+                "prompt": "Pouring water into the ceramic mug"
+            },
+            "only environment": {
+                "path": "output_test/environment/mug/Pouring_water_into_the_mug_from_the_faucet_in_a_home_bathroom_1102.wav",
+                "prompt": "Pouring water into the mug from the faucet in a home bathroom"
+            },
+            "detailed": {
+                "path": "output_test/detailed/mug/Pouring_water_into_a_ceramic_mug_from_the_faucet_in_a_home_bathroom_1102.wav",
+                "prompt": "Pouring water into a ceramic mug from the faucet in a home bathroom"
+            }
+        },
+        {
+            "baseline": {
+                "path": "output_test/baseline/mug/Knocking_over_mug_1102.wav",
+                "prompt": "Knocking over mug"
+            },
+            "only material": {
+                "path": "output_test/material/mug/Knocking_over_the_ceramic_mug_1102.wav",
+                "prompt": "Knocking over the ceramic mug"
+            },
+            "only environment": {
+                "path": "output_test/environment/mug/Knocking_over_the_mug_onto_a_surface_in_a_messy_bathroom_1102.wav",
+                "prompt": "Knocking over the mug onto a surface in a messy bathroom"
+            },
+            "detailed": {
+                "path": "output_test/detailed/mug/Knocking_over_a_ceramic_mug_onto_a_solid_surface_in_a_messy_bathroom_1102.wav",
+                "prompt": "Knocking over a ceramic mug onto a solid surface in a messy bathroom"
+            }
+        }
+    ],
+    "toothpaste_tube": [
+        {
+            "baseline": {
+                "path": "output_test/baseline/toothpaste_tube/Squeezing_toothpaste_tube_1102.wav",
+                "prompt": "Squeezing toothpaste tube"
+            },
+            "only material": {
+                "path": "output_test/material/toothpaste_tube/Squeezing_the_plastic_toothpaste_tube_1102.wav",
+                "prompt": "Squeezing the plastic toothpaste tube"
+            },
+            "only environment": {
+                "path": "output_test/environment/toothpaste_tube/Squeezing_the_toothpaste_tube_on_a_countertop_in_a_quiet_bathroom_1102.wav",
+                "prompt": "Squeezing the toothpaste tube on a countertop in a quiet bathroom"
+            },
+            "detailed": {
+                "path": "output_test/detailed/toothpaste_tube/Squeezing_the_plastic_toothpaste_tube_on_a_granite_countertop_in_a_quiet_bathroom_1102.wav",
+                "prompt": "Squeezing the plastic toothpaste tube on a granite countertop in a quiet bathroom"
+            }
+        },
+        {
+            "baseline": {
+                "path": "output_test/baseline/toothpaste_tube/Twisting_toothpaste_tube_1102.wav",
+                "prompt": "Twisting toothpaste tube"
+            },
+            "only material": {
+                "path": "output_test/material/toothpaste_tube/Twisting_the_plastic_toothpaste_tube_1102.wav",
+                "prompt": "Twisting the plastic toothpaste tube"
+            },
+            "only environment": {
+                "path": "output_test/environment/toothpaste_tube/Twisting_the_toothpaste_tube_in_a_tiled_bathroom_1102.wav",
+                "prompt": "Twisting the toothpaste tube in a tiled bathroom"
+            },
+            "detailed": {
+                "path": "output_test/detailed/toothpaste_tube/Twisting_the_toothpaste_cap_in_a_bathroom_with_tiled_walls_1102.wav",
+                "prompt": "Twisting the toothpaste cap in a bathroom with tiled walls"
+            }
+        },
+        {
+            "baseline": {
+                "path": "output_test/baseline/toothpaste_tube/Dropping_toothpaste_tube_1102.wav",
+                "prompt": "Dropping toothpaste tube"
+            },
+            "only material": {
+                "path": "output_test/material/toothpaste_tube/Dropping_the_plastic_toothpaste_tube_1102.wav",
+                "prompt": "Dropping the plastic toothpaste tube"
+            },
+            "only environment": {
+                "path": "output_test/environment/toothpaste_tube/Dropping_the_toothpaste_tube_into_the_sink_in_a_home_bathroom_1102.wav",
+                "prompt": "Dropping the toothpaste tube into the sink in a home bathroom"
+            },
+            "detailed": {
+                "path": "output_test/detailed/toothpaste_tube/Dropping_the_toothpaste_tube_into_a_ceramic_sink_in_a_home_bathroom_1102.wav",
+                "prompt": "Dropping the toothpaste tube into a ceramic sink in a home bathroom"
+            }
+        },
+        {
+            "baseline": {
+                "path": "output_test/baseline/toothpaste_tube/Flicking_toothpaste_tube_1102.wav",
+                "prompt": "Flicking toothpaste tube"
+            },
+            "only material": {
+                "path": "output_test/material/toothpaste_tube/Flicking_the_plastic_toothpaste_tube_1102.wav",
+                "prompt": "Flicking the plastic toothpaste tube"
+            },
+            "only environment": {
+                "path": "output_test/environment/toothpaste_tube/Flicking_the_toothpaste_tube_in_a_shared_bathroom_1102.wav",
+                "prompt": "Flicking the toothpaste tube in a shared bathroom"
+            },
+            "detailed": {
+                "path": "output_test/detailed/toothpaste_tube/Flicking_a_plastic_toothpaste_tube_on_a_counter_in_a_shared_bathroom_1102.wav",
+                "prompt": "Flicking a plastic toothpaste tube on a counter in a shared bathroom"
+            }
+        },
+        {
+            "baseline": {
+                "path": "output_test/baseline/toothpaste_tube/Rolling_toothpaste_tube_1102.wav",
+                "prompt": "Rolling toothpaste tube"
+            },
+            "only material": {
+                "path": "output_test/material/toothpaste_tube/Rolling_the_plastic_toothpaste_tube_1102.wav",
+                "prompt": "Rolling the plastic toothpaste tube"
+            },
+            "only environment": {
+                "path": "output_test/environment/toothpaste_tube/Rolling_the_toothpaste_tube_in_a_hotel_bathroom_1102.wav",
+                "prompt": "Rolling the toothpaste tube in a hotel bathroom"
+            },
+            "detailed": {
+                "path": "output_test/detailed/toothpaste_tube/Rolling_the_toothpaste_tube_to_get_the_last_bit_in_a_hotel_bathroom_1102.wav",
+                "prompt": "Rolling the toothpaste tube to get the last bit in a hotel bathroom"
+            }
+        }
+    ],
+    "soap_dish": [
+        {
+            "baseline": {
+                "path": "output_test/baseline/soap_dish/Sliding_soap_dish_1102.wav",
+                "prompt": "Sliding soap dish"
+            },
+            "only material": {
+                "path": "output_test/material/soap_dish/Sliding_the_ceramic_soap_dish_1102.wav",
+                "prompt": "Sliding the ceramic soap dish"
+            },
+            "only environment": {
+                "path": "output_test/environment/soap_dish/Sliding_the_soap_dish_on_a_countertop_in_a_quiet_bathroom_1102.wav",
+                "prompt": "Sliding the soap dish on a countertop in a quiet bathroom"
+            },
+            "detailed": {
+                "path": "output_test/detailed/soap_dish/Sliding_the_ceramic_soap_dish_on_a_granite_countertop_in_a_quiet_bathroom_1102.wav",
+                "prompt": "Sliding the ceramic soap dish on a granite countertop in a quiet bathroom"
+            }
+        },
+        {
+            "baseline": {
+                "path": "output_test/baseline/soap_dish/Dropping_soap_dish_1102.wav",
+                "prompt": "Dropping soap dish"
+            },
+            "only material": {
+                "path": "output_test/material/soap_dish/Dropping_a_soap_bar_into_the_ceramic_soap_dish_1102.wav",
+                "prompt": "Dropping a soap bar into the ceramic soap dish"
+            },
+            "only environment": {
+                "path": "output_test/environment/soap_dish/Dropping_a_soap_bar_into_the_soap_dish_in_a_home_bathroom_1102.wav",
+                "prompt": "Dropping a soap bar into the soap dish in a home bathroom"
+            },
+            "detailed": {
+                "path": "output_test/detailed/soap_dish/Dropping_a_soap_bar_into_the_ceramic_soap_dish_in_a_home_bathroom_1102.wav",
+                "prompt": "Dropping a soap bar into the ceramic soap dish in a home bathroom"
+            }
+        },
+        {
+            "baseline": {
+                "path": "output_test/baseline/soap_dish/Clinking_soap_dish_1102.wav",
+                "prompt": "Clinking soap dish"
+            },
+            "only material": {
+                "path": "output_test/material/soap_dish/Clinking_the_ceramic_soap_dish_1102.wav",
+                "prompt": "Clinking the ceramic soap dish"
+            },
+            "only environment": {
+                "path": "output_test/environment/soap_dish/Clinking_the_soap_dish_against_the_sink_in_a_tiled_bathroom_1102.wav",
+                "prompt": "Clinking the soap dish against the sink in a tiled bathroom"
+            },
+            "detailed": {
+                "path": "output_test/detailed/soap_dish/Clinking_the_ceramic_soap_dish_against_the_sink_edge_in_a_tiled_bathroom_1102.wav",
+                "prompt": "Clinking the ceramic soap dish against the sink edge in a tiled bathroom"
+            }
+        },
+        {
+            "baseline": {
+                "path": "output_test/baseline/soap_dish/Cleaning_soap_dish_1102.wav",
+                "prompt": "Cleaning soap dish"
+            },
+            "only material": {
+                "path": "output_test/material/soap_dish/Cleaning_the_ceramic_soap_dish_1102.wav",
+                "prompt": "Cleaning the ceramic soap dish"
+            },
+            "only environment": {
+                "path": "output_test/environment/soap_dish/Cleaning_the_soap_dish_with_a_sponge_in_a_bathroom_1102.wav",
+                "prompt": "Cleaning the soap dish with a sponge in a bathroom"
+            },
+            "detailed": {
+                "path": "output_test/detailed/soap_dish/Cleaning_the_ceramic_soap_dish_with_a_sponge_in_a_bathroom_1102.wav",
+                "prompt": "Cleaning the ceramic soap dish with a sponge in a bathroom"
+            }
+        },
+        {
+            "baseline": {
+                "path": "output_test/baseline/soap_dish/Tapping_soap_dish_1102.wav",
+                "prompt": "Tapping soap dish"
+            },
+            "only material": {
+                "path": "output_test/material/soap_dish/Tapping_the_ceramic_soap_dish_1102.wav",
+                "prompt": "Tapping the ceramic soap dish"
+            },
+            "only environment": {
+                "path": "output_test/environment/soap_dish/Tapping_the_empty_soap_dish_in_a_dim_bathroom_1102.wav",
+                "prompt": "Tapping the empty soap dish in a dim bathroom"
+            },
+            "detailed": {
+                "path": "output_test/detailed/soap_dish/Tapping_nails_on_the_empty_ceramic_soap_dish_in_a_dim_bathroom_1102.wav",
+                "prompt": "Tapping nails on the empty ceramic soap dish in a dim bathroom"
+            }
+        }
+    ],
+    "sink_basin": [
+        {
+            "baseline": {
+                "path": "output_test/baseline/sink_basin/Splashing_sink_basin_1102.wav",
+                "prompt": "Splashing sink basin"
+            },
+            "only material": {
+                "path": "output_test/material/sink_basin/Splashing_water_into_the_porcelain_sink_1102.wav",
+                "prompt": "Splashing water into the porcelain sink"
+            },
+            "only environment": {
+                "path": "output_test/environment/sink_basin/Splashing_water_into_the_sink_in_a_quiet_bathroom_1102.wav",
+                "prompt": "Splashing water into the sink in a quiet bathroom"
+            },
+            "detailed": {
+                "path": "output_test/detailed/sink_basin/Splashing_water_into_a_porcelain_sink_in_a_quiet_bathroom_1102.wav",
+                "prompt": "Splashing water into a porcelain sink in a quiet bathroom"
+            }
+        },
+        {
+            "baseline": {
+                "path": "output_test/baseline/sink_basin/Dropping_in_sink_basin_1102.wav",
+                "prompt": "Dropping in sink basin"
+            },
+            "only material": {
+                "path": "output_test/material/sink_basin/Dropping_a_ring_in_the_porcelain_sink_1102.wav",
+                "prompt": "Dropping a ring in the porcelain sink"
+            },
+            "only environment": {
+                "path": "output_test/environment/sink_basin/Dropping_a_ring_in_the_sink_in_a_tiled_bathroom_1102.wav",
+                "prompt": "Dropping a ring in the sink in a tiled bathroom"
+            },
+            "detailed": {
+                "path": "output_test/detailed/sink_basin/Dropping_a_metal_ring_in_the_porcelain_sink_in_a_tiled_bathroom_1102.wav",
+                "prompt": "Dropping a metal ring in the porcelain sink in a tiled bathroom"
+            }
+        },
+        {
+            "baseline": {
+                "path": "output_test/baseline/sink_basin/Running_in_sink_basin_1102.wav",
+                "prompt": "Running in sink basin"
+            },
+            "only material": {
+                "path": "output_test/material/sink_basin/Running_water_in_the_porcelain_sink_1102.wav",
+                "prompt": "Running water in the porcelain sink"
+            },
+            "only environment": {
+                "path": "output_test/environment/sink_basin/Running_water_echoing_in_the_sink_in_a_bathroom_1102.wav",
+                "prompt": "Running water echoing in the sink in a bathroom"
+            },
+            "detailed": {
+                "path": "output_test/detailed/sink_basin/Running_water_echoing_in_an_empty_porcelain_sink_in_a_bathroom_1102.wav",
+                "prompt": "Running water echoing in an empty porcelain sink in a bathroom"
+            }
+        },
+        {
+            "baseline": {
+                "path": "output_test/baseline/sink_basin/Tapping_sink_basin_1102.wav",
+                "prompt": "Tapping sink basin"
+            },
+            "only material": {
+                "path": "output_test/material/sink_basin/Tapping_the_edge_of_the_porcelain_sink_1102.wav",
+                "prompt": "Tapping the edge of the porcelain sink"
+            },
+            "only environment": {
+                "path": "output_test/environment/sink_basin/Tapping_the_edge_of_the_sink_in_a_home_bathroom_1102.wav",
+                "prompt": "Tapping the edge of the sink in a home bathroom"
+            },
+            "detailed": {
+                "path": "output_test/detailed/sink_basin/Tapping_the_edge_of_a_porcelain_sink_with_a_toothbrush_in_a_home_bathroom_1102.wav",
+                "prompt": "Tapping the edge of a porcelain sink with a toothbrush in a home bathroom"
+            }
+        },
+        {
+            "baseline": {
+                "path": "output_test/baseline/sink_basin/Rubbing_sink_basin_1102.wav",
+                "prompt": "Rubbing sink basin"
+            },
+            "only material": {
+                "path": "output_test/material/sink_basin/Rubbing_a_sponge_around_the_porcelain_sink_1102.wav",
+                "prompt": "Rubbing a sponge around the porcelain sink"
+            },
+            "only environment": {
+                "path": "output_test/environment/sink_basin/Rubbing_a_sponge_around_the_sink_in_a_cleaning_session_1102.wav",
+                "prompt": "Rubbing a sponge around the sink in a cleaning session"
+            },
+            "detailed": {
+                "path": "output_test/detailed/sink_basin/Rubbing_a_sponge_around_the_porcelain_sink_in_a_cleaning_session_1102.wav",
+                "prompt": "Rubbing a sponge around the porcelain sink in a cleaning session"
+            }
+        }
+    ]
+}
