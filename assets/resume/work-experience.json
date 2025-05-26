@@ -1,0 +1,19 @@
+[
+    { 
+        "title": "Machine Learning Engineer", 
+        "location": "Dcard Taiwan LTD",
+        "advisor": "Manager: <a href=\"https://www.linkedin.com/in/chaojoel/\" target=\"_blank\">Ting-Hsuan Chao</a>",
+        "year": "2022/11 - 2023/09",
+        "description": [
+          "Design a recommendation system for a Taiwanese forum, serving over 15 million users with more than 10,000 posts per day."
+        ]
+    },
+    { 
+        "title": "Research Development Intern", 
+        "location": "Microsoft @ Bing Maps & Geospatial Team",
+        "advisor": "Manager: <a href=\"https://www.linkedin.com/in/zhiqinghong/\" target=\"_blank\">Jason Hong</a>",
+        "year": "2021/12 - 2022/06",
+        "description": [
+        ]
+    }
+]
