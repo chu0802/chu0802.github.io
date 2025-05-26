@@ -165,6 +165,138 @@ function renderLastModifiedDate(data) {
   lastModifiedDate.textContent = "Last updated: " + data.lastModifiedDate;
 }
 
+function typewriterEffect(element, text, speed = 100) {
+  // Parse the text to get static part and roles
+  const parts = text.split(' - ');
+  const staticPart = parts[0] + ' - ';
+  const roles = parts[1].split('/');
+  
+  let roleIndex = 0;
+  let i = 0;
+  let isFirstRun = true;
+  const deleteSpeed = 10; // Faster delete speed
+  const pauseBeforeDelete = 1000; // Pause before starting to delete
+  const pauseBeforeRestart = 500; // Pause before restarting the typing
+  
+  // Clear the element first
+  element.innerHTML = '';
+  
+  // Create cursor element
+  const cursor = document.createElement('span');
+  cursor.className = 'typewriter-cursor';
+  element.appendChild(cursor);
+  
+  // Create typing function
+  function type() {
+    if (isFirstRun) {
+      // First run: type the entire text (name + first role)
+      const fullText = staticPart + roles[0];
+      
+      if (i < fullText.length) {
+        // Remove cursor before adding new character
+        element.removeChild(cursor);
+        
+        // Add next character
+        element.innerHTML = fullText.substring(0, i + 1);
+        
+        // Add cursor back after the new character
+        element.appendChild(cursor);
+        
+        i++;
+        setTimeout(type, speed);
+      } else {
+        // First run complete, wait before deleting role part
+        setTimeout(deleteRole, pauseBeforeDelete);
+      }
+    } else {
+      // Subsequent runs: type only the role
+      const currentRole = roles[roleIndex];
+      
+      if (i < currentRole.length) {
+        // Remove cursor before adding new character
+        element.removeChild(cursor);
+        
+        // Add next character
+        element.innerHTML = staticPart + currentRole.substring(0, i + 1);
+        
+        // Add cursor back after the new character
+        element.appendChild(cursor);
+        
+        i++;
+        setTimeout(type, speed);
+      } else {
+        // Typing is complete, wait before deleting
+        setTimeout(deleteRole, pauseBeforeDelete);
+      }
+    }
+  }
+  
+  // Create deleting function for roles
+  function deleteRole() {
+    if (isFirstRun) {
+      // Only delete the role part on first run
+      const nameLength = staticPart.length;
+      const fullText = element.textContent;
+      
+      if (fullText.length > nameLength) {
+        // Remove cursor
+        element.removeChild(cursor);
+        
+        // Remove last character of the role part
+        element.innerHTML = fullText.substring(0, fullText.length - 1);
+        
+        // Add cursor back
+        element.appendChild(cursor);
+        
+        setTimeout(deleteRole, deleteSpeed);
+      } else {
+        // Role part deleted, mark first run as complete
+        isFirstRun = false;
+        // Reset counter for the next role
+        i = 0;
+        // Move to the next role
+        roleIndex = (roleIndex + 1) % roles.length;
+        // Restart typing after a pause
+        setTimeout(type, pauseBeforeRestart);
+      }
+    } else {
+      // Regular role deletion
+      if (i > 0) {
+        // Remove cursor
+        element.removeChild(cursor);
+        
+        // Remove last character of the role
+        element.innerHTML = staticPart + roles[roleIndex].substring(0, i - 1);
+        
+        // Add cursor back
+        element.appendChild(cursor);
+        
+        i--;
+        setTimeout(deleteRole, deleteSpeed);
+      } else {
+        // Deletion complete, switch to next role
+        roleIndex = (roleIndex + 1) % roles.length;
+        // Restart typing after a pause
+        setTimeout(type, pauseBeforeRestart);
+      }
+    }
+  }
+  
+  // Start typing
+  type();
+}
+
+/**
+ * Initialize the typewriter effect
+ */
+function setupTypewriter() {
+  const typewriterBox = document.querySelector('.typewriter-box');
+  if (typewriterBox) {
+    const typewriterText = typewriterBox.textContent;
+    typewriterEffect(typewriterBox, typewriterText, 50);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   // Selectors (defined once)
   const navLinks = document.querySelectorAll('.nav-links a');
@@ -481,6 +613,10 @@ document.addEventListener('DOMContentLoaded', () => {
           hideModal();
       }
   });
+
+  // Setup typewriter animation
+  setupTypewriter();
 });
+
 
 

@@ -429,7 +429,7 @@ body.dark-mode {
   transform: scale(1.05);
 }
 
-.about-info h3 {
+.typewriter-box {
   font-family: var(--font-secondary);
   font-size: 1.5rem;
   color: var(--primary-color);
@@ -439,29 +439,21 @@ body.dark-mode {
   border-right: 2px solid transparent;
   overflow: hidden;
   white-space: nowrap;
-  animation: 
-    typing 2.5s steps(40, end),
-    cursor-blink-typing 0.75s step-end 8;
 }
 
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-@keyframes cursor-blink {
-  from, to { border-color: transparent }
-  50% { border-color: var(--primary-color) }
-}
-
-/* Typewriter cursor effect for headline */
-.about-info h3::after {
-  content: '|';
+.typewriter-cursor {
   display: inline-block;
-  animation: cursor-blink 0.75s step-end 8;
-  font-weight: 400;
-  color: var(--primary-color);
-  margin-left: 3px;
+  width: 2px;
+  height: 1.5em;
+  background-color: currentColor;
+  margin-left: 8px;
+  animation: blink 0.8s infinite;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 .contact-list {
@@ -1038,6 +1030,9 @@ body.dark-mode .dark-mode-toggle .fa-sun { opacity: 1; transform: scale(1); }
 
 /* Responsive Styles */
 @media (max-width: 992px) {
+  .typewriter-box {
+    height: 3em;
+  }
   .sidebar {
     width: 240px;
   }
@@ -1062,6 +1057,10 @@ body.dark-mode .dark-mode-toggle .fa-sun { opacity: 1; transform: scale(1); }
 }
 
 @media (max-width: 768px) {
+  .typewriter-box {
+    height: 3em;
+  }
+
   .nav-toggle {
     display: flex;
     align-items: center;
@@ -1234,6 +1233,10 @@ body.dark-mode .dark-mode-toggle .fa-sun { opacity: 1; transform: scale(1); }
 }
 
 @media (max-width: 480px) {
+  .typewriter-box {
+    height: 3em;
+  }
+
   .section h2 {
     font-size: 2rem;
   }
@@ -1839,8 +1842,12 @@ h1, h2, h3, h4, h5, h6,
 
 /* Basic responsive fixes for very small screens */
 @media (max-width: 360px) {
+  
   body {
     min-width: 320px; /* Set minimum width to avoid excessive squeezing */
+  }
+  .typewriter-box {
+    height: 3em;
   }
   
   .section h2 {
