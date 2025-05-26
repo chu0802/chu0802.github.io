@@ -3,6 +3,12 @@ function renderLastModifiedDate(data) {
   lastModifiedDate.textContent = "Last updated: " + data.lastModifiedDate;
 }
 
+function renderCopyright(data) {
+  const copyright = document.getElementById('copyright');
+  const currentYear = data.lastModifiedDate.split('/')[0];
+  copyright.textContent = `© ${currentYear} Yu-Chu Yu, reserved`;
+}
+
 
 // Simplified script for newresources.html that preserves active class
 document.addEventListener('DOMContentLoaded', () => {
@@ -20,7 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!res.ok) throw new Error(`Failed to load last modified date: ${res.status} ${res.statusText}`);
       return res.json();
     })
-    .then(data => renderLastModifiedDate(data));
+    .then(data => {
+      renderLastModifiedDate(data);
+      renderCopyright(data);
+    })
 
   // 1. Dark Mode Toggle
   if (darkModeToggle) {

@@ -108,6 +108,7 @@ function mapEducationToTimeline(data) {
     
     return {
       institution: item.title || '',
+      overview: item.overview || '',
       location: item.location || '',
       advisor: item.advisor || '',
       start: start,
@@ -146,11 +147,11 @@ function renderTimeline(containerId, items) {
     
     div.innerHTML = `
       <div class="institution">
-        ${it.institution}
+        ${it.institution? it.institution : it.overview}
         ${it.location ? `<span class="location">${it.location}</span>` : ''}
         ${it.advisor ? `<span class="advisor">${it.advisor}</span>` : ''}
       </div>
-      <div class="date-pill">${it.start} ${it.end ? `– ${it.end}` : ''}</div>
+      ${it.start ? `<div class="date-pill">${it.start} ${it.end ? `– ${it.end}` : ''}</div>` : ''}
       ${it.role ? `<div class="role">${it.role}</div>` : ''}
       ${Array.isArray(it.description) && it.description.length
         ? `<ul>${it.description.map(d => `<li>${d}</li>`).join('')}</ul>`
@@ -163,6 +164,12 @@ function renderTimeline(containerId, items) {
 function renderLastModifiedDate(data) {
   const lastModifiedDate = document.getElementById('last-modified-date');
   lastModifiedDate.textContent = "Last updated: " + data.lastModifiedDate;
+}
+
+function renderCopyright(data) {
+  const copyright = document.getElementById('copyright');
+  const currentYear = data.lastModifiedDate.split('/')[0];
+  copyright.textContent = `© ${currentYear} Yu-Chu Yu, reserved`;
 }
 
 function typewriterEffect(element, text, speed = 100) {
@@ -315,7 +322,10 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!res.ok) throw new Error(`Failed to load last modified date: ${res.status} ${res.statusText}`);
       return res.json();
     })
-    .then(data => renderLastModifiedDate(data));
+    .then(data => {
+      renderCopyright(data);
+      renderLastModifiedDate(data);
+    })
 
   // 0. Load and render Introduction
   fetch(ASSET_PATH + 'introduction.json')
@@ -362,6 +372,7 @@ document.addEventListener('DOMContentLoaded', () => {
   loadTimelineData('teaching.json', 'teaching-timeline');
   loadTimelineData('research-experience.json', 'research-timeline');
   loadTimelineData('work-experience.json', 'work-timeline');
+  loadTimelineData('service.json', 'service-timeline');
 
   // 3. Mobile sidebar toggle
   if (navToggle && sidebar) {

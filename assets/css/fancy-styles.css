@@ -874,7 +874,7 @@ body .authors,
   border-radius: 0; /* Square corners for typewriter style */
   font-size: 0.8rem;
   color: var(--primary-color);
-  margin-bottom: var(--spacing-sm);
+  margin: var(--spacing-sm) 0;
   font-family: var(--font-secondary);
   border: 1px dashed rgba(42, 77, 105, 0.2);
 }

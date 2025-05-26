@@ -10,10 +10,9 @@
       "location": "M.S. in Computer Science and Information Engineering", 
       "year": "2020/09 - 2022/11",
       "title": "National Taiwan University",
-      "description": {
-        "GPA": "4.1 / 4.3",
-        "Master Thesis Award": "Taiwanese Association for Artificial Intelligence 2023"
-      }
+      "description": [
+        "<strong>Master Thesis Award</strong> - Taiwanese Association for Artificial Intelligence 2023"
+      ]
     },
     { 
       "location": "B.S. in Computer Science and Information Engineering", 
