@@ -190,7 +190,7 @@ body.dark-mode {
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  50% { transform: translateY(-5px); }
 }
 
 .profile img {
@@ -247,7 +247,7 @@ body.dark-mode {
 .social a:hover {
   color: white;
   background: var(--accent-gradient);
-  transform: translateY(-5px) rotate(360deg);
+  transform: translateY(-5px) rotate(22.5deg);
   box-shadow: var(--shadow-accent);
   text-decoration: none;
 }
@@ -378,6 +378,7 @@ body.dark-mode {
   font-family: var(--font-secondary);
   font-weight: 700;
   letter-spacing: -0.5px;
+  cursor: default;
 }
 
 .section h2::after {
@@ -875,7 +876,7 @@ body .authors,
   color: var(--primary-color);
   margin-bottom: var(--spacing-sm);
   font-family: var(--font-secondary);
-  border: 1px solid rgba(42, 77, 105, 0.2);
+  border: 1px dashed rgba(42, 77, 105, 0.2);
 }
 
 .timeline-item .role {
