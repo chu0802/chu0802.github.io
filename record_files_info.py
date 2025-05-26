@@ -32,16 +32,18 @@ def record_files_info(directory_path):
 
 def get_file_last_modifiled_date(file_path):
     if file_path.exists():
-        if file_path.is_dir():
+        if file_path.is_file():
+            return file_path.stat().st_mtime
+        else:
+            latest_modified_date = 0
             for item in file_path.iterdir():
-                if item.is_file():
-                    return item.stat().st_mtime
-                elif item.is_dir():
-                    return get_file_last_modifiled_date(item)
+                last_modified = get_file_last_modifiled_date(item)
+                if last_modified > latest_modified_date:
+                    latest_modified_date = last_modified
+            return latest_modified_date
     return 0
 
-def track_homepage_last_modified():
-    tracked_files = ["index.html", "assets/"]
+def track_homepage_last_modified_date(tracked_files):
     latest_modified_date = 0
     for path in tracked_files:
         file_path = Path(path)
@@ -64,7 +66,7 @@ if __name__ == "__main__":
     directory = Path("resources")
     output_file = "files_info.json"
     
-    last_modified_date = track_homepage_last_modified()
+    last_modified_date = track_homepage_last_modified_date(["index.html", "assets/", "resources.html"])
     
     files_info, _ = record_files_info(directory)
     save_to_json(files_info, output_file)

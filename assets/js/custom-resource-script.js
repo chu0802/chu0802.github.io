@@ -1,3 +1,9 @@
+function renderLastModifiedDate(data) {
+  const lastModifiedDate = document.getElementById('last-modified-date');
+  lastModifiedDate.textContent = "Last updated: " + data.lastModifiedDate;
+}
+
+
 // Simplified script for newresources.html that preserves active class
 document.addEventListener('DOMContentLoaded', () => {
   // Selectors
