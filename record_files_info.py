@@ -30,6 +30,26 @@ def record_files_info(directory_path):
     
     return files_info, time.strftime('%Y-%m-%d %H:%M', time.localtime(newest_modified))
 
+def get_file_last_modifiled_date(file_path):
+    if file_path.exists():
+        if file_path.is_dir():
+            for item in file_path.iterdir():
+                if item.is_file():
+                    return item.stat().st_mtime
+                elif item.is_dir():
+                    return get_file_last_modifiled_date(item)
+    return 0
+
+def track_homepage_last_modified():
+    tracked_files = ["index.html", "assets/"]
+    latest_modified_date = 0
+    for path in tracked_files:
+        file_path = Path(path)
+        last_modified = get_file_last_modifiled_date(file_path)
+        if last_modified > latest_modified_date:
+            latest_modified_date = last_modified
+    return time.strftime('%Y/%m/%d', time.localtime(latest_modified_date))
+
 def save_to_json(file_info, output_file):
     with open(output_file, 'w') as f:
         json.dump(file_info, f, indent=4)
@@ -44,7 +64,10 @@ if __name__ == "__main__":
     directory = Path("resources")
     output_file = "files_info.json"
     
+    last_modified_date = track_homepage_last_modified()
+    
     files_info, _ = record_files_info(directory)
     save_to_json(files_info, output_file)
+    save_to_json({"lastModifiedDate": last_modified_date}, "last_modified_date.json")
     
     git_process()

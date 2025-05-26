@@ -51,7 +51,7 @@ function renderPublications(list) {
     
     item.innerHTML = `
       <div class="pub-img">
-        <img src="${imgSrc}" alt="${p.title}" onerror="this.src='assets/img/placeholder-pub.jpg'; this.onerror=null;">
+        <img src="${imgSrc}" alt="${p.title}" class="thumbnail" onerror="this.src='assets/img/placeholder-pub.jpg'; this.onerror=null;">
       </div>
       <div class="pub-details">
         <h3>${p.title}</h3>
@@ -63,6 +63,16 @@ function renderPublications(list) {
         </div>
       </div>
     `;
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+    const img = item.querySelector('.thumbnail');
+      img.addEventListener('click', () => {
+        modal.style.display = 'flex';
+        setTimeout(() => {
+            modal.classList.add('show');
+        }, 10); // Small delay to ensure display change is registered
+        modalImg.src = img.src;
+    });
     container.appendChild(item);
   });
 }
@@ -150,6 +160,11 @@ function renderTimeline(containerId, items) {
   });
 }
 
+function renderLastModifiedDate(data) {
+  const lastModifiedDate = document.getElementById('last-modified-date');
+  lastModifiedDate.textContent = "Last updated: " + data.lastModifiedDate;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   // Selectors (defined once)
   const navLinks = document.querySelectorAll('.nav-links a');
@@ -161,6 +176,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const sidebar = document.querySelector('.sidebar');
   
   console.log('Loading resume data from:', ASSET_PATH);
+
+  // -1. Load last modified date
+  fetch('last_modified_date.json')
+    .then(res => {
+      if (!res.ok) throw new Error(`Failed to load last modified date: ${res.status} ${res.statusText}`);
+      return res.json();
+    })
+    .then(data => renderLastModifiedDate(data));
+
   // 0. Load and render Introduction
   fetch(ASSET_PATH + 'introduction.json')
     .then(res => {
@@ -425,6 +449,37 @@ document.addEventListener('DOMContentLoaded', () => {
         icon.classList.add('fa-bars');
       }
     }
+  });
+
+  // 11. Modal
+  const modal = document.getElementById('modal');
+  const modalImg = document.getElementById('modal-img');
+  const thumbnails = document.querySelectorAll('.thumbnail');
+  const close = document.querySelector('.close');
+
+  thumbnails.forEach(thumbnail => {
+      thumbnail.addEventListener('click', () => {
+          modal.style.display = 'flex';
+          setTimeout(() => {
+              modal.classList.add('show');
+          }, 10); // Small delay to ensure display change is registered
+          modalImg.src = thumbnail.src;
+      });
+  });
+
+  const hideModal = () => {
+      modal.classList.remove('show');
+      setTimeout(() => {
+          modal.style.display = 'none';
+      }, 500); // Match this duration with the CSS transition duration
+  };
+
+  close.addEventListener('click', hideModal);
+
+  document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && modal.style.display === 'flex') {
+          hideModal();
+      }
   });
 });
 

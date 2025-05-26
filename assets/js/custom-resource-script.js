@@ -7,7 +7,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const navToggle = document.getElementById('navToggle');
   const sidebar = document.querySelector('.sidebar');
   const navLinks = document.querySelectorAll('.nav-links a');
-  
+
+  // -1. Load last modified date
+  fetch('last_modified_date.json')
+    .then(res => {
+      if (!res.ok) throw new Error(`Failed to load last modified date: ${res.status} ${res.statusText}`);
+      return res.json();
+    })
+    .then(data => renderLastModifiedDate(data));
+
   // 1. Dark Mode Toggle
   if (darkModeToggle) {
     // Check local storage for dark mode preference
