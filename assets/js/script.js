@@ -19,6 +19,23 @@ function renderIntroduction(list) {
 }
 
 /**
+ * Render the Contact List section from JSON.
+ * Expects each item in `list` to have:
+ *   - phone, city, status, email
+ */
+function renderContactList(list) {
+  const container = document.getElementById('contact-list');
+  container.innerHTML = '';
+  // traverse both key and value for the list
+  for (const [key, value] of Object.entries(list)) {
+    const item = document.createElement('li');
+    item.className = 'contact-item';
+    item.innerHTML = `<strong>${key.charAt(0).toUpperCase() + key.slice(1)}:</strong> ${value}`;
+    container.appendChild(item);
+  }
+}
+
+/**
  * Render the Publication section from JSON.
  * Expects each item in `list` to have:
  *   - title, author (HTML string), conference, year,
@@ -326,6 +343,14 @@ document.addEventListener('DOMContentLoaded', () => {
       renderCopyright(data);
       renderLastModifiedDate(data);
     })
+  
+  // -0.5 Load contact list
+  fetch(ASSET_PATH + 'contact-list.json')
+    .then(res => {
+      if (!res.ok) throw new Error(`Failed to load contact list: ${res.status} ${res.statusText}`);
+      return res.json();
+    })
+    .then(data => renderContactList(data))
 
   // 0. Load and render Introduction
   fetch(ASSET_PATH + 'introduction.json')
