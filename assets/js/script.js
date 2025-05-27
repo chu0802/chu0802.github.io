@@ -38,7 +38,7 @@ function renderPublications(list) {
     const authors = p.author.split(', ').map((author, index) => {
       // Make Yu-Chu Yu bold
       const isAuthor = author === "Yu-Chu Yu";
-      const authorText = isAuthor ? `<strong>${author}</strong>` : author;
+      const authorText = isAuthor ? `<span class="author-name">${author}</span>` : author;
       
       if (p.links && p.links[index]) {
         if (isAuthor)
