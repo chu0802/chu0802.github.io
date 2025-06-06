@@ -1,0 +1,211 @@
+/* Global Styles */
+body {
+  font-family: 'Times New Roman', Times, serif; /* Change font-family to Times New Roman */
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  font-size: 18px;
+}
+
+.container {
+  padding: 0;
+  width: 210mm;
+  height: 297mm;
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile h1 {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 600;
+  font-style: normal;
+
+  font-size: 2em;
+  margin: 30px 0 10px 0;
+  color: #2c0000;
+}
+
+.content {
+  width: 100%;
+  background-color: #fff;
+  padding: 0 50px 0 50px;
+}
+
+h2 {
+  font-size: 1.2em;
+  margin: 0 0 5px 0;
+  padding-bottom: 5px;
+  color: #2c0000;
+  border-bottom: 2px solid #9c0909;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Item List Styles */
+/* .item-list li {
+  margin-bottom: 10px;
+} */
+
+.item-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.item-title {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.item-year {
+  font-size: 0.8em;
+  color: #666;
+}
+
+.item-location {
+  font-size: 0.9em;
+  margin: 0 0 5px 0;
+  color: #666;
+}
+
+.item-overview {
+  font-size: 1em;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+/* Item Description Styles */
+.item-description {
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+.item-description ul {
+  list-style-type: disc;
+  margin-left: 20px; /* Add indentation for bullet points */
+}
+
+.item-description li {
+  margin-bottom: 5px; 
+}
+
+/* Additional Styles */
+.extra-info {
+  color: #666;
+  font-size: 1em;
+}
+
+.extra-info span {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin: 0 10px 0 10px;
+}
+
+
+.publication {
+  font-size: 0.9em;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 5px;
+}
+
+.publication-content {
+  margin-left: 20px;
+  flex-grow: 1; /* Allow content to grow to fill available space */
+}
+
+.publication-conference {
+  font-style: italic;
+}
+
+
+.publication-link {
+  margin-left: 10px;
+  color: blue;
+  text-decoration: underline;
+}
+
+.reference-link {
+  font-size: 0.8em;
+  color: rgb(6, 195, 132);
+}
+
+.reference-link::before {
+  content: "[";
+  color: black;
+}
+
+.reference-link::after {
+  content: "]";
+  color: black;
+}
+
+.footnote {
+  font-size: 0.8em;
+  color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  width: 100%;
+  height: 2em;
+  margin-top: 2em;
+  padding-bottom: 2em;
+}
+
+/* Print Styles */
+@media print {
+  @page {
+    size: A4;
+    margin: 2cm 0 2cm 0;
+  }
+
+  body {
+    font-size: 12px;
+  }
+
+  .footnote {
+    display: none;
+  }
+  
+} 
+
+@media (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+#publication {
+  text-align: justify;
+}
+
+.item-list {
+  text-align: justify;
+}
+
+#service-list {
+  text-align: justify;
+}

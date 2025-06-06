@@ -1,0 +1,14 @@
+[
+    {
+        "introduction": "I’m an incoming Ph.D. student in Computer Science at the University of British Columbia. Currently, I work as a Research Assistant at VLLab in National Taiwan University under Prof. <a href=\"https://vllab.ee.ntu.edu.tw/ycwang.html\" target=\"_blank\">Yu-Chiang Frank Wang</a>. Before that, I was a visiting student with Prof. <a href=\"https://faculty.ucmerced.edu/mhyang/\" target=\"_blank\">Ming-Hsuan Yang</a> at the University of California, Merced."
+    },
+    {
+        "introduction": "<strong>My Primary research interests lie in Computer Vision, with a particular focus on multi-modal models' adaptability, continual learning, and open-domain 3D articulation synthesis.</strong>"
+    },
+    {
+        "introduction": "Prior to my role at VLLab, I was a Machine Learning Engineer at Dcard, where I designed a recommendation system using machine learning algorithms for over 15 million users."
+    },
+    {
+        "introduction": "I completed my bachelor's and master's degrees in Computer Science from National Taiwan University, where I conducted research in the Computational Learning Lab under Prof. <a href=\"https://www.csie.ntu.edu.tw/~htlin/\" target=\"_blank\">Hsuan-Tien Lin</a>."
+    }
+]

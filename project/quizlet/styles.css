@@ -1,0 +1,163 @@
+body, html {
+    height: 100%;  /* Ensure full height but not exceeding the viewport */
+    overflow: hidden;  /* Hide overflow at the root to prevent scrollbars */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    touch-action: manipulation;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    /* max-width: 400px; */
+    display: flex;        /* Enables Flexbox */
+    flex-direction: column; /* Stacks children vertically */
+    justify-content: center; /* Center children vertically */
+    align-items: center;  /* Center children horizontally */
+}
+
+.cards-container {
+    perspective: 1000px;
+    width: 100%;         /* Adjust width as needed */
+    height: 200px;       /* Adjust height as needed */
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 50px; /* Space between the cards and the button */
+}
+
+.card {
+    width: 100%;
+    height: 200px;  /* Ensure this matches the .cards-container height or is appropriate for content */
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    cursor: pointer;
+    display: none;   /* Start with all cards hidden */
+    position: absolute;  /* Absolute position within .cards-container */
+    top: 0;  /* Align to the top of the parent container */
+    left: 0; /* Align to the left of the parent container */
+}
+
+.card.show {
+    display: block; /* Show only the active card */
+}
+
+.card.flip {
+    transform: rotateY(180deg);
+}
+
+
+.card-face {
+    position: absolute;
+    width: 100%;    /* Match width of the card */
+    height: 100%;   /* Match height of the card */
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: white;
+}
+
+.word {
+    font-size: 1.5em;
+    margin: 0 20px 0 20px;
+}
+
+.definition {
+    margin: 0 20px 0 20px;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    /* margin: 0 20px 0 20px; */
+    width: 48%;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.menu-button {
+    font-size: 2em;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #007BFF;
+    transition: 0.3s;
+
+}
+
+.menu-button:active {
+    font-size: 1em;
+
+}
+
+.side-menu {
+    font-size: 0;
+    height: 100%;
+    width: 0; /* Initially set width to 0 */
+    max-width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: 0.5s;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.book-link {
+    font-size: 100%;
+    margin: 20px 0 20px 0;
+    text-align: center;
+    background: none;
+    color: #007BFF;
+    border: none;
+    width: 90%;
+    height: 50px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    text-align: left;
+
+}
+
+.book-link:nth-child(1) {
+    margin-top: 50px;
+}
+
+.book-link:hover {
+    background-color: #0056b3;
+    color: white;
+    cursor: pointer;
+}

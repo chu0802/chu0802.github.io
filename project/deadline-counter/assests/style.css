@@ -1,0 +1,133 @@
+#menu.show {
+    left: 0;
+  }
+  body {
+    font-family: 'Arial', sans-serif;
+    background-size: 100vw 100vh;
+    color: #fff;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  .dark-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(5, 3, 22, 0.8); /* Adjust the last value (0.5) for darkness */
+    z-index: -1;
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 5em;
+    margin-bottom: 20px;
+  }
+
+  #countdown {
+      font-size: 3em;
+      margin-bottom: 50px;
+  }
+
+  #clock {
+      position: relative;
+      width: 250px;
+      height: 250px;
+      margin: 20px auto;
+      border: 5px solid #5c6bc0; /* Fancy color for clock border */
+      border-radius: 50%;
+      background-color: rgba(22, 68, 91, 0.429); /* Background color for clock face */
+    }
+
+  .number {
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% 100%;
+  }
+
+  .number:nth-child(1) { transform: translate(-50%, -100%) rotate(30deg) translate(0, -450%); }
+  .number:nth-child(2) { transform: translate(-50%, -100%) rotate(60deg) translate(0, -450%); }
+  .number:nth-child(3) { transform: translate(-50%, -100%) rotate(90deg) translate(0, -450%); }
+  .number:nth-child(4) { transform: translate(-50%, -100%) rotate(120deg) translate(0, -450%); }
+  .number:nth-child(5) { transform: translate(-50%, -100%) rotate(150deg) translate(0, -450%); }
+  .number:nth-child(6) { transform: translate(-50%, -100%) rotate(180deg) translate(0, -450%); }
+  .number:nth-child(7) { transform: translate(-50%, -100%) rotate(210deg) translate(0, -450%); }
+  .number:nth-child(8) { transform: translate(-50%, -100%) rotate(240deg) translate(0, -450%); }
+  .number:nth-child(9) { transform: translate(-50%, -100%) rotate(270deg) translate(0, -450%); }
+  .number:nth-child(10) { transform: translate(-50%, -100%) rotate(300deg) translate(0, -450%); }
+  .number:nth-child(11) { transform: translate(-50%, -100%) rotate(330deg) translate(0, -450%); }
+  .number:nth-child(12) { transform: translate(-50%, -100%) rotate(360deg) translate(0, -450%); }
+
+  .hand {
+    position: absolute;
+    width: 2px;
+    height: 80px;
+    background-color: #5c6bc0; /* Fancy color for hands */
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% 100%;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+    
+    .hour {
+      height: 60px;
+      width: 6px;
+      background-color: #ef5350; /* Fancy color for hour hand */
+      transform-origin: 50% 100%;
+      animation-name: rotateHour;
+      animation-duration: 43200s; /* 12 hours */
+    }
+    
+    .minute {
+      height: 90px;
+      width: 4px;
+      background-color: #26a69a; /* Fancy color for minute hand */
+      transform-origin: 50% 100%;
+      animation-name: rotateMinute;
+      animation-duration: 3600s; /* 60 minutes */
+    }
+    
+    .second {
+      height: 100px;
+      width: 2px;
+      background-color: #ffee58; /* Fancy color for seconds hand */
+      transform-origin: 50% 100%;
+      animation-name: rotateSecond;
+      animation-duration: 60s; /* 60 seconds */
+    }
+  @keyframes rotateHour {
+      from {
+        transform: translate(-50%, -100%) rotate(calc(30deg * var(--hour-rotation)));
+      }
+      to {
+        transform: translate(-50%, -100%) rotate(calc(30deg * var(--hour-rotation)));
+      }
+    }
+
+    @keyframes rotateMinute {
+      from {
+        transform: translate(-50%, -100%) rotate(calc(6deg * var(--minute-rotation)));
+      }
+      to {
+        transform: translate(-50%, -100%) rotate(calc(6deg * var(--minute-rotation)));
+      }
+    }
+
+    @keyframes rotateSecond {
+      from {
+        transform: translate(-50%, -100%) rotate(calc(6deg * var(--second-rotation)));
+      }
+      to {
+        transform: translate(-50%, -100%) rotate(calc(6deg * var(--second-rotation)));
+      }
+    }

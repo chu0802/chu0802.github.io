@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QZT4G47E4M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QZT4G47E4M');
+</script>
+<link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/icon/apple-touch-icon.png">
+<link rel="icon" href="../../assets/img/icon/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/icon/favicon-16x16.png">
+<link rel="manifest" href="../../assets/img/icon/site.webmanifest">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Editor</title>
+    <link rel="stylesheet" href="styles.css">
+
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Editor</h1>
+        <div id="resumeOutput" class="resume-output">
+            <h2>Resume</h2>
+            <p><strong>Name:</strong> <span id="fullName" class="editable" contenteditable="true">John Doe</span></p>
+            <p><strong>Email:</strong> <span id="email" class="editable" contenteditable="true">john@example.com</span></p>
+            <h3>Education</h3>
+            <p id="education" class="editable" contenteditable="true">Bachelor's Degree in Computer Science</p>
+            <h3>Work Experience</h3>
+            <p id="experience" class="editable" contenteditable="true">Software Developer at XYZ Company</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

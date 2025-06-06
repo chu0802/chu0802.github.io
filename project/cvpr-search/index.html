@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QZT4G47E4M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QZT4G47E4M');
+</script>
+<link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/icon/apple-touch-icon.png">
+<link rel="icon" href="../../assets/img/icon/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/icon/favicon-16x16.png">
+<link rel="manifest" href="../../assets/img/icon/site.webmanifest">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CVPR 2024 Easy Search</title>
+    <link rel="stylesheet" href="assests/style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>CVPR 2024 Easy Search</h1>
+        <!-- Add a search input -->
+        <input type="text" id="searchInput" placeholder="Search by title, author's name or author's affiliation" oninput="filterTitles()">
+        <!-- Display the number of papers -->
+        <p id="paperCounter">Total Papers: 0</p>
+    </div>
+
+    <div class="content" id="dataContainer"></div>
+</div>
+
+
+
+<script>
+    let jsonData;
+    let lastRenderedIndex = 0;
+    const batchSize = 5;
+    const container = document.getElementById('dataContainer');
+    const paperCounter = document.getElementById('paperCounter');
+    const searchInput = document.getElementById('searchInput');
+
+
+    // Function to render a paper
+    function renderPaper(data, index, searchTerm) {
+        const paperDiv = document.createElement('div');
+        paperDiv.classList.add('paper');
+
+        // Display basic information with highlighting
+        const title = data.title || 'Title not available';
+        const highlightedTitle = title.replace(new RegExp(searchTerm, 'gi'), match => `<span class="highlight">${match}</span>`);
+        paperDiv.innerHTML += `<h2>${highlightedTitle}</h2>`;
+
+        const authorListHeading = document.createElement('div');
+        authorListHeading.textContent = 'Author List';
+        authorListHeading.classList.add('author-list-heading');
+        paperDiv.appendChild(authorListHeading);
+
+        const horizontalLine = document.createElement('hr');
+        horizontalLine.classList.add('heading-line');
+        paperDiv.appendChild(horizontalLine);
+
+        const tableContainer = document.createElement('div');
+        tableContainer.classList.add('table-container');
+
+        const authorTable = document.createElement('table'); // Create a table element
+        authorTable.classList.add('author-list'); // Add class to the table
+
+        data.authors.forEach(author_info => {
+            const authorRow = document.createElement('tr'); // Create a table row for each author
+
+            const authorNameCell = document.createElement('td'); // Create a table cell for author's name
+            authorNameCell.classList.add('author-name');
+            const highlightedName = author_info.name.replace(new RegExp(searchTerm, 'gi'), match => `<span class="highlight">${match}</span>`);
+            authorNameCell.innerHTML = highlightedName;
+
+            const authorAffiliationCell = document.createElement('td'); // Create a table cell for author's affiliation
+            authorAffiliationCell.classList.add('author-affiliation');
+            const highlightedAffiliation = author_info.affiliation.replace(new RegExp(searchTerm, 'gi'), match => `<span class="highlight">${match}</span>`);
+            authorAffiliationCell.innerHTML = `(${highlightedAffiliation})`;
+
+            authorRow.appendChild(authorNameCell); // Append name cell to the row
+            authorRow.appendChild(authorAffiliationCell); // Append affiliation cell to the row
+
+            authorTable.appendChild(authorRow); // Append the row to the table
+        });
+
+        tableContainer.appendChild(authorTable);
+        paperDiv.appendChild(tableContainer); // Append the table container to the paperDiv
+        const bottomHorizontalLine = document.createElement('hr');
+        bottomHorizontalLine.classList.add('heading-line');
+        paperDiv.appendChild(bottomHorizontalLine);
+        container.appendChild(paperDiv);
+    }
+
+    // Function to update the paper counter
+    function updatePaperCounter(count) {
+        paperCounter.innerText = `Total Papers: ${count}`;
+    }
+
+    // Function to filter titles, author names, and affiliations based on the search input
+    function filterTitles(searchTerm) {
+        if (!searchTerm) {
+            return jsonData;
+        }
+
+        const lowerSearchTerm = searchTerm.toLowerCase();
+        return jsonData.filter(data => {
+            // Check if the title, author name, or any author's affiliation contains the search term
+            return data.title.toLowerCase().includes(lowerSearchTerm) ||
+                data.authors.some(author => {
+                    return author.name.toLowerCase().includes(lowerSearchTerm) ||
+                            author.affiliation.toLowerCase().includes(lowerSearchTerm);
+                });
+        });
+    }
+
+
+    // Function to handle search input changes
+    function handleSearchInput() {
+        // Reset settings
+        lastRenderedIndex = 0;
+        container.innerHTML = ''; // Clear existing content
+        observeLazyLoading(); // Re-observe lazy loading for the new search results
+    }
+    // Attach event listener to search input
+    searchInput.addEventListener('input', handleSearchInput);
+
+    // Function to observe lazy loading
+    function observeLazyLoading() {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    lazyLoadPapers();
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const placeholder = document.createElement('div');
+        container.appendChild(placeholder);
+        observer.observe(placeholder);
+
+        // Listen for scroll events to check if the user has reached the bottom of the page
+        window.addEventListener('scroll', () => {
+            const isAtBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight;
+            if (isAtBottom) {
+                lazyLoadPapers();
+            }
+        });
+    }
+
+    // Function to lazy load additional papers
+    function lazyLoadPapers() {
+        const filteredData = filterTitles(searchInput.value);
+        updatePaperCounter(filteredData.length);
+        const remainingPapers = filteredData.length - lastRenderedIndex;
+        const papersToRender = Math.min(remainingPapers, batchSize);
+
+        console.log(papersToRender);
+
+        for (let i = 0; i < papersToRender; i++) {
+            renderPaper(filteredData[lastRenderedIndex + i], lastRenderedIndex + i, searchInput.value);
+        }
+
+        lastRenderedIndex += papersToRender;
+
+        if (lastRenderedIndex < filteredData.length) {
+            // Move the placeholder down the list
+            const placeholder = document.createElement('div');
+            container.appendChild(placeholder);
+        }
+    }
+
+    // Function to fetch JSON data from a file
+    async function fetchData() {
+        try {
+            const response = await fetch('assests/cvpr24.json');
+            jsonData = await response.json();
+
+            if (!Array.isArray(jsonData)) {
+                console.error('Error: JSON data is not an array.');
+                return;
+            }
+
+            // Sort papers by average score (descending order)
+            jsonData.sort((a, b) => b.avg_score - a.avg_score);
+
+            observeLazyLoading();
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    }
+
+    // Call the function to fetch and render data
+    fetchData();
+</script>
+
+
+
+</body>
+</html>

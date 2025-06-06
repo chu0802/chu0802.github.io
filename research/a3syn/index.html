@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QZT4G47E4M"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-QZT4G47E4M');
+    </script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/icon/apple-touch-icon.png">
+    <link rel="icon" href="../../assets/img/icon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/icon/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/img/icon/site.webmanifest">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affordance-Aware Articulation Synthesis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="content">
+        <div class="author-section">
+            <h1>Towards Affordance-Aware Articulation <br>Synthesis for Rigged Objects</h1>
+            <!-- <p id="conference-name"> <i>European Conference on Computer Vision (ECCV) 2024</i></p> -->
+            <div class="authors">
+                <span><a href="https://chuyu.org" target="_blank">Yu-Chu Yu</a><sup class="ntu">1</sup></span>
+                <span><a href="https://hubert0527.github.io" target="_blank">Chieh Hubert Lin</a><sup class="merced">2</sup></span>
+                <span><a href="http://hsinyinglee.com" target="_blank">Hsin-Ying Lee</a><sup class="snap">3</sup></span>
+            </div>
+            <div class="authors">
+                <span><a href="https://mightychaos.github.io" target="_blank">Chaoyang Wang</a><sup class="snap">3</sup></span>
+                <span><a href="http://vllab.ee.ntu.edu.tw/ycwang.html" target="_blank">Yu-Chiang Frank Wang</a><sup class="ntu">1</sup></span>
+                <span><a href="https://faculty.ucmerced.edu/mhyang/" target="_blank">Ming-Hsuan Yang</a><sup><span class="merced">2</span>, <span class="yonsei">4</span></sup></span>
+            </div>
+            <div class="affiliations">
+                <span><sup class="ntu">1</sup> National Taiwan University</span>
+                <span><sup class="merced">2</sup> University of California, Merced</span>
+                <span><sup class="snap">3</sup> Snap Research</span>
+                <span><sup class="yonsei">4</sup> Yonsei University</span>
+            </div>
+            <div class="buttons">
+                <a href="https://arxiv.org/abs/2501.12393" class="button" target="_blank"><img src="images/arxiv.svg"> Paper</a>
+                <a href="https://github.com/chu0802/a3syn" class="button" target="_blank"> <img src="images/github-dark.svg">Code (Coming Soon!)</a>
+                
+            </div>
+        </div>
+
+        <div class="section animated-section">
+            <h2>Demo</h2>
+            <video class="thumbnail" src="images/final_compress.mp4" width="80%" max-width="960px" style="border-radius: 1em;" autoplay muted loop></video>
+            <p>
+                Given arbitrary scene and open-domain rigged objects, <span class="highlight">A3Syn</span> synthesizes articulation that respects the affordance and context.
+            </p>
+        </div>
+
+        <div class="section animated-section">
+            <h2>Abstract</h2>
+
+            <img src="images/teaser.svg" class="thumbnail">
+
+            <p>
+                Rigged objects are commonly used in artist pipelines, as they can flexibly adapt to different scenes and postures. However, articulating the rigs into realistic affordance-aware postures (e.g., following the context, respecting the physics and the personalities of the object) remains time-consuming and heavily relies on human labor from experienced artists. In this paper, we tackle the novel problem and design <span class="highlight">A3Syn</span>. With a given context, such as the environment mesh and a text prompt of the desired posture, <span class="highlight">A3Syn</span> synthesizes articulation parameters for arbitrary and open-domain rigged objects obtained from the Internet. The task is incredibly challenging due to the lack of training data, and we do not make any topological assumptions about the open-domain rigs. We propose using 2D inpainting diffusion model and several control techniques to synthesize in-context affordance information. Then, we develop an efficient bone correspondence alignment using a combination of differentiable rendering and semantic correspondence. <span class="highlight">A3Syn</span> has stable convergence, completes in minutes, and synthesizes plausible affordance on different combinations of in-the-wild object rigs and scenes. 
+            </p>
+        </div>
+
+        <div class="section animated-section">
+            <h2>Overview</h2>
+
+            <img src="images/method.svg" class="thumbnail">
+            
+            <p>
+                <b>Left.</b> Our <span class="highlight">A3Syn</span> takes four inputs: The scene geometry, a rigged object, a text prompt describes the desired articulation, and an approximate location to perform the pose. The goal is to solve the object transformation and articulation parameters. 
+            </p>
+            <p>
+                <b>Middle.</b> Our first stage aims to synthesize a course proposal posture, then optimizes the single-view pixel coordinate alignment with the current rest pose. The processing is fully and efficiently differentiable by using differentiable rendering and semantic correspondence.    
+            </p>
+            <p>
+                <b>Right.</b> In the second stage, we use a combination of grid prior and partial denoising to synthesize cross-view consistent affordance reference, then optimizes the alignment in multiple views. In both stages, the optimization objective is equivalent to explicit 3D deformation, and we show such an optimization has a steady convergence.
+            </p>
+        </div>
+
+        <div class="section animated-section">
+            <h2>Results</h2>
+
+            <div class="video-grid">
+                <div class="grid-item description">
+                    <img class="thumbnail" src="results/kyoto-chairs.png">
+                    <p>Jumping down from a wooden chair to the ground.</p>
+                </div>
+                <video class="grid-item thumbnail" src="results/01_rabbit_jump_chair.mp4" autoplay muted loop></video>
+                <video class="grid-item thumbnail" src="results/02_fox_jump_chair.mp4" autoplay muted loop></video>
+                <video class="grid-item thumbnail" src="results/03_shiba_jump_chair.mp4" autoplay muted loop></video>
+                <div class="grid-item description">
+                    <img class="thumbnail" src="results/kyoto-bridge.png">
+                    <p>Running on a wooden bridge.</p>
+                </div>
+                <video class="grid-item thumbnail" src="results/04_fox_bridge.mp4" autoplay muted loop></video>
+                <video class="grid-item thumbnail" src="results/05_cow_bridge.mp4" autoplay muted loop></video>
+                <video class="grid-item thumbnail" src="results/06_horse_bridge.mp4" autoplay muted loop></video>
+                <div class="grid-item description">
+                    <img class="thumbnail" src="results/venice-stairs.png">
+                    <p>Climbing stairs.</p>
+                </div>
+                <video class="grid-item thumbnail" src="results/07_cat_stairs.mp4" autoplay muted loop></video>
+                <video class="grid-item thumbnail" src="results/08_shiba_stairs.mp4" autoplay muted loop></video>
+                <video class="grid-item thumbnail" src="results/09_horse_stairs.mp4" autoplay muted loop></video>
+                <div class="grid-item description">
+                    <img class="thumbnail" src="results/venice-tree.png">
+                    <p>Climbing a tree.</p>
+                </div>
+                <video class="grid-item thumbnail" src="results/10_fox_tree.mp4" autoplay muted loop></video>
+                <video class="grid-item thumbnail" src="results/11_cat_tree.mp4" autoplay muted loop></video>
+                <video class="grid-item thumbnail" src="results/12_shiba_tree.mp4" autoplay muted loop></video>
+            </div>
+
+            <p>
+                The affordance-aware articulation synthesized with our <span class="highlight">A3Syn</span>. For each scene-prompt-location composition, we use three different objects to show that our algorithm can adapt to arbitrary open-domain objects, maintain the physical soundness, and be aware of the object semantics (e.g., the rabbit has a different jumping posture, the cat and dog has different tail signatures). Most importantly, the same object adapts to distinctive postures accord to different scene geometries, showing our results captures the nuance of affordance: the complementarity between the animal and the environment.
+            </p>
+            
+            
+        </div>
+
+        <div class="section animated-section">
+            <h2>Comparison</h2>
+
+            <img src="images/comparison.png" class="thumbnail" style="width: 50%;">
+
+            <p>
+                <b>Comparisons.</b> SDS has a limited pose change from the rest pose, or creates unnaturally distorted limbs (e.g., the legs of the shiba inu and rabbit). Our method produces more natural posture, while the added articulation better resembles the affordance.
+            </p>
+        </div>
+
+        <div class="section animated-section">
+            <h2>Ablation Study</h2>
+
+            <img src="images/ablation.png" class="thumbnail" style="width: 50%;">
+
+            <p>
+                <b>Ablation study.</b> We show a sample of dog attempting to climb tree from two views. Removing bone rotation penalty (BR) causes unnatural limb bending, while omitting our second stage multi-view alignment (MV) leads to floating due to single-view depth ambiguity. Combining all methods lead to the best posture.
+            </p>
+        </div>
+
+        <div class="section animated-section">
+            <h2>Convergence Analysis</h2>
+
+            <img src="images/analysis.png" class="thumbnail">
+
+            <p>
+                <b>Our approach provides steady convergence.</b> We visualize the bone rotation in degrees (y-axis) to optimization iterations (x-axis), each line represents a unique bone. All methods use similar hyperparameters. Our approach (no learning rate decay) has a clear converge direction. In contrast, SDS does not have a consistent converge target, even with HiFA scheduling that sets a low noise rate by the end of optimization. Adding learning rate scheduling mitigates the issue (still unstable at end), but restricts the change in angle.
+            </p>
+        </div>
+
+        <div class="section animated-section">
+            <h2>Intermediate Visualization</h2>
+
+            <img src="images/intermediate.png" class="thumbnail" style="width: 50%;">
+
+            <p>
+                <b>Intermediate steps for multi-view fine-grained alignment stage. </b> <i>Text prompt: A brown rabbit in mid-leap as it jumps down from a wooden chair. </i> In this example, the left hind leg of the rabbit are wrongly placed after the single-view placement stage (initial pose), appearing in an unnatural position. During the multi-view alignment stage, the posture is iteratively refined, with the left hind leg gradually adjusting to align more realistically with the action described in the prompt.
+            </p>
+        </div>
+
+        <div class="section animated-section">
+            <h2>Bibtex</h2>
+            <p class="code">
+    @article{yu2025towards,
+        title={Towards Affordance-Aware Articulation Synthesis for Rigged Objects},
+        author={Yu, Yu-Chu and Lin, Chieh Hubert and Lee, Hsin-Ying and Wang, Chaoyang and Wang, Yu-Chiang Frank and Yang, Ming-Hsuan},
+        journal={arXiv preprint},
+        year={2025}
+    }
+            </p>
+        </div>
+
+        <div class="section animated-section">
+            <h2>Acknowledgement</h2>
+            <p style="font-size: 1em;">
+                We thank all the following artists for creating the 3D objects used in our work and generously shared them for free on Sketchfab.com: <a href="https://skfb.ly/6TKqH" target="_blank">3d modelling my cat: Fripouille</a> by guillaume bolis, <a href="https://skfb.ly/6nVN9" target="_blank">Cow NPC</a> by Owlish Media, <a href="https://skfb.ly/p8wzz" target="_blank">Horse Rigged(Game Ready)</a> by abhayexe, <a href="https://skfb.ly/o6Joz" target="_blank">Low poly fox running animation</a> by dragonsnap, <a href="https://skfb.ly/69ps6" target="_blank">Shiba Inu Doggy</a> by aaadragon, <a href="https://skfb.ly/6V6FS" target="_blank">Rabbit Rigged</a> by FourthGreen, <a href="https://skfb.ly/oFCQX" target="_blank">Spongebob. Rigged</a> by Eyeball, <a href="https://skfb.ly/oFCRw" target="_blank">Patrick. Rigged</a> by Eyeball, <a href="https://skfb.ly/6TptH" target="_blank">Venice city scene 1DAE08 Aaron Ongena</a> by AaronOngena, <a href="https://skfb.ly/6ToLn" target="_blank">1DAE10 Quintyn Glenn City Scene Kyoto</a> by Glenn.Quintyn, <a href="https://skfb.ly/6QYJI" target="_blank">Low Poly Farm V2</a> by EdwiixGG. All 3D objects are licensed under CC Attribution.
+            </p>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <span class="close" id="close">&times;</span>
+        <div class="modal-content" id="modal-content">
+    </div>
+    
+
+    <script src="scripts.js"></script>
+</body>
+</html>

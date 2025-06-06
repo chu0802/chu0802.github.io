@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QZT4G47E4M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QZT4G47E4M');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/icon/apple-touch-icon.png">
+  <link rel="icon" href="../../assets/img/icon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/icon/favicon-16x16.png">
+  <link rel="manifest" href="../../assets/img/icon/site.webmanifest">
+  <link rel="stylesheet" href="assests/style.css">
+  <title>AI Conference Deadline Counter</title>
+</head>
+<body>
+  <div id="trigger" style="position: fixed; left: 0; top: 0; width: 10px; height: 100%; background: transparent; z-index: 1000;"></div>
+  <div id="menu" style="position: fixed; left: -250px; top: 0; width: 250px; height: 100%; background: #333; transition: left 0.3s; z-index: 999; overflow-y: auto;">
+    <h2 style="color: white; text-align: center;">Coming Events</h2>
+
+    <h3 style="color: white; text-align: left; padding: 10px;">Submission Due</h3>
+    <ul id="submissionList" style="list-style-type: none; padding: 0;"></ul>
+    <h3 style="color: white; text-align: left; padding: 10px;">Review Release Date</h3>
+    <ul id="reviewList" style="list-style-type: none; padding: 0;"></ul>
+    <h3 style="color: white; text-align: left; padding: 10px;">Rebuttal Due</h3>
+    <ul id="rebuttalList" style="list-style-type: none; padding: 0;"></ul>
+    <h3 style="color: white; text-align: left; padding: 10px;">Decision Release</h3>
+    <ul id="decisionList" style="list-style-type: none; padding: 0;"></ul>
+    <h3 style="color: white; text-align: left; padding: 10px;">Coming Trip</h3>
+    <ul id="tripList" style="list-style-type: none; padding: 0;"></ul>
+  </div>
+      <!-- Clock elements go here -->
+    </div>
+  </div>
+  <div class="dark-overlay"></div>
+  <div class="container">
+    <h1 id="eventName">Select an Event</h1>
+    <h2 id="eventType">Event Type</h2>
+    <h2 id="eventDate">Event Date</h2>
+    
+    <div id="countdown"></div>
+    <div id="clock">
+      <!-- Numbers on the clock face -->
+      <div class="number">1</div>
+      <div class="number">2</div>
+      <div class="number">3</div>
+      <div class="number">4</div>
+      <div class="number">5</div>
+      <div class="number">6</div>
+      <div class="number">7</div>
+      <div class="number">8</div>
+      <div class="number">9</div>
+      <div class="number">10</div>
+      <div class="number">11</div>
+      <div class="number">12</div>
+      <!-- Clock hands -->
+      <div class="hand hour" style="--hour-rotation: 0;"></div>
+      <div class="hand minute" style="--minute-rotation: 0;"></div>
+      <div class="hand second" style="--second-rotation: 0;"></div>
+    </div>
+  </div>
+    <script src="assests/script.js"></script>
+    </body>
+    </html>

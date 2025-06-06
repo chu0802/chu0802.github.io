@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QZT4G47E4M"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-QZT4G47E4M');
+    </script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/icon/apple-touch-icon.png">
+    <link rel="icon" href="../../assets/img/icon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/icon/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/img/icon/site.webmanifest">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select and Distill, ECCV 2024</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="content">
+        <div class="author-section">
+            <h1>Select and Distill: <br>Selective Dual-Teacher Knowledge Transfer for <br>Continual Learning on Vision-Language Models</h1>
+            <p id="conference-name"> <i>European Conference on Computer Vision (ECCV) 2024</i></p>
+            <div class="authors">
+                <span><a href="https://chuyu.org" target="_blank">Yu-Chu Yu</a><sup class="ntu">1</sup></span>
+                <span><a href="#">Chi-Pin Huang</a><sup class="ntu">1</sup></span>
+                <span><a href="#">Jr-Jen Chen</a><sup class="ntu">1</sup></span>
+            </div>
+            <div class="authors">
+                <span><a href="#">Kai-Po Chang</a><sup class="ntu">1</sup></span>
+                <span><a href="http://franklin905.github.io" target="_blank">Yung-Hsuan Lai</a><sup class="ntu">1</sup></span>
+                <span><a href="https://fuenyang1127.github.io" target="_blank">Fu-En Yang</a><sup class="nv">2</sup></span>
+                <span><a href="http://vllab.ee.ntu.edu.tw/ycwang.html" target="_blank">Yu-Chiang Frank Wang</a><sup><span class="ntu">1</span>, <span class="nv">2</span></sup></span>
+            </div>
+            <div class="affiliations">
+                <p><sup class="ntu">1</sup> National Taiwan University</p>
+                <p><sup class="nv">2</sup> NVIDIA</p>
+            </div>
+            <div class="buttons">
+                <a href="https://arxiv.org/abs/2403.09296" class="button" target="_blank"><img src="images/arxiv.svg"></i> Paper</a>
+                <a href="https://github.com/chu0802/SnD" class="button" target="_blank"> <img src="images/github.svg">Code</a>
+                
+            </div>
+        </div>
+
+        <div class="section animated-section">
+            <h2>Abstract</h2>
+
+            <img src="images/teaser.svg" class="thumbnail">
+
+            <p>
+                Large-scale vision-language models (VLMs) have shown a strong zero-shot generalization capability on unseen-domain data. However, adapting pre-trained VLMs to a sequence of downstream tasks often leads to the forgetting of previously learned knowledge and a reduction in zero-shot classification performance. To tackle this problem, we propose a unique Selective Dual-Teacher Knowledge Transfer framework that leverages the most recent fine-tuned and the original pre-trained VLMs as dual teachers to preserve the previously learned knowledge and zero-shot capabilities, respectively. With only access to an unlabeled reference dataset, our proposed framework performs a selective knowledge distillation mechanism by measuring the feature discrepancy from the dual-teacher VLMs. Consequently, our selective dual-teacher knowledge distillation mitigates catastrophic forgetting of previously learned knowledge while preserving the zero-shot capabilities of pre-trained VLMs. Extensive experiments on benchmark datasets demonstrate that our framework is favorable against state-of-the-art continual learning approaches for preventing catastrophic forgetting and zero-shot degradation.
+            </p>
+        </div>
+
+        <!-- Gallery Section -->
+        <div class="section animated-section" id="gallery">
+            <h2>Evaluation of Our Proposed Framework</h2>
+            <div class="carousel">
+                <button class="carousel-button left" onclick="prevSlide()">&#10094;</button>
+                <div class="carousel-track-container">
+                    <div class="carousel-track" id="carouselTrack">
+                        <!-- Images will be dynamically added here -->
+                    </div>
+                </div>
+                <button class="carousel-button right" onclick="nextSlide()">&#10095;</button>
+                
+            </div>
+            <div id="dots"></div>
+            <p>
+                Take adventage from dual-teacher VLMs, our proposed framework, <b><i>Selective Dual-Teacher Knowledge Transfer (S&D)</i></b>, successfully prevents catastrophic forgetting on previously learned datasets and preserves the original zero-shot capability for unseen data.
+            </p>
+        </div>
+
+        <div class="section animated-section">
+            <h2>Method</h2>
+            <img src="images/arch.svg" class="thumbnail">
+            <p>
+                The overall architecture of our proposed Selective Dual-Teacher Knowledge Transfer <b>(S&D)</b> framework. We propose a teacher selection mechanism based on the <i>dual-teacher discrepancy</i>. If a sampled reference image aligns with the distribution of previous datasets, the feature derived by the g<sub>k-1</sub> would differ from that obtained by the pre-trained VLM g<sub>0</sub>, inducing large dual teacher discrepancy. On the other hand, if a reference image is out of previous data distribution, a smaller discrepancy would be expected since this reference image is unfamiliar to both teacher models, so that such unseen-domain data can be leveraged to facilitate zero-shot preservation.
+            </p>
+        </div>
+
+        <div class="section animated-section">
+            <h2>Quatitative Results on <br> Multi-Domain Task-Incremental Learning</h2>
+    
+            <img src="images/mtil.svg"class="thumbnail">
+    
+            <p>
+                we present the quantitative comparisons with different methods on the MTIL benchmark. The results demonstrate that our method outperforms SOTA CL approaches, showing the effectiveness of our proposed method. By leveraging dual teachers with the proposed teacher selective mechanism, our framework is capable of alleviating catastrophic forgetting on all training sequences with less than 2% of performance degradation. In addition, the zero-shot classification capability can be properly preserved by our proposed learning framework.
+            </p>
+        </div>
+    
+        
+    
+        <div class="section animated-section">
+            <h2>Quantitative Results on <br> Multi-Domain Class-Incremental Learning</h2>
+    
+            <img src="images/mcil.svg" class="thumbnail">
+    
+            <p>
+                We further consider a more challenging scenario, Multi-Domain Class-Incremental Learning (MCIL), where the task (data domain) to be evaluated is not known during inference. To realize this, we conduct a unified label space by merging label spaces from all datasets at the inference stage. As we can observe, while there is a slight performance drop for all methods, our method consistently surpasses the other SOTA approaches, with about 1 ~ 3% improvement for almost all metrics across different sequences. From the above results, we successfully confirm the effectiveness and robustness of our proposed method in the more challenging class-incremental setting.
+            </p>
+        </div>
+        <div class="section animated-section">
+            <h2>Bibtex</h2>
+            <p class="code">
+    @article{yu2024select,
+        title={Select and Distill: Selective Dual-Teacher Knowledge Transfer for Continual Learning on Vision-Language Models},
+        author={Yu, Yu-Chu and Huang, Chi-Pin and Chen, Jr-Jen and Chang, Kai-Po and Lai, Yung-Hsuan and Yang, Fu-En and Wang, Yu-Chiang Frank},
+        journal={arXiv preprint arXiv:2403.09296},
+        year={2024}
+    }
+            </p>
+        </div>
+    </div>
+
+
+
+
+    <div id="modal" class="modal">
+        <span class="close" id="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+    
+
+    <script src="scripts.js"></script>
+</body>
+</html>

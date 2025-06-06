@@ -1,0 +1,75 @@
+[
+    {
+        "title": "Towards Affordance-Aware Articulation Synthesis for Rigged Objects",
+        "abbr": "a3syn",
+        "year": "January 2025",
+        "author": "Yu-Chu Yu, Chieh Hubert Lin, Hsin-Ying Lee, Chaoyang Wang, Yu-Chiang Frank Wang, Ming-Hsuan Yang",
+        "conference": "arXiv preprint",
+        "arxivLink": "https://arxiv.org/abs/2501.12393",
+        "githubLink": "research/a3syn",
+        "image": "assets/img/research/a3syn.jpg",
+        "confAbbr": null,
+        "links": [
+            "#",
+            "https://hubert0527.github.io/",
+            "https://hsinyinglee.com/",
+            "https://mightychaos.github.io/",
+            "https://vllab.ee.ntu.edu.tw/ycwang.html",
+            "https://faculty.ucmerced.edu/mhyang/"
+        ]
+    },
+    {
+        "title": "ReXTime: A Benchmark Suite for Reasoning-Across-Time in Videos",
+        "abbr": "rextime",
+        "year": "December 2024",
+        "author": "Jr-Jen Chen, Yu-Chien Liao, Hsi-Che Lin, Yu-Chu Yu, Yen-Chun Chen, Yu-Chiang Frank Wang",
+        "conference": "Neural Information Processing Systems",
+        "arxivLink": "https://arxiv.org/abs/2406.19392",
+        "githubLink": "https://rextime.github.io/",
+        "image": "assets/img/research/rextime.jpg",
+        "confAbbr": "NeurIPS",
+        "links": [
+            "https://tousakanagio.github.io/",
+            "https://www.linkedin.com/in/liao-yu-chien-13951a252/",
+            "https://openreview.net/profile?id=~Hsi-Che_Lin1",
+            "#",
+            "https://www.microsoft.com/en-us/research/people/yenche/",
+            "https://vllab.ee.ntu.edu.tw/ycwang.html"
+        ]
+    },
+    {
+        "title": "Select and Distill: Selective Dual-Teacher Knowledge Transfer for Continual Learning on Vision-Language Models",
+        "abbr": "sad",
+        "year": "September 2024",
+        "author": "Yu-Chu Yu, Chi-Pin Huang, Jr-Jen Chen, Kai-Po Chang, Yung-Hsuan Lai, Fu-En Yang, Yu-Chiang Frank Wang",
+        "conference": "European Conference on Computer Vision",
+        "arxivLink": "https://arxiv.org/abs/2403.09296",
+        "githubLink": "research/snd",
+        "image": "assets/img/research/snd.png",
+        "confAbbr": "ECCV",
+        "links": [
+            "#",
+            "https://jasper0314-huang.github.io/",
+            "https://tousakanagio.github.io/",
+            "https://www.linkedin.com/in/kai-po-chang-14051a191",
+            "https://franklin905.github.io/",
+            "https://fuenyang1127.github.io/",
+            "https://vllab.ee.ntu.edu.tw/ycwang.html"
+        ]
+    },
+    {
+        "title": "Semi-Supervised Domain Adaptation with Source Label Adaptation",
+        "abbr": "sla",
+        "year": "June 2023",
+        "author": "Yu-Chu Yu, Hsuan-Tien Lin",
+        "conference": "Computer Vision and Pattern Recognition",
+        "arxivLink": "https://arxiv.org/abs/2302.02335",
+        "githubLink": "https://github.com/chu0802/SLA",
+        "image": "assets/img/research/sla.png",
+        "confAbbr": "CVPR",
+        "links": [
+            "#",
+            "https://www.csie.ntu.edu.tw/~htlin/"
+        ]
+    }
+]
