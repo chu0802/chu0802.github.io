@@ -59,6 +59,7 @@ def save_to_json(file_info, output_file):
 def git_process():
     try:
         subprocess.run(["git", "add", "files_info.json"])
+        subprocess.run(["git", "add", "last_modified_date.json"])
     except:
         pass
 
