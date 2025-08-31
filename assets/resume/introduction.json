@@ -1,6 +1,6 @@
 [
     {
-        "introduction": "I’m an incoming Ph.D. student in Computer Science at the University of British Columbia. Currently, I work as a Research Assistant at VLLab in National Taiwan University under Prof. <a href=\"https://vllab.ee.ntu.edu.tw/ycwang.html\" target=\"_blank\">Yu-Chiang Frank Wang</a>. Before that, I was a visiting student with Prof. <a href=\"https://faculty.ucmerced.edu/mhyang/\" target=\"_blank\">Ming-Hsuan Yang</a> at the University of California, Merced."
+        "introduction": "I’m an Ph.D. student in Computer Science at the University of British Columbia. Currently, I work as a Research Assistant at VLLab in National Taiwan University under Prof. <a href=\"https://vllab.ee.ntu.edu.tw/ycwang.html\" target=\"_blank\">Yu-Chiang Frank Wang</a>. Before that, I was a visiting student with Prof. <a href=\"https://faculty.ucmerced.edu/mhyang/\" target=\"_blank\">Ming-Hsuan Yang</a> at the University of California, Merced."
     },
     {
         "introduction": "<strong>My Primary research interests lie in Computer Vision, with a particular focus on multi-modal models' adaptability, continual learning, and open-domain 3D articulation synthesis.</strong>"
