@@ -2,7 +2,7 @@
     "test": {
         "name": "test",
         "size": "Directory",
-        "last_modified": "2025-06-06 10:56",
+        "last_modified": "2025-06-05 19:56",
         "files": {
             "..": {
                 "name": "..",
@@ -13,7 +13,7 @@
             "icon-128.png": {
                 "name": "icon-128.png",
                 "size": 13881,
-                "last_modified": "2025-06-06 10:56",
+                "last_modified": "2025-06-05 19:56",
                 "url": "https://raw.githubusercontent.com/chu0802/chu0802.github.io/master/resources/test/icon-128.png",
                 "type": "png"
             }
@@ -23,28 +23,28 @@
     "icon-1024.png": {
         "name": "icon-1024.png",
         "size": 167992,
-        "last_modified": "2025-06-06 10:56",
+        "last_modified": "2025-06-05 19:56",
         "url": "https://raw.githubusercontent.com/chu0802/chu0802.github.io/master/resources/icon-1024.png",
         "type": "png"
     },
     "taai2023.pdf": {
         "name": "taai2023.pdf",
         "size": 1668424,
-        "last_modified": "2025-06-06 10:56",
+        "last_modified": "2025-06-05 19:56",
         "url": "https://raw.githubusercontent.com/chu0802/chu0802.github.io/master/resources/taai2023.pdf",
         "type": "pdf"
     },
     "resume20250204.pdf": {
         "name": "resume20250204.pdf",
         "size": 351494,
-        "last_modified": "2025-06-06 10:56",
+        "last_modified": "2025-06-05 19:56",
         "url": "https://raw.githubusercontent.com/chu0802/chu0802.github.io/master/resources/resume20250204.pdf",
         "type": "pdf"
     },
     "eccv2024_snd_poster.pdf": {
         "name": "eccv2024_snd_poster.pdf",
         "size": 1691593,
-        "last_modified": "2025-06-06 10:56",
+        "last_modified": "2025-06-05 19:56",
         "url": "https://raw.githubusercontent.com/chu0802/chu0802.github.io/master/resources/eccv2024_snd_poster.pdf",
         "type": "pdf"
     }

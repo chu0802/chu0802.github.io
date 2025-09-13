@@ -36,6 +36,47 @@ function renderContactList(list) {
 }
 
 /**
+ * Render the News section from JSON.
+ * Expects each item in `list` to have:
+ *   - date (string in YYYY-MM-DD format)
+ *   - content (string with news content)
+ */
+function renderNews(list) {
+  const container = document.getElementById('news-list');
+  container.innerHTML = '';
+  
+  // Sort news by date (most recent first)
+  const sortedNews = list.sort((a, b) => new Date(b.date) - new Date(a.date));
+  
+  sortedNews.forEach((newsItem, index) => {
+    const item = document.createElement('div');
+    item.className = 'news-item';
+    
+    // Format the date to be more readable using Pacific Time
+    const date = new Date(newsItem.date + 'T00:00:00-08:00'); // Ensure PT timezone
+    const formattedDate = date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+      timeZone: 'America/Los_Angeles'
+    });
+    
+    item.innerHTML = `
+      <div class="news-date">${formattedDate}</div>
+      <div class="news-content">${newsItem.content}</div>
+    `;
+    
+    container.appendChild(item);
+    
+    // Animate in with JavaScript for better control
+    setTimeout(() => {
+      item.style.transition = 'all 0.6s ease';
+      item.classList.add('visible');
+    }, index * 100);
+  });
+}
+
+/**
  * Render the Publication section from JSON.
  * Expects each item in `list` to have:
  *   - title, author (HTML string), conference, year,
@@ -364,6 +405,18 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('introduction').innerHTML = `<p class="error-message">Failed to load introduction data. Error: ${err.message}</p>`;
     });
 
+  // 0.5. Load and render News
+  fetch(ASSET_PATH + 'news.json')
+    .then(res => {
+      if (!res.ok) throw new Error(`Failed to load news: ${res.status} ${res.statusText}`);
+      return res.json();
+    })
+    .then(data => renderNews(data))
+    .catch(err => {
+      console.error('Failed to load news:', err);
+      document.getElementById('news-list').innerHTML = `<p class="error-message">Failed to load news data. Error: ${err.message}</p>`;
+    });
+
   // 1. Load and render Publications
   fetch(ASSET_PATH + 'publication.json')
     .then(res => {
@@ -375,29 +428,6 @@ document.addEventListener('DOMContentLoaded', () => {
       console.error('Failed to load publications:', err);
       document.getElementById('publication-list').innerHTML = `<p class="error-message">Failed to load publication data. Error: ${err.message}</p>`;
     });
-
-  // 2. Load and render Resume timelines with better error handling
-  const loadTimelineData = (filename, containerId, mapFn = mapEducationToTimeline) => {
-    fetch(ASSET_PATH + filename)
-      .then(res => {
-        if (!res.ok) throw new Error(`Failed to load ${filename}: ${res.status} ${res.statusText}`);
-        return res.json();
-      })
-      .then(data => renderTimeline(containerId, mapFn(data)))
-      .catch(err => {
-        console.error(`Failed to load ${filename}:`, err);
-        const container = document.getElementById(containerId);
-        if (container) {
-          container.innerHTML = `<p class="error-message">Failed to load data. Error: ${err.message}</p>`;
-        }
-      });
-  };
-
-  loadTimelineData('education.json', 'education-timeline');
-  loadTimelineData('teaching.json', 'teaching-timeline');
-  loadTimelineData('research-experience.json', 'research-timeline');
-  loadTimelineData('work-experience.json', 'work-timeline');
-  loadTimelineData('service.json', 'service-timeline');
 
   // 3. Mobile sidebar toggle
   if (navToggle && sidebar) {
