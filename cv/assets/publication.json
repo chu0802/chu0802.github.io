@@ -1,5 +1,13 @@
 [
     {
+        "title": "Serial Lifelong Editing via Mixture of Knowledge Experts",
+        "abbr": "moke",
+        "year": "July 2025",
+        "author": "Yu-Ju Cheng, <b>Yu-Chu Yu</b>, Kai-Po Chang, Yu-Chiang Frank Wang",
+        "conference": "Association for Computational Linguistics <b>(ACL)</b>",
+        "arxivLink": "https://aclanthology.org/2025.acl-long.1492.pdf"
+    },
+    {
         "title": "Towards Affordance-Aware Articulation Synthesis for Rigged Objects",
         "abbr": "a3syn",
         "year": "January 2025",

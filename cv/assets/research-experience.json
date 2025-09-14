@@ -4,7 +4,7 @@
       "location": "National Taiwan University. Advisor: Prof. <a href=\"http://vllab.ee.ntu.edu.tw/members.html\" target=\"_blank\">Yu-Chiang Frank Wang</a>", 
       "year": "2023/09 - Present",
       "description": [
-        "Research on Continual Learning for Vision-Language Models, develop a selective knowledge distillation algorithm <a href=\"#sad\" class=\"reference-link\">3</a> to preserve both previous knowledge and zero-shot transferability for VLMs. <font color=\"red\">(ECCV'24)</font>"
+        "Research on Continual Learning for Vision-Language Models, develop a selective knowledge distillation algorithm to preserve both previous knowledge and zero-shot transferability for VLMs. <font color=\"red\">(ECCV'24)</font>"
       ]
     },
     {
@@ -12,7 +12,7 @@
       "location": "University of California, Merced. Advisor: Prof. <a href=\"https://faculty.ucmerced.edu/mhyang/\" target=\"_blank\">Ming-Hsuan Yang</a>",
       "year": "2024/04 - 2024/12",
       "description": [
-        "Propose A3Syn <a href=\"#a3syn\" class=\"reference-link\">1</a>, a novel framework to synthesize affordance-aware 3D articulation for open-domain rigged objects."
+        "Propose A3Syn, a novel framework to synthesize affordance-aware 3D articulation for open-domain rigged objects."
       ]
     },
     { 
@@ -21,7 +21,7 @@
       "year": "2020/09 - 2022/11",
       "description": [
         "Research on Semi-Supervised Domain Adaptation.",
-        "Address Domain Adaptation as a Noisy Label Learning problem. Develop a dynamic algorithm SLA <a href=\"#sla\" class=\"reference-link\">4</a> to learn from the noisy source labels and <b>outperform state-of-the-art algorithms</b>.  <font color=\"red\">(CVPR'23)</font>"
+        "Address Domain Adaptation as a Noisy Label Learning problem. Develop a dynamic algorithm SLA to learn from the noisy source labels and <b>outperform state-of-the-art algorithms</b>.  <font color=\"red\">(CVPR'23)</font>"
       ]
     }
   ]

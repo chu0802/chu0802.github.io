@@ -1,10 +1,16 @@
 [
+    {
+      "title": "Ph.D. in Computer Science",
+      "year": "2025/09 - Present",
+      "location": "The University of British Columbia",
+      "description": {
+      }
+    },
     { 
       "title": "M.S. in Computer Science and Information Engineering", 
       "year": "2020/09 - 2022/11",
       "location": "National Taiwan University",
       "description": {
-        "GPA": "4.1 / 4.3",
         "Adivisor": "<b>Hsuan-Tien Lin</b>. Computational Learning Lab (CLLab)"
       }
     },
