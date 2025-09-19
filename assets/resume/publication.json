@@ -1,5 +1,22 @@
 [
     {
+        "title": "EMLoC: Emulator-based Memory-efficient Fine-tuning with LoRA Correction",
+        "abbr": "emloc",
+        "year": "December 2025",
+        "author": "Hsi-Che Lin, Yu-Chu Yu, Kai-Po Chang, Yu-Chiang Frank Wang",
+        "conference": "Neural Information Processing Systems",
+        "arxivLink": "https://arxiv.org/abs/2506.12015",
+        "githubLink": null,
+        "image": "assets/img/research/emloc.png",
+        "confAbbr": "NeurIPS",
+        "links": [
+            "https://hsi-che-lin.github.io/",
+            "#",
+            "https://www.linkedin.com/in/kai-po-chang-14051a191",
+            "https://vllab.ee.ntu.edu.tw/ycwang.html"
+        ]
+    },
+    {
         "title": "Serial Lifelong Editing via Mixture of Knowledge Experts",
         "abbr": "moke",
         "year": "July 2025",
