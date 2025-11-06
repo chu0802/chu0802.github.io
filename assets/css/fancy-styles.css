@@ -397,17 +397,6 @@ body.dark-mode {
   left: -2px !important;
 }
 
-.sub-nav-link:hover,
-.sub-nav-link.active {
-  transform: translateX(3px) !important;
-  border-left-color: var(--primary-color);
-}
-
-.sub-nav-link.active::before {
-  background: var(--primary-color);
-  transform: scaleY(1);
-}
-
 .sub-nav-link i {
   font-size: 0.95rem !important;
   width: 20px !important;
