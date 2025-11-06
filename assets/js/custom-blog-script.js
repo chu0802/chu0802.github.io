@@ -76,6 +76,27 @@ document.addEventListener("DOMContentLoaded", function() {
     setupBackButton();
     updateCopyrightAndDate();
     makeVisibleSections();
+    setupBrowserNavigation();
+  }
+  
+  /**
+   * Setup browser back/forward button support
+   */
+  function setupBrowserNavigation() {
+    window.addEventListener('popstate', (event) => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const postId = urlParams.get('post');
+      
+      if (postId) {
+        loadBlogPost(postId, false);
+      } else {
+        // Back to blog list
+        currentPost = null;
+        document.getElementById('backToBlogList').style.display = 'none';
+        document.getElementById('searchInput').value = '';
+        displayBlogList();
+      }
+    });
   }
 
   /**
@@ -113,6 +134,13 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log('Displaying blog list with', blogPosts.length, 'posts');
     displayBlogList();
     // displayBlogSidebar();
+    
+    // Check URL parameters after posts are loaded
+    const urlParams = new URLSearchParams(window.location.search);
+    const postId = urlParams.get('post');
+    if (postId) {
+      loadBlogPost(postId, false);
+    }
   }
 
   /**
@@ -215,8 +243,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
   /**
    * Load and display a single blog post
+   * @param {string} postId - The ID of the post to load
+   * @param {boolean} updateUrl - Whether to update the URL (default: true)
    */
-  async function loadBlogPost(postId) {
+  async function loadBlogPost(postId, updateUrl = true) {
     const post = blogPosts.find(p => p.id === postId);
     if (!post) return;
 
@@ -227,6 +257,12 @@ document.addEventListener("DOMContentLoaded", function() {
       const markdown = await response.text();
       currentPost = post;
       displayBlogPost(post, markdown);
+      
+      // Update URL with post parameter
+      if (updateUrl) {
+        const newUrl = `${window.location.pathname}?post=${postId}`;
+        window.history.pushState({ postId: postId }, '', newUrl);
+      }
       
       // Show back button
       document.getElementById('backToBlogList').style.display = 'inline-flex';
@@ -341,6 +377,11 @@ document.addEventListener("DOMContentLoaded", function() {
       currentPost = null;
       backBtn.style.display = 'none';
       document.getElementById('searchInput').value = '';
+      
+      // Clear URL parameter
+      const newUrl = window.location.pathname;
+      window.history.pushState({}, '', newUrl);
+      
       displayBlogList();
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
