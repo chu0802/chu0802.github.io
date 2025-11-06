@@ -1,0 +1,13 @@
+[
+  {
+    "id": "sample-blog-post",
+    "title": "Welcome to My Blog",
+    "excerpt": "This is a sample blog post demonstrating the Markdown parsing capabilities of this blog system.",
+    "date": "2025-11-06",
+    "author": "Yu-Chu Yu",
+    "file": "blog/resources/sample-blog-post.md",
+    "image": "",
+    "tags": ["welcome", "markdown", "tutorial"],
+    "readTime": "5 min read"
+  }
+]
