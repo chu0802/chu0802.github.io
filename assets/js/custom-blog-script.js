@@ -306,6 +306,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Add click handlers for images (modal)
     setupImageModal();
+    
+    // Add copy button functionality
+    setupCopyButtons();
+
+    // Render math equations with MathJax
+    if (typeof MathJax !== 'undefined') {
+      MathJax.typesetPromise([blogContent]).catch((err) => console.error('MathJax error:', err));
+    }
   }
 
   /**
@@ -340,6 +348,46 @@ document.addEventListener("DOMContentLoaded", function() {
         if (event.key === 'Escape' && modal.style.display === 'flex') {
             hideModal();
         }
+    });
+  }
+
+  /**
+   * Setup copy buttons for code blocks
+   */
+  function setupCopyButtons() {
+    document.querySelectorAll('.copy-code-btn').forEach(button => {
+      button.addEventListener('click', async (e) => {
+        const codeBlock = e.currentTarget.closest('.code-block-wrapper');
+        const encodedCode = codeBlock.dataset.code;
+        
+        // Decode the HTML entities
+        const textarea = document.createElement('textarea');
+        textarea.innerHTML = encodedCode;
+        const code = textarea.value;
+        
+        try {
+          await navigator.clipboard.writeText(code);
+          
+          // Change button text to "Copied!"
+          const copyText = button.querySelector('.copy-text');
+          const icon = button.querySelector('i');
+          const originalText = copyText.textContent;
+          
+          copyText.textContent = 'Copied!';
+          icon.className = 'fas fa-check';
+          button.classList.add('copied');
+          
+          // Reset after 2 seconds
+          setTimeout(() => {
+            copyText.textContent = originalText;
+            icon.className = 'fas fa-copy';
+            button.classList.remove('copied');
+          }, 2000);
+        } catch (err) {
+          console.error('Failed to copy code:', err);
+          alert('Failed to copy code to clipboard');
+        }
+      });
     });
   }
 

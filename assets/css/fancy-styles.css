@@ -2492,6 +2492,24 @@ h1, h2, h3, h4, h5, h6,
   margin: var(--spacing-xl) 0;
 }
 
+/* Math Equations Styling */
+.markdown-content .MathJax {
+  font-size: 1.1em;
+}
+
+.markdown-content mjx-container {
+  display: inline-block;
+  margin: var(--spacing-xs) 0;
+}
+
+.markdown-content mjx-container[display="true"] {
+  display: block;
+  margin: var(--spacing-md) 0;
+  text-align: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
 /* Blog Sidebar Section */
 .blog-sidebar-section {
   margin-top: var(--spacing-xl);

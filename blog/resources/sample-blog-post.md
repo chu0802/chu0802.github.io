@@ -11,6 +11,27 @@ This blog system includes several powerful features:
 3. **Responsive Design** - Works great on all devices
 4. **Search Functionality** - Easily find posts by title, excerpt, or tags
 5. **Dark Mode Support** - Automatic dark mode that matches your site preferences
+6. **Math Equations** - Support for LaTeX math equations using MathJax
+
+## Math Equations
+
+You can write inline math like $E = mc^2$ or display math equations:
+
+$$
+\frac{d}{dx}\left( \int_{0}^{x} f(u)\,du\right)=f(x)
+$$
+
+Here's a more complex example:
+
+$$
+\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} = \frac{4\pi}{c}\vec{\mathbf{j}}
+$$
+
+The quadratic formula:
+
+$$
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+$$
 
 ## Code Examples
 
