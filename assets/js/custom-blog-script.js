@@ -248,7 +248,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const html = `
       <article class="blog-post">
         <header class="blog-post-header">
-          ${post.image ? `<img src="${post.image}" alt="${post.title}" class="blog-post-image">` : ''}
           <h1 class="blog-post-title">${post.title}</h1>
           <div class="blog-post-meta">
             <time class="blog-date">
