@@ -1,5 +1,17 @@
 // File: js/script.js
 
+// Handle sub-navigation visibility based on current page
+document.addEventListener('DOMContentLoaded', function() {
+  const subNavItems = document.querySelector('.sub-nav-items');
+  const currentPage = window.location.pathname;
+  const isHomePage = currentPage.endsWith('index.html') || currentPage.endsWith('/');
+  
+  // Hide sub-nav items if not on home page
+  if (subNavItems && !isHomePage) {
+    subNavItems.classList.add('hidden');
+  }
+});
+
 const ASSET_PATH = 'assets/resume/';
 
 /**

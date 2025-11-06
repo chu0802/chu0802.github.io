@@ -64,13 +64,14 @@ def git_process():
         pass
 
 if __name__ == "__main__":
-    directory = Path("resources")
+    # track resources directory
+    resources_directory = Path("resources")
     output_file = "files_info.json"
     
-    last_modified_date = track_homepage_last_modified_date(["index.html", "assets/", "resources.html"])
-    
-    files_info, _ = record_files_info(directory)
+    files_info, _ = record_files_info(resources_directory)
     save_to_json(files_info, output_file)
-    save_to_json({"lastModifiedDate": last_modified_date}, "last_modified_date.json")
     
+    # track homepage last modified date
+    last_modified_date = track_homepage_last_modified_date(["index.html", "assets/", "resources.html"])
+    save_to_json({"lastModifiedDate": last_modified_date}, "last_modified_date.json")
     git_process()

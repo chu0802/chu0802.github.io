@@ -463,7 +463,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
     if (copyrightEl) {
       const currentYear = new Date().getFullYear();
-      copyrightEl.textContent = `© ${currentYear} Yu-Chu Yu`;
+      copyrightEl.textContent = `© ${currentYear} Yu-Chu Yu, reserved`;
     }
 
     if (lastModifiedEl) {
