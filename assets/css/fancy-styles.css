@@ -2098,10 +2098,11 @@ h1, h2, h3, h4, h5, h6,
 
 .blog-card-image {
   width: 80%;
-  max-height: 300px;
+  max-height: 200px;
   object-fit: cover;
   display: block;
-  margin: 0 auto;
+  margin: var(--spacing-md) auto;
+  border-radius: var(--border-radius-md);
 }
 
 .blog-card-meta {
