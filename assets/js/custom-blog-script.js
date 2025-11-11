@@ -281,10 +281,20 @@ document.addEventListener("DOMContentLoaded", function() {
   function displayBlogPost(post, markdown) {
     const blogContent = document.getElementById('blogContent');
     
+    // Extract the first H1 from markdown as the title
+    const h1Match = markdown.match(/^#\s+(.+)$/m);
+    const title = h1Match ? h1Match[1] : post.title;
+    
+    // Remove the first H1 from markdown to avoid duplication
+    let contentMarkdown = markdown;
+    if (h1Match) {
+      contentMarkdown = markdown.replace(/^#\s+.+$/m, '').trim();
+    }
+    
     const html = `
       <article class="blog-post">
         <header class="blog-post-header">
-          <h1 class="blog-post-title">${post.title}</h1>
+          <h1 class="blog-post-title">${title}</h1>
           <div class="blog-post-meta">
             <time class="blog-date">
               <i class="fas fa-calendar"></i> ${formatDate(post.date)}
@@ -295,9 +305,10 @@ document.addEventListener("DOMContentLoaded", function() {
             ${post.author ? `<span class="blog-author"><i class="fas fa-user"></i> ${post.author}</span>` : ''}
           </div>
           ${post.tags ? `<div class="blog-tags">${post.tags.map(tag => `<span class="blog-tag">${tag}</span>`).join('')}</div>` : ''}
+          <hr class="title-divider">
         </header>
         <div class="blog-post-content markdown-content">
-          ${marked.parse(markdown)}
+          ${marked.parse(contentMarkdown)}
         </div>
       </article>
     `;

@@ -96,7 +96,7 @@ Here's a sample table:
 | Markdown | ✅ | Full GFM support |
 | Code Highlighting | ✅ | Via Highlight.js |
 | Images | ✅ | Clickable modal view |
-| Math | ⚠️ | Can be added with KaTeX |
+| Math | ✅ | Support inline math and display math equations |
 
 ## Images
 
