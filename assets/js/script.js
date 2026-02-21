@@ -126,7 +126,7 @@ function renderPublications(list) {
       <div class="pub-details">
         <h3>${p.title}</h3>
         <div class="authors" style="word-spacing:normal;">${authors}</div>
-        <div class="venue">${p.conference}${p.confAbbr ? ` (<strong>${p.confAbbr}</strong>)` : ''}, ${p.year}</div>
+        <div class="venue">${p.conference}${p.confAbbr ? ` (<strong>${p.confAbbr}</strong>)` : ''}${p.track ? ` - <em>${p.track}</em>` : ''}, ${p.year}</div>
         <div class="links">
           ${p.arxivLink ? `<a href="${p.arxivLink}" target="_blank"><i class="fas fa-file-pdf"></i> Paper Link</a>` : ''}
           ${p.githubLink ? `<a href="${p.githubLink}" target="_blank"><i class="fab fa-github"></i> Project Page</a>` : ''}

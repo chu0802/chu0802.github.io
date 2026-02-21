@@ -9,6 +9,7 @@
         "githubLink": "https://hsi-che-lin.github.io/EMLoC/",
         "image": "assets/img/research/emloc.png",
         "confAbbr": "NeurIPS",
+        "track": null,
         "links": [
             "https://hsi-che-lin.github.io/",
             "#",
@@ -26,6 +27,7 @@
         "githubLink": null,
         "image": "assets/img/research/moke.png",
         "confAbbr": "ACL",
+        "track": null,
         "links": [
             "https://www.linkedin.com/in/ricky-undefined-86393b289/",
             "#",
@@ -43,6 +45,7 @@
         "githubLink": "research/a3syn",
         "image": "assets/img/research/a3syn.jpg",
         "confAbbr": null,
+        "track": null,
         "links": [
             "#",
             "https://hubert0527.github.io/",
@@ -62,6 +65,7 @@
         "githubLink": "https://rextime.github.io/",
         "image": "assets/img/research/rextime.jpg",
         "confAbbr": "NeurIPS",
+        "track": "Datasets and Benchmarks Track",
         "links": [
             "https://tousakanagio.github.io/",
             "https://www.linkedin.com/in/liao-yu-chien-13951a252/",
@@ -81,6 +85,7 @@
         "githubLink": "research/snd",
         "image": "assets/img/research/snd.png",
         "confAbbr": "ECCV",
+        "track": null,
         "links": [
             "#",
             "https://jasper0314-huang.github.io/",
@@ -101,6 +106,7 @@
         "githubLink": "https://github.com/chu0802/SLA",
         "image": "assets/img/research/sla.png",
         "confAbbr": "CVPR",
+        "track": null,
         "links": [
             "#",
             "https://www.csie.ntu.edu.tw/~htlin/"
