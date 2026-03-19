@@ -2,7 +2,7 @@
     {
         "title": "Graduate Research Assistant",
         "Location": "University of British Columbia",
-        "advisor": "Advisor: Prof. <a href=\"https://imaginarynumber.net/research/\" target=\"_blank\">Evan Shelhamer</a>", Prof. <a href=\"https://www.cs.ubc.ca/~lsigal/\" target=\"_blank\">Leonid Sigal</a>",
+        "advisor": "Advisor: Prof. <a href=\"https://imaginarynumber.net/research/\" target=\"_blank\">Evan Shelhamer</a>, Prof. <a href=\"https://www.cs.ubc.ca/~lsigal/\" target=\"_blank\">Leonid Sigal</a>",
         "year": "2025/09 - Present",
         "description": [
             "Efficient Computation for Vision Transformers."
